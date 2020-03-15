@@ -15,9 +15,19 @@
 		E81A7D94241E433200836547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81A7D92241E433200836547 /* Main.storyboard */; };
 		E81A7D96241E433200836547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81A7D95241E433200836547 /* Assets.xcassets */; };
 		E81A7D99241E433200836547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81A7D97241E433200836547 /* LaunchScreen.storyboard */; };
-		E81A7DA2241E442900836547 /* TapQrCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DA1241E442900836547 /* TapQrCodeType.swift */; };
 		E81A7DA5241E44CF00836547 /* MPQRCoreSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81A7DA3241E44CB00836547 /* MPQRCoreSDK.framework */; };
 		E81A7DA6241E44CF00836547 /* MPQRCoreSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E81A7DA3241E44CB00836547 /* MPQRCoreSDK.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E81A7DAA241E6FFA00836547 /* TapQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DA9241E6FFA00836547 /* TapQRCodeGenerator.swift */; };
+		E81A7DB3241E706400836547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DB2241E706400836547 /* AppDelegate.m */; };
+		E81A7DB6241E706400836547 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DB5241E706400836547 /* SceneDelegate.m */; };
+		E81A7DB9241E706400836547 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DB8241E706400836547 /* ViewController.m */; };
+		E81A7DBC241E706400836547 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81A7DBA241E706400836547 /* Main.storyboard */; };
+		E81A7DBE241E706500836547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81A7DBD241E706500836547 /* Assets.xcassets */; };
+		E81A7DC1241E706500836547 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81A7DBF241E706500836547 /* LaunchScreen.storyboard */; };
+		E81A7DC4241E706500836547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DC3241E706500836547 /* main.m */; };
+		E81A7DC9241E727D00836547 /* TapQRCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DC8241E727D00836547 /* TapQRCodeType.swift */; };
+		E81A7DCB241E732400836547 /* TapQrCodeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DCA241E732400836547 /* TapQrCodeContent.swift */; };
+		E81A7DD3241E870900836547 /* QrCodeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD2241E870900836547 /* QrCodeValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,8 +59,23 @@
 		E81A7D95241E433200836547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E81A7D98241E433200836547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E81A7D9A241E433200836547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E81A7DA1241E442900836547 /* TapQrCodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQrCodeType.swift; sourceTree = "<group>"; };
 		E81A7DA3241E44CB00836547 /* MPQRCoreSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MPQRCoreSDK.framework; sourceTree = "<group>"; };
+		E81A7DA9241E6FFA00836547 /* TapQRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQRCodeGenerator.swift; sourceTree = "<group>"; };
+		E81A7DAF241E706400836547 /* TapQRCodeExampleObjc-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TapQRCodeExampleObjc-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E81A7DB1241E706400836547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E81A7DB2241E706400836547 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E81A7DB4241E706400836547 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		E81A7DB5241E706400836547 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		E81A7DB7241E706400836547 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E81A7DB8241E706400836547 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E81A7DBB241E706400836547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E81A7DBD241E706500836547 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E81A7DC0241E706500836547 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E81A7DC2241E706500836547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E81A7DC3241E706500836547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E81A7DC8241E727D00836547 /* TapQRCodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQRCodeType.swift; sourceTree = "<group>"; };
+		E81A7DCA241E732400836547 /* TapQrCodeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQrCodeContent.swift; sourceTree = "<group>"; };
+		E81A7DD2241E870900836547 /* QrCodeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +89,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E81A7D87241E433200836547 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E81A7DAC241E706400836547 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -87,6 +119,7 @@
 			children = (
 				E81A7D48241E3DA900836547 /* TapQRCode-iOS */,
 				E81A7D8B241E433200836547 /* TapQRCodeExample-iOS */,
+				E81A7DB0241E706400836547 /* TapQRCodeExampleObjc-iOS */,
 				E81A7D47241E3DA900836547 /* Products */,
 				E81A7D51241E41AC00836547 /* Frameworks */,
 				5F9443FE22E9F72EAF958567 /* Pods */,
@@ -98,6 +131,7 @@
 			children = (
 				E81A7D46241E3DA900836547 /* TapQRCode_iOS.framework */,
 				E81A7D8A241E433200836547 /* TapQRCodeExample-iOS.app */,
+				E81A7DAF241E706400836547 /* TapQRCodeExampleObjc-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,7 +171,8 @@
 		E81A7D9E241E43D200836547 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E81A7DA0241E441300836547 /* enums */,
+				E81A7DCC241E760200836547 /* Private */,
+				E81A7DA8241E6FAF00836547 /* Public */,
 				E81A7D9F241E43DF00836547 /* Frameworks */,
 			);
 			path = Core;
@@ -154,7 +189,51 @@
 		E81A7DA0241E441300836547 /* enums */ = {
 			isa = PBXGroup;
 			children = (
-				E81A7DA1241E442900836547 /* TapQrCodeType.swift */,
+				E81A7DC8241E727D00836547 /* TapQRCodeType.swift */,
+			);
+			path = enums;
+			sourceTree = "<group>";
+		};
+		E81A7DA8241E6FAF00836547 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				E81A7DA0241E441300836547 /* enums */,
+				E81A7DA9241E6FFA00836547 /* TapQRCodeGenerator.swift */,
+				E81A7DCA241E732400836547 /* TapQrCodeContent.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		E81A7DB0241E706400836547 /* TapQRCodeExampleObjc-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				E81A7DB1241E706400836547 /* AppDelegate.h */,
+				E81A7DB2241E706400836547 /* AppDelegate.m */,
+				E81A7DB4241E706400836547 /* SceneDelegate.h */,
+				E81A7DB5241E706400836547 /* SceneDelegate.m */,
+				E81A7DB7241E706400836547 /* ViewController.h */,
+				E81A7DB8241E706400836547 /* ViewController.m */,
+				E81A7DBA241E706400836547 /* Main.storyboard */,
+				E81A7DBD241E706500836547 /* Assets.xcassets */,
+				E81A7DBF241E706500836547 /* LaunchScreen.storyboard */,
+				E81A7DC2241E706500836547 /* Info.plist */,
+				E81A7DC3241E706500836547 /* main.m */,
+			);
+			path = "TapQRCodeExampleObjc-iOS";
+			sourceTree = "<group>";
+		};
+		E81A7DCC241E760200836547 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				E81A7DD1241E86F900836547 /* enums */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		E81A7DD1241E86F900836547 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				E81A7DD2241E870900836547 /* QrCodeValue.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -210,6 +289,23 @@
 			productReference = E81A7D8A241E433200836547 /* TapQRCodeExample-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E81A7DAE241E706400836547 /* TapQRCodeExampleObjc-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E81A7DC5241E706500836547 /* Build configuration list for PBXNativeTarget "TapQRCodeExampleObjc-iOS" */;
+			buildPhases = (
+				E81A7DAB241E706400836547 /* Sources */,
+				E81A7DAC241E706400836547 /* Frameworks */,
+				E81A7DAD241E706400836547 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TapQRCodeExampleObjc-iOS";
+			productName = "TapQRCodeExampleObjc-iOS";
+			productReference = E81A7DAF241E706400836547 /* TapQRCodeExampleObjc-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -225,6 +321,9 @@
 						LastSwiftMigration = 1120;
 					};
 					E81A7D89241E433200836547 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					E81A7DAE241E706400836547 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -244,6 +343,7 @@
 			targets = (
 				E81A7D45241E3DA900836547 /* TapQRCode-iOS */,
 				E81A7D89241E433200836547 /* TapQRCodeExample-iOS */,
+				E81A7DAE241E706400836547 /* TapQRCodeExampleObjc-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -263,6 +363,16 @@
 				E81A7D99241E433200836547 /* LaunchScreen.storyboard in Resources */,
 				E81A7D96241E433200836547 /* Assets.xcassets in Resources */,
 				E81A7D94241E433200836547 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E81A7DAD241E706400836547 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E81A7DC1241E706500836547 /* LaunchScreen.storyboard in Resources */,
+				E81A7DBE241E706500836547 /* Assets.xcassets in Resources */,
+				E81A7DBC241E706400836547 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +408,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E81A7DA2241E442900836547 /* TapQrCodeType.swift in Sources */,
+				E81A7DCB241E732400836547 /* TapQrCodeContent.swift in Sources */,
+				E81A7DAA241E6FFA00836547 /* TapQRCodeGenerator.swift in Sources */,
+				E81A7DC9241E727D00836547 /* TapQRCodeType.swift in Sources */,
+				E81A7DD3241E870900836547 /* QrCodeValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +422,17 @@
 				E81A7D91241E433200836547 /* ViewController.swift in Sources */,
 				E81A7D8D241E433200836547 /* AppDelegate.swift in Sources */,
 				E81A7D8F241E433200836547 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E81A7DAB241E706400836547 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E81A7DB9241E706400836547 /* ViewController.m in Sources */,
+				E81A7DB3241E706400836547 /* AppDelegate.m in Sources */,
+				E81A7DC4241E706500836547 /* main.m in Sources */,
+				E81A7DB6241E706400836547 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +451,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				E81A7D98241E433200836547 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E81A7DBA241E706400836547 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E81A7DBB241E706400836547 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E81A7DBF241E706500836547 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E81A7DC0241E706500836547 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -557,6 +697,42 @@
 			};
 			name = Release;
 		};
+		E81A7DC6241E706500836547 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G46S76PUH4;
+				INFOPLIST_FILE = "TapQRCodeExampleObjc-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "company.tap.TapQRCodeExampleObjc-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E81A7DC7241E706500836547 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G46S76PUH4;
+				INFOPLIST_FILE = "TapQRCodeExampleObjc-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "company.tap.TapQRCodeExampleObjc-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -583,6 +759,15 @@
 			buildConfigurations = (
 				E81A7D9B241E433200836547 /* Debug */,
 				E81A7D9C241E433200836547 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E81A7DC5241E706500836547 /* Build configuration list for PBXNativeTarget "TapQRCodeExampleObjc-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E81A7DC6241E706500836547 /* Debug */,
+				E81A7DC7241E706500836547 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
