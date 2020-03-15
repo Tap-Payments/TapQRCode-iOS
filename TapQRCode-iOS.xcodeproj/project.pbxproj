@@ -28,6 +28,9 @@
 		E81A7DC9241E727D00836547 /* TapQRCodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DC8241E727D00836547 /* TapQRCodeType.swift */; };
 		E81A7DCB241E732400836547 /* TapQrCodeContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DCA241E732400836547 /* TapQrCodeContent.swift */; };
 		E81A7DD3241E870900836547 /* QrCodeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD2241E870900836547 /* QrCodeValue.swift */; };
+		E81A7DD6241E897C00836547 /* TapEmvcoPushData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD5241E897C00836547 /* TapEmvcoPushData.swift */; };
+		E81A7DD8241E8EFA00836547 /* TapEmvcoNetworkTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */; };
+		E81A7DDA241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +79,9 @@
 		E81A7DC8241E727D00836547 /* TapQRCodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQRCodeType.swift; sourceTree = "<group>"; };
 		E81A7DCA241E732400836547 /* TapQrCodeContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQrCodeContent.swift; sourceTree = "<group>"; };
 		E81A7DD2241E870900836547 /* QrCodeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeValue.swift; sourceTree = "<group>"; };
+		E81A7DD5241E897C00836547 /* TapEmvcoPushData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoPushData.swift; sourceTree = "<group>"; };
+		E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoNetworkTags.swift; sourceTree = "<group>"; };
+		E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoPaymentNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				E81A7DC8241E727D00836547 /* TapQRCodeType.swift */,
+				E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -200,6 +207,8 @@
 				E81A7DA0241E441300836547 /* enums */,
 				E81A7DA9241E6FFA00836547 /* TapQRCodeGenerator.swift */,
 				E81A7DCA241E732400836547 /* TapQrCodeContent.swift */,
+				E81A7DD5241E897C00836547 /* TapEmvcoPushData.swift */,
+				E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -411,6 +420,9 @@
 				E81A7DCB241E732400836547 /* TapQrCodeContent.swift in Sources */,
 				E81A7DAA241E6FFA00836547 /* TapQRCodeGenerator.swift in Sources */,
 				E81A7DC9241E727D00836547 /* TapQRCodeType.swift in Sources */,
+				E81A7DD6241E897C00836547 /* TapEmvcoPushData.swift in Sources */,
+				E81A7DDA241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift in Sources */,
+				E81A7DD8241E8EFA00836547 /* TapEmvcoNetworkTags.swift in Sources */,
 				E81A7DD3241E870900836547 /* QrCodeValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

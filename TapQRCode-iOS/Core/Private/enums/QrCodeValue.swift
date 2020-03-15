@@ -6,8 +6,6 @@
 //  Copyright © 2020 Tap Payments. All rights reserved.
 //
 
-import class MPQRCoreSDK.PushPaymentData
-
 /// Represents the value of qr generator which can be an actual String, URL or PushPaymentData
 public enum QrCodeValue {
     /// Holds the text content of a qr code we need to generate
@@ -15,5 +13,5 @@ public enum QrCodeValue {
     /// Holds the url content of a qr code we need to generate
     case urlCode(URL)
     /// Holds the PushPaymentData we need to generate
-    case pushData(PushPaymentData)
+    case pushData(TapEmvcoPushData)
 }
