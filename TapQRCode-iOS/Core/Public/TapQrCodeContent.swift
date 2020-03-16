@@ -47,6 +47,7 @@ public class TapQrCodeContent:NSObject
     {
         super.init()
         qrCodeType = .EmvCode
+        content["content"] = withEmv
     }
     
     /**

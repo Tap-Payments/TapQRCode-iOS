@@ -20,7 +20,7 @@ import class MPQRCoreSDK.PushPaymentData
      - Parameter tag: Indicates which EMVCO merchant idenrefier tag this object represents (e.g. 02-03 VISA, 04-05 MasterCard, etc.)
      - Parameter value: an up to 32 length string that provides the Globally Unique Identifier of the merchant for the given tag
      */
-    @objc init(with tag:TapEmvcoNetworkTags, value:String)
+    @objc public init(with tag:TapEmvcoNetworkTags, value:String)
     {
         super.init()
         self.tag = tag

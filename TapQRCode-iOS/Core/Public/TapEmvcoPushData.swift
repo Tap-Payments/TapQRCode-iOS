@@ -31,7 +31,7 @@ import class MPQRCoreSDK.AdditionalData
      - Parameter postalCode:  Defines postal code address of he merchant up to 25
      - Parameter additionData:Defines the Additional Data Field Template (ID "62")
      */
-    @objc init(pointOfInitiation:TapEmvcoOfInitiation,
+    @objc public init(pointOfInitiation:TapEmvcoOfInitiation,
                merchantPaymentTags:[TapEmvcoPaymentNetwork],
                transactionAmount:Float = 0,
                transactionCurrency:TapEmvcoCurrencyCode,
