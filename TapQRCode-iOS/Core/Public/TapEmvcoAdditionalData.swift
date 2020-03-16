@@ -38,6 +38,18 @@ import class MPQRCoreSDK.AdditionalData
     /// This will be used to calculate and map the inpt from the merchant to acceptabld AdditionalData object for EMVCO request
     internal var additionalData:AdditionalData? = AdditionalData()
     
+    
+    /**
+     Creates an additional data accepted object by EMVCO
+     - Parameter billNumber: The invoice number or bill number, will always be truncated to first 25 charachters
+     - Parameter customerLabel: This value could be provided by the merchant, if known, or could be an indication to the mobile application to provide a prompt that will allow the consumer to input their Customer Label, will always be truncated to first 25 charachters
+     - Parameter loyaltyNumber: Typically a loyalty card number., will always be truncated to first 25 charachters
+     - Parameter mobileNumber: Mobile phone number to be used for multiple use cases, such as mobile top- up and bill payment, will always be truncated to first 25 charachters
+     - Parameter purposeForTransaction: Any value as defined by the merchant or acquirer in order to define the purpose of the transaction, will always be truncated to first 25 charachters
+     - Parameter storeLabel: A distinctive id associated to a store, will always be truncated to first 25 charachters
+     - Parameter terminalLabel: A distinctive id associated to a terminal inside a store, will always be truncated to first 25 charachters
+     - Parameter additionalCustomerDataCollection: Contains indications that the mobile application should include the requested information in order to complete the transaction. The information requested should be provided by the mobile application in the authorization without unnecessarily prompting the consumer. If present, the Additional Consumer Data Request (ID "09") shall contain any combination of the characters: "A", "M" and/or "E", and there shall only be a single instance of each of these characters.
+     **/
     @objc public init(billNumber:String?,
                                customerLabel:String?,
                                loyaltyNumber:String?,
