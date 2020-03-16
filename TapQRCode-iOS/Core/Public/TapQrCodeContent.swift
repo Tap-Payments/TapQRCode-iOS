@@ -15,7 +15,7 @@ public class TapQrCodeContent:NSObject
     /// The type of the qr code, calculated based on the given content
     private var qrCodeType:TapQrCodeType = .TextCode
     /// Holds privately what content had been passed to create the QRcodeContent
-    private var content:[String:String] = [:]
+    private var content:[String:Any] = [:]
     
     /**
         Creates a  text based TapQRCodeContent object
@@ -43,7 +43,7 @@ public class TapQrCodeContent:NSObject
        Creates an  EMVCO based TapQRCodeContent object
     - Parameter withUrl: The url value of the code content
     */
-    @objc public init(withEmv:URL)
+    @objc public init(withEmv:TapEmvcoPushData)
     {
         super.init()
         qrCodeType = .EmvCode
@@ -57,11 +57,11 @@ public class TapQrCodeContent:NSObject
     {
         switch qrCodeType {
         case .TextCode:
-            return QrCodeValue.textCode(content["content"] ?? "")
+            return QrCodeValue.textCode(content["content"] as? String ?? "")
         case .UrlCode:
-            return QrCodeValue.urlCode(URL(string: content["content"] ?? "")!)
+            return QrCodeValue.urlCode(URL(string: content["content"] as? String ?? "")!)
         case .EmvCode:
-            return QrCodeValue.urlCode(URL(string: content["content"] ?? "")!)
+            return QrCodeValue.pushData(content["content"] as! TapEmvcoPushData)
         }
     }
 }
