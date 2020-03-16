@@ -40,7 +40,10 @@ public class TapQRCodeGenerator:NSObject
     
     
     internal static func generateQRCode(from string: String) -> UIImage? {
-        
+        if string == "" {
+            return nil
+        }
+            
         if let tryImage = EFQRCode.generate(
             content: string
             //foregroundColor: UIColor.init(red: 1, green: 0, blue: 0, alpha: 0.73).cgColor,
