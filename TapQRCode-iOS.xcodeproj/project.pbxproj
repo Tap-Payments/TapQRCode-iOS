@@ -31,6 +31,7 @@
 		E81A7DD6241E897C00836547 /* TapEmvcoPushData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD5241E897C00836547 /* TapEmvcoPushData.swift */; };
 		E81A7DD8241E8EFA00836547 /* TapEmvcoNetworkTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */; };
 		E81A7DDA241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */; };
+		E81A7DDC241F416E00836547 /* TapEmvcoOfInitiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DDB241F416E00836547 /* TapEmvcoOfInitiation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -82,6 +83,7 @@
 		E81A7DD5241E897C00836547 /* TapEmvcoPushData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoPushData.swift; sourceTree = "<group>"; };
 		E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoNetworkTags.swift; sourceTree = "<group>"; };
 		E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoPaymentNetwork.swift; sourceTree = "<group>"; };
+		E81A7DDB241F416E00836547 /* TapEmvcoOfInitiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoOfInitiation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 			children = (
 				E81A7DC8241E727D00836547 /* TapQRCodeType.swift */,
 				E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */,
+				E81A7DDB241F416E00836547 /* TapEmvcoOfInitiation.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81A7DCB241E732400836547 /* TapQrCodeContent.swift in Sources */,
+				E81A7DDC241F416E00836547 /* TapEmvcoOfInitiation.swift in Sources */,
 				E81A7DAA241E6FFA00836547 /* TapQRCodeGenerator.swift in Sources */,
 				E81A7DC9241E727D00836547 /* TapQRCodeType.swift in Sources */,
 				E81A7DD6241E897C00836547 /* TapEmvcoPushData.swift in Sources */,

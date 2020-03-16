@@ -15,7 +15,9 @@ import class MPQRCoreSDK.PushPaymentData
     
     @objc init(with payloadFormat:String = "01",
                initiationMethod:String = "12",
-               merchantPaymentTags:[TapEmvcoPaymentNetwork])
+               merchantPaymentTags:[TapEmvcoPaymentNetwork],
+               customerID:String?,
+               )
     {
         
     }
