@@ -13,9 +13,9 @@ import MPQRCoreSDK
 public class TapQrCodeContent:NSObject
 {
     /// The type of the qr code, calculated based on the given content
-    private var qrCodeType:TapQrCodeType = .TextCode
+    internal var qrCodeType:TapQrCodeType = .TextCode
     /// Holds privately what content had been passed to create the QRcodeContent
-    private var content:[String:Any] = [:]
+    internal var content:[String:Any] = [:]
     
     /**
         Creates a  text based TapQRCodeContent object
