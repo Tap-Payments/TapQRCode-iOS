@@ -35,6 +35,8 @@
 		E81A7DDE241F4D3C00836547 /* TapEmvcoCurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DDD241F4D3C00836547 /* TapEmvcoCurrencyCode.swift */; };
 		E81A7DE0241F532000836547 /* TapEmvcoExtraFees.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DDF241F532000836547 /* TapEmvcoExtraFees.swift */; };
 		E81A7DE2241F565400836547 /* TapEmvcoCountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE1241F565400836547 /* TapEmvcoCountryCode.swift */; };
+		E81A7DE4241F5E0900836547 /* TapEmvcoAdditionalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE3241F5E0900836547 /* TapEmvcoAdditionalData.swift */; };
+		E81A7DE6241F632900836547 /* TapEmvcoAdditionalDataCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE5241F632900836547 /* TapEmvcoAdditionalDataCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -90,6 +92,8 @@
 		E81A7DDD241F4D3C00836547 /* TapEmvcoCurrencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoCurrencyCode.swift; sourceTree = "<group>"; };
 		E81A7DDF241F532000836547 /* TapEmvcoExtraFees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoExtraFees.swift; sourceTree = "<group>"; };
 		E81A7DE1241F565400836547 /* TapEmvcoCountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoCountryCode.swift; sourceTree = "<group>"; };
+		E81A7DE3241F5E0900836547 /* TapEmvcoAdditionalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoAdditionalData.swift; sourceTree = "<group>"; };
+		E81A7DE5241F632900836547 /* TapEmvcoAdditionalDataCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoAdditionalDataCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,7 @@
 				E81A7DDD241F4D3C00836547 /* TapEmvcoCurrencyCode.swift */,
 				E81A7DDF241F532000836547 /* TapEmvcoExtraFees.swift */,
 				E81A7DE1241F565400836547 /* TapEmvcoCountryCode.swift */,
+				E81A7DE5241F632900836547 /* TapEmvcoAdditionalDataCollection.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				E81A7DCA241E732400836547 /* TapQrCodeContent.swift */,
 				E81A7DD5241E897C00836547 /* TapEmvcoPushData.swift */,
 				E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */,
+				E81A7DE3241F5E0900836547 /* TapEmvcoAdditionalData.swift */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -429,7 +435,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E81A7DE6241F632900836547 /* TapEmvcoAdditionalDataCollection.swift in Sources */,
 				E81A7DCB241E732400836547 /* TapQrCodeContent.swift in Sources */,
+				E81A7DE4241F5E0900836547 /* TapEmvcoAdditionalData.swift in Sources */,
 				E81A7DDC241F416E00836547 /* TapEmvcoOfInitiation.swift in Sources */,
 				E81A7DDE241F4D3C00836547 /* TapEmvcoCurrencyCode.swift in Sources */,
 				E81A7DAA241E6FFA00836547 /* TapQRCodeGenerator.swift in Sources */,

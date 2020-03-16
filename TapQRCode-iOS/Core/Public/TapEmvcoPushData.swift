@@ -13,13 +13,16 @@ import class MPQRCoreSDK.PushPaymentData
 {
     internal lazy var pushPaymentData:PushPaymentData = PushPaymentData()
     
-    @objc init(pointOfInitiation:TapEmvcoOfInitiation = .Dynamic,
+    @objc init(pointOfInitiation:TapEmvcoOfInitiation,
                merchantPaymentTags:[TapEmvcoPaymentNetwork],
                transactionAmount:Float = 0,
-               transactionCurrency:TapEmvcoCurrencyCode = .KWD,
+               transactionCurrency:TapEmvcoCurrencyCode,
                extraFeesMode:TapEmvcoExtraFees = .FixedFees,
                extraFeesAmount:Float = 0,
-               countryCode:TapEmvcoCountryCode = .KW
+               countryCode:TapEmvcoCountryCode,
+               merchantName:String,
+               merchantCity:String,
+               postalCode:String?
                )
     {
         
