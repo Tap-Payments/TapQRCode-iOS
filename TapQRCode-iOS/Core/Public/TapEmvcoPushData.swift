@@ -13,10 +13,9 @@ import class MPQRCoreSDK.PushPaymentData
 {
     internal lazy var pushPaymentData:PushPaymentData = PushPaymentData()
     
-    @objc init(with payloadFormat:String = "01",
-               initiationMethod:String = "12",
+    @objc init(pointOfInitiation:TapEmvcoOfInitiation = .Dynamic,
                merchantPaymentTags:[TapEmvcoPaymentNetwork],
-               customerID:String?,
+               customerID:String?
                )
     {
         
