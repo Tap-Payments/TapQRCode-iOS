@@ -50,13 +50,13 @@ import class MPQRCoreSDK.AdditionalData
      - Parameter terminalLabel: A distinctive id associated to a terminal inside a store, will always be truncated to first 25 charachters Write it as *** if you want the mobile app to gather it
      - Parameter additionalCustomerDataCollection: Contains indications that the mobile application should include the requested information in order to complete the transaction. The information requested should be provided by the mobile application in the authorization without unnecessarily prompting the consumer. If present, the Additional Consumer Data Request (ID "09") shall contain any combination of the characters: "A", "M" and/or "E", and there shall only be a single instance of each of these characters.
      **/
-    @objc public init(billNumber:String?,
-                               customerLabel:String?,
-                               loyaltyNumber:String?,
-                               mobileNumber:String?,
-                               purposeForTransaction:String?,
-                               storeLabel:String?,
-                               terminalLabel:String?,
+    @objc public init(billNumber:String? = nil,
+                               customerLabel:String? = nil,
+                               loyaltyNumber:String? = nil,
+                               mobileNumber:String? = nil,
+                               purposeForTransaction:String? = nil,
+                               storeLabel:String? = nil,
+                               terminalLabel:String? = nil,
                                additionalCustomerDataCollection:TapEmvcoAdditionalDataCollection = .None) {
         
         super.init()

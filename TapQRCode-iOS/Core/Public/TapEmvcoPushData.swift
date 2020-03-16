@@ -41,7 +41,7 @@ import class MPQRCoreSDK.AdditionalData
                merchantCategoryCode:String,
                merchantName:String,
                merchantCity:String,
-               postalCode:String?,
+               postalCode:String? = nil,
                additionData:TapEmvcoAdditionalData?
                )
     {
