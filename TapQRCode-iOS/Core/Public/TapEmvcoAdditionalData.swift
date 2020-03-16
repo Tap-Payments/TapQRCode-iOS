@@ -89,7 +89,7 @@ import class MPQRCoreSDK.AdditionalData
             additionalData?.mobileNumber = self.mobileNumber
         }
         
-        if let nonNullPurposeForTransaction = mobileNumber {
+        if let nonNullPurposeForTransaction = purposeForTransaction {
             shouldCreateAdditionalDataField = true
             self.purposeForTransaction = nonNullPurposeForTransaction
             additionalData?.purpose = self.purposeForTransaction
