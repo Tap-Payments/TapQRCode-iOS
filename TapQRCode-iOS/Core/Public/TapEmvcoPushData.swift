@@ -16,7 +16,10 @@ import class MPQRCoreSDK.PushPaymentData
     @objc init(pointOfInitiation:TapEmvcoOfInitiation = .Dynamic,
                merchantPaymentTags:[TapEmvcoPaymentNetwork],
                transactionAmount:Float = 0,
-               transactionCurrency:TapEmvcoCurrencyCode = .USD
+               transactionCurrency:TapEmvcoCurrencyCode = .KWD,
+               extraFeesMode:TapEmvcoExtraFees = .FixedFees,
+               extraFeesAmount:Float = 0,
+               countryCode:TapEmvcoCountryCode = .KW
                )
     {
         
