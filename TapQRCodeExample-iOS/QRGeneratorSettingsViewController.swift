@@ -108,30 +108,104 @@ extension QRGeneratorSettingsViewController:UITableViewDataSource
 extension QRGeneratorSettingsViewController:UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = textualQRdataSource[indexPath.section][indexPath.row]
+        
         if indexPath.section == 0 {
+            let data = textualQRdataSource[indexPath.section][indexPath.row]
             // URL/Text qr codes
             let inputTitle:String = (data["code"] == "url") ? "Enter a url" : "Enter a text"
+            let keyBoardType:UIKeyboardType = (data["code"] == "url") ? .URL : .default
             let inputMessage:String = "Whatever you write here will be encoded as a QR Code ;)"
-            let ac = UIAlertController(title: inputTitle, message: inputMessage, preferredStyle: .alert)
-            ac.addTextField()
-
-            let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac, weak self] _ in
-                let answer = ac.textFields![0]
-                // do something interesting with "answer" here\
-
-                let qrImageView:QRImageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRImageViewController") as! QRImageViewController
-                qrImageView.tapQrCodeContent = TapQrCodeContent(withText: answer.text ?? "")
-                self?.navigationController?.pushViewController(qrImageView, animated: true)
+            alertTextQR(with: inputTitle, message: inputMessage,keyboardType: keyBoardType, Emvco: false,selectedIndexPath: indexPath)
+        }else if indexPath.section == 1 {
+            let key:String = Array(emvcoQRdataSource.keys)[indexPath.row]
+            var keyBoardType:UIKeyboardType = .default
+            if let _:Float = emvcoQRdataSource[key] as? Float {
+                keyBoardType = .decimalPad
             }
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [unowned ac] _ in
-                ac.dismiss(animated: true, completion: nil)
-            }
-
-            ac.addAction(submitAction)
-            ac.addAction(cancelAction)
-            present(ac, animated: true)
+            let inputTitle:String = "New value for \(key)"
+            let inputMessage:String = "Current value \(emvcoQRdataSource[key])"
+            alertTextQR(with: inputTitle, message: inputMessage,keyboardType: keyBoardType, Emvco: true,key: key,selectedIndexPath: indexPath)
+        }else if indexPath.section == 2 {
+            let keyBoardType:UIKeyboardType = .default
+            let inputTitle:String = "New value for \(self.emvcoQRPaymentTagsSource[indexPath.row]["tag"])"
+            let inputMessage:String = "Current value \(self.emvcoQRPaymentTagsSource[indexPath.row]["value"])"
+            alertTextQR(with: inputTitle, message: inputMessage,keyboardType: keyBoardType, Emvco: true,selectedIndexPath: indexPath)
         }
+    }
+    
+    
+    
+    func alertTextQR(with title:String, message:String,keyboardType:UIKeyboardType = .default,Emvco:Bool,key:String? = nil,selectedIndexPath:IndexPath)
+    {
+        // cretea alert control with given title and message
+        let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        // Define the keyboard
+        ac.addTextField { (textField) in
+            textField.keyboardType = keyboardType
+        }
+        
+        // Define what to do when the user fills in the value
+        let submitAction = UIAlertAction(title: "Submit", style: .default) { [unowned ac, weak self] _ in
+            let answer = ac.textFields![0]
+            // do something interesting with "answer" here\
+// Check if it is a URL/Text code, then we show the code with the inputted url/text
+            if !Emvco {
+                self?.showQR(for: answer.text ?? "")
+            }else {
+                // if it is emvco data field, we need to update the current field to the new one and reload the table
+                var tempDict:[String:Any] = self?.emvcoQRdataSource ?? [:]
+                
+                // Add the new data
+                if selectedIndexPath.section == 1 {
+                    tempDict[key!] = answer.text ?? ""
+                    tempDict["paymentNetworks"] = self?.emvcoQRPaymentTagsSource
+                }else if selectedIndexPath.section == 2 {
+                    var tempTagsDict:[[String:String]]? = self?.emvcoQRPaymentTagsSource
+                    tempTagsDict?[selectedIndexPath.row]["value"] = answer.text ?? ""
+                    tempDict["paymentNetworks"] = tempTagsDict
+                }
+                
+                // Validate the new data
+                do {
+                    _ = try TapEmvcoPushData.init(withDictionary: tempDict)
+                    self?.emvcoQRdataSource = tempDict
+                    self?.emvcoQRPaymentTagsSource = tempDict["paymentNetworks"] as! [[String : String]]
+                    self?.emvcoQRdataSource.removeValue(forKey: "paymentNetworks")
+                    self?.qrSettingsTableView.reloadData()
+                }catch{
+                    self?.showError(with: error)
+                }
+            }
+        }
+        // The submit action
+        ac.addAction(submitAction)
+        // The cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [unowned ac] _ in
+            ac.dismiss(animated: true, completion: nil)
+        }
+        ac.addAction(cancelAction)
+        present(ac, animated: true)
+    }
+    
+    
+    func showError(with error:Error)
+    {
+        // cretea alert control with given title and message
+        let ac = UIAlertController(title: "Malformed Data", message: error.localizedDescription, preferredStyle: .alert)
+        // The cancel action
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [unowned ac] _ in
+            ac.dismiss(animated: true, completion: nil)
+        }
+        ac.addAction(cancelAction)
+        present(ac, animated: true)
+    }
+    
+    func showQR(for content:String)
+    {
+        let qrImageView:QRImageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRImageViewController") as! QRImageViewController
+        qrImageView.tapQrCodeContent = TapQrCodeContent(withText: content)
+        self.navigationController?.pushViewController(qrImageView, animated: true)
     }
 }

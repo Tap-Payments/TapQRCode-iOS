@@ -141,7 +141,7 @@ import class MPQRCoreSDK.AdditionalData
             try pushPaymentData.generatePushPaymentString()
         } catch {
             print("Error occurred during validation \(error)")
-            throw error
+            throw "Error occurred during validation \(error)"
         }
     }
     /**
