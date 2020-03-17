@@ -159,7 +159,16 @@ extension QRGeneratorSettingsViewController:UITableViewDelegate
                 
                 // Add the new data
                 if selectedIndexPath.section == 1 {
-                    tempDict[key!] = answer.text ?? ""
+                    // Check if float value required
+                    if let _:Float = tempDict[key!] as? Float {
+                        if let inputFloatValue:Float = Float(answer.text ?? "") {
+                            tempDict[key!] = inputFloatValue
+                        }else {
+                            self?.showError(with: "Input a valid float value")
+                        }
+                    }else {// For string vales
+                        tempDict[key!] = answer.text ?? ""
+                    }
                     tempDict["paymentNetworks"] = self?.emvcoQRPaymentTagsSource
                 }else if selectedIndexPath.section == 2 {
                     var tempTagsDict:[[String:String]]? = self?.emvcoQRPaymentTagsSource
