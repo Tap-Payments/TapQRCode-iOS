@@ -19,6 +19,7 @@ class QRGeneratorSettingsViewController: UIViewController {
 
         
         dataSource.append([["title":"URL QR Code","value":"http://tap.company","type":"text","code":"url"],["title":"Text QR Code","value":"Tap QR Code Kit 2020","type":"text","code":"text"]])
+        dataSource.append([["title":"URL QR Code","value":"http://tap.company","type":"text","code":"url"],["title":"Text QR Code","value":"Tap QR Code Kit 2020","type":"text","code":"text"]])
         
         qrSettingsTableView.dataSource = self
         qrSettingsTableView.delegate = self
@@ -43,7 +44,7 @@ class QRGeneratorSettingsViewController: UIViewController {
 extension QRGeneratorSettingsViewController:UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return dataSource.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

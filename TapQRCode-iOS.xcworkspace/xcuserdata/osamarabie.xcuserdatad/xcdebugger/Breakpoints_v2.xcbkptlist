@@ -7,38 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "4A468674-1142-40F5-A7EC-C4A0F471D6DA"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TapQRCode-iOS/Core/Public/TapEmvcoPushData.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "init(pointOfInitiation:merchantPaymentTags:transactionAmount:transactionCurrency:extraFeesMode:extraFeesAmount:countryCode:merchantCategoryCode:merchantName:merchantCity:postalCode:additionData:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F5641DD7-F4BF-44ED-8B37-ED9A2098C6D9"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TapQRCode-iOS/Core/Public/TapEmvcoPushData.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "init(pointOfInitiation:merchantPaymentTags:transactionAmount:transactionCurrency:extraFeesMode:extraFeesAmount:countryCode:merchantCategoryCode:merchantName:merchantCity:postalCode:additionData:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "3B51C830-EC19-48E0-BF27-A4821EEBBF3D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
