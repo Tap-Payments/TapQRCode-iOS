@@ -139,28 +139,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hfb-cT-SKN">
-                                <rect key="frame" x="82" y="323" width="250" height="250"/>
+                                <rect key="frame" x="82" y="64" width="250" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="2cH-QB-yZ1"/>
                                     <constraint firstAttribute="width" constant="250" id="A1m-lp-tRc"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9w-dZ-BWU">
+                                <rect key="frame" x="142.5" y="322" width="129" height="30"/>
+                                <state key="normal" title="Foreground Colour"/>
+                                <connections>
+                                    <action selector="foregroundButtonClicked:" destination="1qm-U4-opO" eventType="touchUpInside" id="Baq-hR-sWh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paX-cY-Q8K">
+                                <rect key="frame" x="141" y="372" width="132" height="30"/>
+                                <state key="normal" title="Background Colour"/>
+                                <connections>
+                                    <action selector="backgroundButtonClicked:" destination="1qm-U4-opO" eventType="touchUpInside" id="8uE-yb-gy4"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IsT-dJ-BPt">
+                                <rect key="frame" x="343" y="417" width="51" height="31"/>
+                                <connections>
+                                    <action selector="logoSwitchChanged:" destination="1qm-U4-opO" eventType="valueChanged" id="ztS-eO-rkk"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyJ-Dv-bTO">
+                                <rect key="frame" x="20" y="422" width="303" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="IsT-dJ-BPt" firstAttribute="leading" secondItem="LyJ-Dv-bTO" secondAttribute="trailing" constant="20" id="5Hj-kH-doI"/>
+                            <constraint firstItem="i9w-dZ-BWU" firstAttribute="centerX" secondItem="QCf-0Q-CZO" secondAttribute="centerX" id="5c7-ZG-utA"/>
+                            <constraint firstItem="i9w-dZ-BWU" firstAttribute="top" secondItem="Hfb-cT-SKN" secondAttribute="bottom" constant="8" id="D3h-ny-vYZ"/>
+                            <constraint firstItem="LyJ-Dv-bTO" firstAttribute="leading" secondItem="tPt-Yy-i0Z" secondAttribute="leading" constant="20" id="Gef-d3-K5a"/>
+                            <constraint firstItem="Hfb-cT-SKN" firstAttribute="top" secondItem="tPt-Yy-i0Z" secondAttribute="top" constant="20" id="Tmh-PC-Ikv"/>
+                            <constraint firstItem="paX-cY-Q8K" firstAttribute="centerX" secondItem="QCf-0Q-CZO" secondAttribute="centerX" id="UHP-O8-7H9"/>
+                            <constraint firstItem="tPt-Yy-i0Z" firstAttribute="trailing" secondItem="IsT-dJ-BPt" secondAttribute="trailing" constant="22" id="afb-aQ-5li"/>
                             <constraint firstItem="Hfb-cT-SKN" firstAttribute="centerX" secondItem="QCf-0Q-CZO" secondAttribute="centerX" id="cSs-8v-6pb"/>
-                            <constraint firstItem="Hfb-cT-SKN" firstAttribute="centerY" secondItem="QCf-0Q-CZO" secondAttribute="centerY" id="eec-kO-NCV"/>
+                            <constraint firstItem="paX-cY-Q8K" firstAttribute="top" secondItem="i9w-dZ-BWU" secondAttribute="bottom" constant="20" id="evU-sk-V9j"/>
+                            <constraint firstItem="IsT-dJ-BPt" firstAttribute="centerY" secondItem="LyJ-Dv-bTO" secondAttribute="centerY" id="hpu-Ar-ON9"/>
+                            <constraint firstItem="LyJ-Dv-bTO" firstAttribute="top" secondItem="paX-cY-Q8K" secondAttribute="bottom" constant="20" id="k53-X8-5Xj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tPt-Yy-i0Z"/>
                     </view>
                     <navigationItem key="navigationItem" id="kpR-ZZ-ueD"/>
                     <connections>
+                        <outlet property="backgroundButton" destination="paX-cY-Q8K" id="YZq-xC-65x"/>
+                        <outlet property="foregroundButton" destination="i9w-dZ-BWU" id="at1-Sb-mzE"/>
                         <outlet property="qrImageView" destination="Hfb-cT-SKN" id="LN6-Pr-eHM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrM-TU-oj6" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2912" y="138"/>
+            <point key="canvasLocation" x="2911.594202898551" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

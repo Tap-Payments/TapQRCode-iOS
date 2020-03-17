@@ -15,4 +15,5 @@ end
 
 target 'TapQRCodeExample-iOS' do
   default_pods
+  pod 'SheetyColors'
 end

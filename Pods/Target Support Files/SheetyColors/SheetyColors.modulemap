@@ -1,0 +1,6 @@
+framework module SheetyColors {
+  umbrella header "SheetyColors-umbrella.h"
+
+  export *
+  module * { export * }
+}

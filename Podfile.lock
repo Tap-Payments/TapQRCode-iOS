@@ -1,18 +1,26 @@
 PODS:
+  - Capable/Colors (1.1.4)
   - EFQRCode (5.1.6):
     - EFQRCode/Core (= 5.1.6)
   - EFQRCode/Core (5.1.6)
+  - SheetyColors (1.0.2):
+    - Capable/Colors (~> 1.1)
 
 DEPENDENCIES:
   - EFQRCode
+  - SheetyColors
 
 SPEC REPOS:
   trunk:
+    - Capable
     - EFQRCode
+    - SheetyColors
 
 SPEC CHECKSUMS:
+  Capable: 9f420f2a80a12144814ea2f0ba196516a0827ca1
   EFQRCode: a7ea2e517912f5bf6ba258b631327a83cd8084a5
+  SheetyColors: 1d0d56e5ee7923b3f12eea59a2815eae826479ee
 
-PODFILE CHECKSUM: d90845d3621cae6dd719192001a0872157e30438
+PODFILE CHECKSUM: 7bda0aa0420571e353086f90c23b1c95ead9de35
 
 COCOAPODS: 1.8.4

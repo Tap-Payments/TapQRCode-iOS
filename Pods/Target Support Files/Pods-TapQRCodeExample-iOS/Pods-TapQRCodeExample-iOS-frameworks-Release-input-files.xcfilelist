@@ -1,2 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework
+${BUILT_PRODUCTS_DIR}/Capable/Capable.framework
+${BUILT_PRODUCTS_DIR}/SheetyColors/SheetyColors.framework

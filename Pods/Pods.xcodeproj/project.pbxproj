@@ -3,52 +3,123 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1568EE3122A659385F18733A29841D2A /* EFPointShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDE20F0790DCDAF1732FB3AC5F49099 /* EFPointShape.swift */; };
-		15C97296B033AC054EECCD420E9F3ED6 /* EFIntSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65D393BA0D1C172F2CD5CC61B269D54 /* EFIntSize.swift */; };
-		2F1067021F46784F4BEB264DEDE32BE1 /* EFInputCorrectionLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2E1764B4472F92F914219509FB81AB /* EFInputCorrectionLevel.swift */; };
-		32F37496A3812FE42EBD58FF14712E7E /* EFQRCode+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ED4D9A11B9C6ADECF0C632FAE05379 /* EFQRCode+GIF.swift */; };
-		613D3693A8F32F1D628C4F11A7F2042B /* BinaryFloatingPoint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540F47CF1D72FFCBDDB6DD78B5009FD1 /* BinaryFloatingPoint+.swift */; };
-		629B204EB3AD6A448E0C09C982835986 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57D5A06506ADDB5EAEC8DC974719C3DD /* ImageIO.framework */; };
-		64FB4092793AFD2EE037F735BBDAE255 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7BE615C9FB1064B24E4F111DE51F87 /* Foundation.framework */; };
-		6CAD5CD2C6F8563AF019DA687AF586F7 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125698E86A3511286D53FB6249D25A7E /* UIColor+.swift */; };
-		797EC3205E1BB4457CDB2521115A31B7 /* EFQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08336D4D04FA533CEDB2C32A6A18BF0 /* EFQRCode.swift */; };
-		8067FCE456EF7F53FCA41259B8849ADC /* EFQRCodeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A93F0AE81F9BE038EE2B14B3B72BD /* EFQRCodeMode.swift */; };
-		8073BFD5DA2DB9D9166BB5F219E8FAD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7BE615C9FB1064B24E4F111DE51F87 /* Foundation.framework */; };
-		80AC6DB61F066714FD26B14F9F9274F4 /* NSImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E70365B46E362AA8C58A23400C4196 /* NSImage+.swift */; };
-		8A21A561CCDE112874B50E87B8576C86 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF06C1E112DDC5FFFFEE98A639A3104 /* CoreImage.framework */; };
-		90A2D12FCCCD294BF583CA2C23BF0F89 /* CGImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F65D3628FC9D524DF8002C97473E976 /* CGImage+.swift */; };
-		966F33A05F55F9707E09E788D40220F2 /* Pods-TapQRCodeExample-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7036D0983F1BCE1752648D0228B339CF /* Pods-TapQRCodeExample-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B37AD911AB4E2C25A5D6FDF737DA36A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7BE615C9FB1064B24E4F111DE51F87 /* Foundation.framework */; };
-		A400D853004BF9C61498073EE7DBB34D /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD5199D0818526BC3A94FE3F6CADE2 /* UIImage+.swift */; };
-		AF31ACDB6F49FCF55518B2EE87440BAD /* NSColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18CF50A78765D66315C090D23E388CF /* NSColor+.swift */; };
+		04C1171221CE3E0C9F0A7195827F6116 /* UIView+anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2854B99729361055CAA0A773C3562566 /* UIView+anchor.swift */; };
+		0CB933D9409EC9E812EB4EB838AED5D5 /* SheetyColorsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A2A503372DE41F2B9258A01E2B9EC6B /* SheetyColorsViewController.xib */; };
+		1393ECFE3E2FE6892082509B8234F4E4 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9120C67981AA9382FF51BCB67CC6D7EA /* Colors.xcassets */; };
+		13F117DF238B21F347E7589E00B97337 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0031E821F86471B3636C0A7E92518D54 /* RGBAColor.swift */; };
+		1568EE3122A659385F18733A29841D2A /* EFPointShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E32D72001EB3DD16CAAA085B6C13F09 /* EFPointShape.swift */; };
+		15C97296B033AC054EECCD420E9F3ED6 /* EFIntSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB3705534C65029B41396372E00D12D /* EFIntSize.swift */; };
+		1B03BB0E87E84D44DE9BED619A8D897B /* SheetyColorsConfigProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0165FC2131EA618994FAF0ED02A6469 /* SheetyColorsConfigProtocol.swift */; };
+		2344501E78D93C70401F7D680DFC12FA /* GrayscaleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE84429A397C5CFC6B838471F737A4DF /* GrayscaleColor.swift */; };
+		247E723AB499ED7CE06C76A87719BD9B /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B6F9EA7C81C984BEDC5C5123A2C6644 /* GradientSlider.swift */; };
+		27E369EBE1DAFF0564E5DAE0EF719B9D /* AppearenceProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77CFCC237B1C92D43901C1418564378 /* AppearenceProviderProtocol.swift */; };
+		2AA2306BF7544D7A2BC70356592E3955 /* SheetyColorsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4FF4B013F1D86A632B003054095A3C /* SheetyColorsType.swift */; };
+		2F1067021F46784F4BEB264DEDE32BE1 /* EFInputCorrectionLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB273F3BD10EA573A2BEBDBB9B4AA8C /* EFInputCorrectionLevel.swift */; };
+		32F37496A3812FE42EBD58FF14712E7E /* EFQRCode+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5D8C3AC51A26AC4EE26A36C1D1808C /* EFQRCode+GIF.swift */; };
+		37A5E39E3F161E150AB642CC8FD91421 /* SheetyColorsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FFFF67D1EDB878B1EF1B3972C627E5 /* SheetyColorsViewProtocol.swift */; };
+		386F3436307ED18774FD30FEC49279C6 /* OSLogType+greaterEqual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3BBE0CBC5A11F0A6ED989809A577E5 /* OSLogType+greaterEqual.swift */; };
+		3EA07194D2A2C60ED0313F110376232A /* Color+wcag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6CD38319D053A78E17C8B4AED4623A /* Color+wcag.swift */; };
+		3FDC9E96391273010174796380BA56B8 /* SheetyColorsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D46C93D616E314384ED8B599C372C06 /* SheetyColorsConfig.swift */; };
+		43B547B21A6BE47B8DF9647B525A1F85 /* SheetyColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AC2905BE51DBADAC40B676C00FC21F /* SheetyColors-dummy.m */; };
+		489660142F806FDD2740479865373F76 /* RGBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30238AC1C480C2172B1AAFEA1C4D1C9 /* RGBAColor.swift */; };
+		5731F5AA571DF585B8FF5ED55934735F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0DA8B2F203EACA99F0DE1EEA8EC4AD /* Foundation.framework */; };
+		613D3693A8F32F1D628C4F11A7F2042B /* BinaryFloatingPoint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2FA665C98511C00DE661E8281EAF8F /* BinaryFloatingPoint+.swift */; };
+		629B204EB3AD6A448E0C09C982835986 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08993CFFFC289CDAE29CCCF83CA0B9AE /* ImageIO.framework */; };
+		64C89B5124D2DB0BB9CB45B47F7D070F /* HSBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B716BF7EC1BDE256501EF621681C6D0 /* HSBViewModel.swift */; };
+		64FB4092793AFD2EE037F735BBDAE255 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0DA8B2F203EACA99F0DE1EEA8EC4AD /* Foundation.framework */; };
+		66006286ABD101780D02CFE886513F94 /* UIColor+grayscaleColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9615F1231DE345F16BFCBC5FDB167A /* UIColor+grayscaleColor.swift */; };
+		68CA7BD2DDAE18370B5CD443C1B0B0C0 /* UIColor+hsbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BD6465F992B516E18188D3DEFE5CEE /* UIColor+hsbaColor.swift */; };
+		6A009E335A4087A3D5FD7A1D31C403EC /* Image+averageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07D0FCEBAAE00E50A13932D084C3BE9 /* Image+averageColor.swift */; };
+		6CAD5CD2C6F8563AF019DA687AF586F7 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F25D6606F6FAAD3B0F83078D6E7C789C /* UIColor+.swift */; };
+		6EA6C3894C63CB147213E1DFB3A9DFF1 /* CGFloat+constrainToRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F02E38B658E02A6A9988F59893CE0B /* CGFloat+constrainToRange.swift */; };
+		797EC3205E1BB4457CDB2521115A31B7 /* EFQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148092622EDCCDD91A9BDBDFA3AE3C3 /* EFQRCode.swift */; };
+		79A8EA8EE1DC41E2EE7A9BF2E2D2D69E /* GrayscaleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76610719F4CA36EA770143A14DFCE815 /* GrayscaleViewModel.swift */; };
+		7F580FA35BD86EDA98F6E29F0B75630B /* NSFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6A1D9E8DE6896E9AD87BC6B0941F0C /* NSFont+fontProps.swift */; };
+		8010AB8B9E544F88E90E3E762143C071 /* FontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F209B96E15B2C82103BDF55203082 /* FontProps.swift */; };
+		8067FCE456EF7F53FCA41259B8849ADC /* EFQRCodeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46AEC3B1891FB29D006941960D34D0D4 /* EFQRCodeMode.swift */; };
+		80AC6DB61F066714FD26B14F9F9274F4 /* NSImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBCCF2BF4D64D817607A7191C4B5A36 /* NSImage+.swift */; };
+		83EE63509DDE46A301FDB352973327E2 /* CIImage+initWithImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD8D554D7886E126FB25C37F74A66A0 /* CIImage+initWithImage.swift */; };
+		846DF0A83838C09FD6A4385B41F44378 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD29060DF1D4484CF8B5DF6F87900BC7 /* Logger.swift */; };
+		8507700E00DC3C13923B6F3299B2F1D7 /* ImageArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E69BF2A94AB3AF14943CFE4AE2BFFE /* ImageArea.swift */; };
+		8A21A561CCDE112874B50E87B8576C86 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6464B16F59FD11FCE2B7F4C5823C2437 /* CoreImage.framework */; };
+		8D1E72A6BA27450809F69DB8DBCCF654 /* Capable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9FD0F0EEB8A92015DB8C3771AFD7E /* Capable-dummy.m */; };
+		8F2C1826D5312139D6B198682916C7B9 /* UIFont+fontProps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18ED3DDBAB869DBB07E6B50D083A5E9 /* UIFont+fontProps.swift */; };
+		8F646124024FA624FD7794EB09A454FE /* SheetyColorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D69487DCEE54B2CDCB3ABDF5481E00 /* SheetyColorProtocol.swift */; };
+		90A2D12FCCCD294BF583CA2C23BF0F89 /* CGImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69597722DB6D20F5096BC5C876AB288 /* CGImage+.swift */; };
+		9192AC8ADF1C4054440EF649CB3B8BD5 /* SheetyColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CE0B5E42C3B8B8CFF3A6E7F47A101DE /* SheetyColorsViewController.swift */; };
+		921408FB339B026EFDBF354A482CE862 /* UIAlertController+customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CBACB95C862F8D248C3868FD681B3A /* UIAlertController+customView.swift */; };
+		92B234B5FAEBD1B3E937EB7081FA68FE /* NSColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28194FBCEFD9A26582CC730DC7A862D0 /* NSColor+rgbaColor.swift */; };
+		94216C4658A417F38E4EE5C53E1C64D3 /* SheetyColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EF73DFAF11D8776BC3D58CC7FC8FB15 /* SheetyColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97AB8723F14EB49E766C4FE450E480FA /* AppearenceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251FF5EF7C9B3D8F9D914AEE36FDBB00 /* AppearenceProvider.swift */; };
+		9A7DB8FD4EDEF40A8082FBC4C04D5B90 /* SheetyColorsViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98244E464A18533BC5A633022E89D13 /* SheetyColorsViewFactory.swift */; };
+		9A8AE51AEEBA70E08A430B406E264CE8 /* UIColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B76107B3B23D5560A270D799674A65 /* UIColor+rgbaColor.swift */; };
+		9B37AD911AB4E2C25A5D6FDF737DA36A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0DA8B2F203EACA99F0DE1EEA8EC4AD /* Foundation.framework */; };
+		9E184920C60E52CB36D03187FD6A7C2F /* UIColor+rgbaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40860E238D3ADF73ABC6D4BD2376AF7 /* UIColor+rgbaColor.swift */; };
+		A10B7683D5B189DE20E98333FCDB3EAF /* PreviewColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A27CF540F2E45F0F0B277C3D4AAB3B /* PreviewColorView.swift */; };
+		A3FB1491A1A3B81152AF673DADCD2F34 /* SheetyColorsViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F44ABA3F118AD6F9F9E79EB76C6860 /* SheetyColorsViewModelDelegate.swift */; };
+		A400D853004BF9C61498073EE7DBB34D /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65F9ECC60E80BDF3234F8B0FB07A7E2 /* UIImage+.swift */; };
+		A4BA3929D2ABDB7A3A30D66F228B565B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23671BF59C0B946D38F06D7B4252ADAC /* UIKit.framework */; };
+		A4FFAA735C3E28883E2DA3F349E6BB76 /* Pods-TapQRCodeExample-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 761B9CB5CF375619CDEFD23BE540CA4A /* Pods-TapQRCodeExample-iOS-dummy.m */; };
+		AF31ACDB6F49FCF55518B2EE87440BAD /* NSColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200B10A2B1F67B4A68F060E23DA65DB7 /* NSColor+.swift */; };
 		B261CFAF032CA316BC60C5F411BDC91A /* Pods-TapQRCode-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B1F30073D2DBA9A25DA5F4015D8A4F2 /* Pods-TapQRCode-iOS-dummy.m */; };
-		B3A6897EFD0AEBE1D5F8671E4F6AE2A5 /* EFQRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E05E59F66815F9C7B400D38CB2B05B1C /* EFQRCode-dummy.m */; };
-		B5F46B5D174CA4D862217096BF44EC75 /* EFQRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C607E29A9F86621CB14E56F53564FC82 /* EFQRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BEF133AB83A2A0D550A9D375619C85BB /* EFQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = 059A015534D0029B51E0CEFA99BCF77A /* EFQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C45A04D31495F4ABE3E019D18E193BE0 /* EFUIntPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E797ED259353EBA9E627469231507FE1 /* EFUIntPixel.swift */; };
-		C96F4835FB14038992A694B66794179B /* EFQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C219DDB5E9DD2FD30A83F0B7D1F6FF /* EFQRCodeGenerator.swift */; };
-		D2B23A56D2C26F385CDCEBA4CE8753F6 /* CIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22608DE773E6F5959AA56FCF3C9514 /* CIColor+.swift */; };
+		B3A6897EFD0AEBE1D5F8671E4F6AE2A5 /* EFQRCode-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D593AB8343546E6A8D77A5787F2AF889 /* EFQRCode-dummy.m */; };
+		B4652984E852907A5A50CB620E43EE28 /* HSBAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13886BD8E103253655066A2923B05CAC /* HSBAColor.swift */; };
+		B5F46B5D174CA4D862217096BF44EC75 /* EFQRCode-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 043D0904789AA23893F5736A0C75227F /* EFQRCode-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BC0621156106076938EE4CB260141F0F /* SheetyColorsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3A0A2DF5C06D6E3FFAAF142B71FABD /* SheetyColorsViewModelProtocol.swift */; };
+		BEF133AB83A2A0D550A9D375619C85BB /* EFQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = F16EC822E941CC401EC94A04E17BB5F2 /* EFQRCode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C45A04D31495F4ABE3E019D18E193BE0 /* EFUIntPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB0D27DB499FA06AEB258D607BD2819 /* EFUIntPixel.swift */; };
+		C96F4835FB14038992A694B66794179B /* EFQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C96F84FD2399E4A3C41087D8463FF2 /* EFQRCodeGenerator.swift */; };
+		CA1940150CB01743CF82DD18D602FFA4 /* Bundle+framework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464AC32A0DECEAA55DF7D963C6A1CD45 /* Bundle+framework.swift */; };
+		CDEB6A1CC58A4C11D5970D1AD4071230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0DA8B2F203EACA99F0DE1EEA8EC4AD /* Foundation.framework */; };
+		D2B23A56D2C26F385CDCEBA4CE8753F6 /* CIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8288BA9D759369FF5B3CDFF6561EB58F /* CIColor+.swift */; };
 		D2D448A477D845B8DEB2A496D5D6A979 /* Pods-TapQRCode-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF7E93055685705973AB7744EAA100E /* Pods-TapQRCode-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D41EF6C20D2E4945B0A75FEAA1532F0D /* CGColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FFEB426639E4DE594DEF9FD29D63C5 /* CGColor+.swift */; };
-		D43E81E311DFACC24BD14D10C251EC7C /* EFWatermarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761A9C330B76F871BDBA4ED910F784B2 /* EFWatermarkMode.swift */; };
-		D883534EA6928A6120AEB30FC527B531 /* Pods-TapQRCodeExample-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 761B9CB5CF375619CDEFD23BE540CA4A /* Pods-TapQRCodeExample-iOS-dummy.m */; };
-		E9ACFED644F30501CDFACD07AB41F167 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCE7344823D8AFA960E180DB840E5D7 /* CoreGraphics.framework */; };
-		EA432B1EC6E34432BD1D59E4646490C5 /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C06DBC6BFC3765E064B9A8F3C03911A /* CIImage+.swift */; };
-		ECC232A6C0428D37D99A9F2CF6AB0BEA /* EFQRCodeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6304B3CBA5A0A4DA11103A18D87598F /* EFQRCodeRecognizer.swift */; };
-		FE5287EB29DE3E087141A7222CEB440E /* BinaryInteger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E46EA1297F161B1DCEFFB1E15FE157 /* BinaryInteger+.swift */; };
+		D41EF6C20D2E4945B0A75FEAA1532F0D /* CGColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39AA588B45E16A45BE1264B9EE83F13 /* CGColor+.swift */; };
+		D43E81E311DFACC24BD14D10C251EC7C /* EFWatermarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AF966638774B6D9A8E2E435D431F5F /* EFWatermarkMode.swift */; };
+		D542F2806D78202E89894939750D8457 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0DA8B2F203EACA99F0DE1EEA8EC4AD /* Foundation.framework */; };
+		E042A4B064675A65ADB9D7488F911BE4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F3037592A803DACAB646FFFEA84536C /* Images.xcassets */; };
+		E4E88BC89BAD91A2CFED33C63A48F16D /* ConformanceLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775FF01405CEFD3374475E811EDDE9F /* ConformanceLevel.swift */; };
+		E9ACFED644F30501CDFACD07AB41F167 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CEF86249CBC0EB22308731BDB4D8E4 /* CoreGraphics.framework */; };
+		EA432B1EC6E34432BD1D59E4646490C5 /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838F36CCB892D8EC72A480E39F5FBFE9 /* CIImage+.swift */; };
+		ECC232A6C0428D37D99A9F2CF6AB0BEA /* EFQRCodeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9FF8D87997B87C0DBEDAFEB9DB9767 /* EFQRCodeRecognizer.swift */; };
+		F17D86C84572047500394AC464FE37DA /* RGBViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709C2EEBC13BB83D78BCEFD38DBD0B35 /* RGBViewModel.swift */; };
+		F5D21084051570AC5807440E56821595 /* Pods-TapQRCodeExample-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7036D0983F1BCE1752648D0228B339CF /* Pods-TapQRCodeExample-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE4104BF18D4D78A4D90E46C4B33F315 /* Capable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B60DAD0FE2945E5CE476D0572602452D /* Capable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE5287EB29DE3E087141A7222CEB440E /* BinaryInteger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374CF786500CF00FA208DBC91849E90A /* BinaryInteger+.swift */; };
+		FFAD816E3F75BD1F6E69BEC2E917C40D /* Capable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD8031B427874F32B795AFFA67CA003E /* Capable.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		80D1A79262B61C5E312134E4484CC078 /* PBXContainerItemProxy */ = {
+		121E0C0371F51D0A14F7507CBC878BD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F691C395A15AB6A5F19A00E280D57E0F;
+			remoteInfo = Capable;
+		};
+		5B595892AE9A9A33A2D6780B02466BAC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4B97B69C9C0EFA8C1D26B782223AE6EE;
 			remoteInfo = EFQRCode;
+		};
+		A84D9C28DEBEA8598246CCCF872E5586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECE08F087467D1E7D49C414E560769CE;
+			remoteInfo = SheetyColors;
+		};
+		BA17D69127D9BE1907DDD401C7196418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F691C395A15AB6A5F19A00E280D57E0F;
+			remoteInfo = Capable;
 		};
 		FC7045403B0ACEE9D94A1C505AAE0562 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -60,58 +131,116 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		025FE78B0C1AB885BCD273512EE1FB1E /* EFQRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFQRCode.xcconfig; sourceTree = "<group>"; };
-		059A015534D0029B51E0CEFA99BCF77A /* EFQRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EFQRCode.h; path = Source/EFQRCode.h; sourceTree = "<group>"; };
+		0031E821F86471B3636C0A7E92518D54 /* RGBAColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RGBAColor.swift; path = Source/Colors/Models/RGBAColor.swift; sourceTree = "<group>"; };
+		02748B8E08E9A2DA7FD2C904F86231A5 /* Capable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Capable.modulemap; sourceTree = "<group>"; };
+		0283513C60BE999BA457B6F8E3BB58D3 /* EFQRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFQRCode.modulemap; sourceTree = "<group>"; };
+		043D0904789AA23893F5736A0C75227F /* EFQRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFQRCode-umbrella.h"; sourceTree = "<group>"; };
 		06B8482A54FD850F1004C83209CDBAC5 /* Pods-TapQRCodeExample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapQRCodeExample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		0FF06C1E112DDC5FFFFEE98A639A3104 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
-		125698E86A3511286D53FB6249D25A7E /* UIColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+.swift"; path = "Source/UIColor+.swift"; sourceTree = "<group>"; };
+		08993CFFFC289CDAE29CCCF83CA0B9AE /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		0B9FF8D87997B87C0DBEDAFEB9DB9767 /* EFQRCodeRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeRecognizer.swift; path = Source/EFQRCodeRecognizer.swift; sourceTree = "<group>"; };
+		0CE0B5E42C3B8B8CFF3A6E7F47A101DE /* SheetyColorsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorsViewController.swift; path = SheetyColors/Classes/Common/Views/SheetyColorsViewController.swift; sourceTree = "<group>"; };
+		0E32D72001EB3DD16CAAA085B6C13F09 /* EFPointShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFPointShape.swift; path = Source/EFPointShape.swift; sourceTree = "<group>"; };
+		13886BD8E103253655066A2923B05CAC /* HSBAColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSBAColor.swift; path = SheetyColors/Classes/HSB/Models/HSBAColor.swift; sourceTree = "<group>"; };
+		16008633F1BFE2C9DB34CDA957D93034 /* EFQRCode-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EFQRCode-Info.plist"; sourceTree = "<group>"; };
 		1E00D140C6524584DA75E683ABB61890 /* Pods_TapQRCode_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TapQRCode_iOS.framework; path = "Pods-TapQRCode-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F0DA8B2F203EACA99F0DE1EEA8EC4AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1FBCCF2BF4D64D817607A7191C4B5A36 /* NSImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSImage+.swift"; path = "Source/NSImage+.swift"; sourceTree = "<group>"; };
+		200B10A2B1F67B4A68F060E23DA65DB7 /* NSColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSColor+.swift"; path = "Source/NSColor+.swift"; sourceTree = "<group>"; };
+		23671BF59C0B946D38F06D7B4252ADAC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		251FF5EF7C9B3D8F9D914AEE36FDBB00 /* AppearenceProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppearenceProvider.swift; path = SheetyColors/Classes/Common/Models/AppearenceProvider.swift; sourceTree = "<group>"; };
+		28194FBCEFD9A26582CC730DC7A862D0 /* NSColor+rgbaColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSColor+rgbaColor.swift"; path = "Source/Colors/Extensions/NSColor+rgbaColor.swift"; sourceTree = "<group>"; };
+		2854B99729361055CAA0A773C3562566 /* UIView+anchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+anchor.swift"; path = "SheetyColors/Classes/Common/Views/Extensions/UIView+anchor.swift"; sourceTree = "<group>"; };
 		2B1F30073D2DBA9A25DA5F4015D8A4F2 /* Pods-TapQRCode-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TapQRCode-iOS-dummy.m"; sourceTree = "<group>"; };
+		2D4FF4B013F1D86A632B003054095A3C /* SheetyColorsType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorsType.swift; path = SheetyColors/Classes/Common/Models/SheetyColorsType.swift; sourceTree = "<group>"; };
 		2FF7E93055685705973AB7744EAA100E /* Pods-TapQRCode-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TapQRCode-iOS-umbrella.h"; sourceTree = "<group>"; };
-		31E70365B46E362AA8C58A23400C4196 /* NSImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSImage+.swift"; path = "Source/NSImage+.swift"; sourceTree = "<group>"; };
+		374CF786500CF00FA208DBC91849E90A /* BinaryInteger+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BinaryInteger+.swift"; path = "Source/BinaryInteger+.swift"; sourceTree = "<group>"; };
+		3B716BF7EC1BDE256501EF621681C6D0 /* HSBViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HSBViewModel.swift; path = SheetyColors/Classes/HSB/ViewModels/HSBViewModel.swift; sourceTree = "<group>"; };
+		3B7E4AA3201E76F78326015A295A3C22 /* SheetyColors-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SheetyColors-Info.plist"; sourceTree = "<group>"; };
+		41E69BF2A94AB3AF14943CFE4AE2BFFE /* ImageArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageArea.swift; path = Source/Colors/Models/ImageArea.swift; sourceTree = "<group>"; };
 		43041262A7B68821DECDB2D95CCA3242 /* Pods-TapQRCode-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TapQRCode-iOS.modulemap"; sourceTree = "<group>"; };
+		464AC32A0DECEAA55DF7D963C6A1CD45 /* Bundle+framework.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+framework.swift"; path = "SheetyColors/Classes/Common/Models/Extensions/Bundle+framework.swift"; sourceTree = "<group>"; };
+		46AEC3B1891FB29D006941960D34D0D4 /* EFQRCodeMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeMode.swift; path = Source/EFQRCodeMode.swift; sourceTree = "<group>"; };
+		48F44ABA3F118AD6F9F9E79EB76C6860 /* SheetyColorsViewModelDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorsViewModelDelegate.swift; path = SheetyColors/Classes/Common/ViewModels/SheetyColorsViewModelDelegate.swift; sourceTree = "<group>"; };
 		4919E5F2B6A6807BB518ABF82953B627 /* EFQRCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EFQRCode.framework; path = EFQRCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49DD5199D0818526BC3A94FE3F6CADE2 /* UIImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+.swift"; path = "Source/UIImage+.swift"; sourceTree = "<group>"; };
+		4D46C93D616E314384ED8B599C372C06 /* SheetyColorsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorsConfig.swift; path = SheetyColors/Classes/Common/Models/SheetyColorsConfig.swift; sourceTree = "<group>"; };
 		4D7F75AB634494436025391D9448E6B3 /* Pods-TapQRCodeExample-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TapQRCodeExample-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		4DCE7344823D8AFA960E180DB840E5D7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		540F47CF1D72FFCBDDB6DD78B5009FD1 /* BinaryFloatingPoint+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BinaryFloatingPoint+.swift"; path = "Source/BinaryFloatingPoint+.swift"; sourceTree = "<group>"; };
-		57D5A06506ADDB5EAEC8DC974719C3DD /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		4EF73DFAF11D8776BC3D58CC7FC8FB15 /* SheetyColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SheetyColors-umbrella.h"; sourceTree = "<group>"; };
+		524F554538795BB7E266AA58D7BACAC0 /* SheetyColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SheetyColors.xcconfig; sourceTree = "<group>"; };
+		59D69487DCEE54B2CDCB3ABDF5481E00 /* SheetyColorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorProtocol.swift; path = SheetyColors/Classes/Common/Models/Protocols/SheetyColorProtocol.swift; sourceTree = "<group>"; };
+		5A2A503372DE41F2B9258A01E2B9EC6B /* SheetyColorsViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SheetyColorsViewController.xib; path = SheetyColors/Classes/Common/Views/SheetyColorsViewController.xib; sourceTree = "<group>"; };
 		5B50CEF095D3E5C7EBBB1484214E3568 /* Pods-TapQRCode-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TapQRCode-iOS-Info.plist"; sourceTree = "<group>"; };
+		5B6CD38319D053A78E17C8B4AED4623A /* Color+wcag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Color+wcag.swift"; path = "Source/Colors/Extensions/Color+wcag.swift"; sourceTree = "<group>"; };
 		5C9F9B9BDBE28641ACAC00DDF2415E7F /* Pods-TapQRCodeExample-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TapQRCodeExample-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5E84D108D19D38F88246DF472F8BAB4B /* Pods_TapQRCodeExample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TapQRCodeExample_iOS.framework; path = "Pods-TapQRCodeExample-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		61FFEB426639E4DE594DEF9FD29D63C5 /* CGColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGColor+.swift"; path = "Source/CGColor+.swift"; sourceTree = "<group>"; };
-		68C219DDB5E9DD2FD30A83F0B7D1F6FF /* EFQRCodeGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeGenerator.swift; path = Source/EFQRCodeGenerator.swift; sourceTree = "<group>"; };
+		5EB0D27DB499FA06AEB258D607BD2819 /* EFUIntPixel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFUIntPixel.swift; path = Source/EFUIntPixel.swift; sourceTree = "<group>"; };
+		6464B16F59FD11FCE2B7F4C5823C2437 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		6DF9CE64945973EAB64D298F0DBB8525 /* SheetyColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SheetyColors.framework; path = SheetyColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FB3705534C65029B41396372E00D12D /* EFIntSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFIntSize.swift; path = Source/EFIntSize.swift; sourceTree = "<group>"; };
 		7036D0983F1BCE1752648D0228B339CF /* Pods-TapQRCodeExample-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TapQRCodeExample-iOS-umbrella.h"; sourceTree = "<group>"; };
-		70941C7A37AF872D34B1BC2C15C8E772 /* EFQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFQRCode-prefix.pch"; sourceTree = "<group>"; };
-		761A9C330B76F871BDBA4ED910F784B2 /* EFWatermarkMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFWatermarkMode.swift; path = Source/EFWatermarkMode.swift; sourceTree = "<group>"; };
+		709C2EEBC13BB83D78BCEFD38DBD0B35 /* RGBViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RGBViewModel.swift; path = SheetyColors/Classes/RGB/ViewModels/RGBViewModel.swift; sourceTree = "<group>"; };
 		761B9CB5CF375619CDEFD23BE540CA4A /* Pods-TapQRCodeExample-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TapQRCodeExample-iOS-dummy.m"; sourceTree = "<group>"; };
+		76610719F4CA36EA770143A14DFCE815 /* GrayscaleViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrayscaleViewModel.swift; path = SheetyColors/Classes/Grayscale/ViewModels/GrayscaleViewModel.swift; sourceTree = "<group>"; };
+		7775FF01405CEFD3374475E811EDDE9F /* ConformanceLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConformanceLevel.swift; path = Source/Colors/Models/ConformanceLevel.swift; sourceTree = "<group>"; };
 		7AA4D836FBE4D8A7B414F2A52C4D3634 /* Pods-TapQRCodeExample-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TapQRCodeExample-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		7C06DBC6BFC3765E064B9A8F3C03911A /* CIImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIImage+.swift"; path = "Source/CIImage+.swift"; sourceTree = "<group>"; };
-		8C2E1764B4472F92F914219509FB81AB /* EFInputCorrectionLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFInputCorrectionLevel.swift; path = Source/EFInputCorrectionLevel.swift; sourceTree = "<group>"; };
-		8DDE20F0790DCDAF1732FB3AC5F49099 /* EFPointShape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFPointShape.swift; path = Source/EFPointShape.swift; sourceTree = "<group>"; };
-		930A93F0AE81F9BE038EE2B14B3B72BD /* EFQRCodeMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeMode.swift; path = Source/EFQRCodeMode.swift; sourceTree = "<group>"; };
+		7B6F9EA7C81C984BEDC5C5123A2C6644 /* GradientSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientSlider.swift; path = SheetyColors/Classes/Common/Views/GradientSlider.swift; sourceTree = "<group>"; };
+		7B9615F1231DE345F16BFCBC5FDB167A /* UIColor+grayscaleColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+grayscaleColor.swift"; path = "SheetyColors/Classes/Grayscale/Models/Extensions/UIColor+grayscaleColor.swift"; sourceTree = "<group>"; };
+		8148092622EDCCDD91A9BDBDFA3AE3C3 /* EFQRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCode.swift; path = Source/EFQRCode.swift; sourceTree = "<group>"; };
+		8288BA9D759369FF5B3CDFF6561EB58F /* CIColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIColor+.swift"; path = "Source/CIColor+.swift"; sourceTree = "<group>"; };
+		838F36CCB892D8EC72A480E39F5FBFE9 /* CIImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIImage+.swift"; path = "Source/CIImage+.swift"; sourceTree = "<group>"; };
+		887F209B96E15B2C82103BDF55203082 /* FontProps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FontProps.swift; path = Source/Colors/Models/FontProps.swift; sourceTree = "<group>"; };
+		8BA9FD0F0EEB8A92015DB8C3771AFD7E /* Capable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Capable-dummy.m"; sourceTree = "<group>"; };
+		8C3A0A2DF5C06D6E3FFAAF142B71FABD /* SheetyColorsViewModelProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorsViewModelProtocol.swift; path = SheetyColors/Classes/Common/ViewModels/SheetyColorsViewModelProtocol.swift; sourceTree = "<group>"; };
+		8F3037592A803DACAB646FFFEA84536C /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SheetyColors/Classes/Common/Resources/Images.xcassets; sourceTree = "<group>"; };
+		9120C67981AA9382FF51BCB67CC6D7EA /* Colors.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Colors.xcassets; path = SheetyColors/Classes/Common/Resources/Colors.xcassets; sourceTree = "<group>"; };
 		96E8C792114397AC31E6230EA6A96FAB /* Pods-TapQRCodeExample-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TapQRCodeExample-iOS.modulemap"; sourceTree = "<group>"; };
-		9B22608DE773E6F5959AA56FCF3C9514 /* CIColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIColor+.swift"; path = "Source/CIColor+.swift"; sourceTree = "<group>"; };
+		9B3BBE0CBC5A11F0A6ED989809A577E5 /* OSLogType+greaterEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "OSLogType+greaterEqual.swift"; path = "Source/Common/Logger/OSLogType+greaterEqual.swift"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F65D3628FC9D524DF8002C97473E976 /* CGImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImage+.swift"; path = "Source/CGImage+.swift"; sourceTree = "<group>"; };
-		A2ED4D9A11B9C6ADECF0C632FAE05379 /* EFQRCode+GIF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EFQRCode+GIF.swift"; path = "Source/EFQRCode+GIF.swift"; sourceTree = "<group>"; };
-		C607E29A9F86621CB14E56F53564FC82 /* EFQRCode-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFQRCode-umbrella.h"; sourceTree = "<group>"; };
+		A07D0FCEBAAE00E50A13932D084C3BE9 /* Image+averageColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Image+averageColor.swift"; path = "Source/Colors/Extensions/Image+averageColor.swift"; sourceTree = "<group>"; };
+		A1BD6465F992B516E18188D3DEFE5CEE /* UIColor+hsbaColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+hsbaColor.swift"; path = "SheetyColors/Classes/HSB/Models/Extensions/UIColor+hsbaColor.swift"; sourceTree = "<group>"; };
+		A3A27CF540F2E45F0F0B277C3D4AAB3B /* PreviewColorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreviewColorView.swift; path = SheetyColors/Classes/Common/Views/PreviewColorView.swift; sourceTree = "<group>"; };
+		A5CBACB95C862F8D248C3868FD681B3A /* UIAlertController+customView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+customView.swift"; path = "SheetyColors/Classes/Common/Views/Extensions/UIAlertController+customView.swift"; sourceTree = "<group>"; };
+		ABF8E3755C9EF06F8451DABA57387327 /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Capable.framework; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF89DBE0E5B1C0A41A39119F5FFE9946 /* Capable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Capable-Info.plist"; sourceTree = "<group>"; };
+		B1CEF86249CBC0EB22308731BDB4D8E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		B30238AC1C480C2172B1AAFEA1C4D1C9 /* RGBAColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RGBAColor.swift; path = SheetyColors/Classes/RGB/Models/RGBAColor.swift; sourceTree = "<group>"; };
+		B60DAD0FE2945E5CE476D0572602452D /* Capable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Capable-umbrella.h"; sourceTree = "<group>"; };
+		B922D53BE1C9FF7441FB6CD1C34F98DA /* EFQRCode-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EFQRCode-prefix.pch"; sourceTree = "<group>"; };
+		BE84429A397C5CFC6B838471F737A4DF /* GrayscaleColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GrayscaleColor.swift; path = SheetyColors/Classes/Grayscale/Models/GrayscaleColor.swift; sourceTree = "<group>"; };
+		BFB273F3BD10EA573A2BEBDBB9B4AA8C /* EFInputCorrectionLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFInputCorrectionLevel.swift; path = Source/EFInputCorrectionLevel.swift; sourceTree = "<group>"; };
+		C1AF966638774B6D9A8E2E435D431F5F /* EFWatermarkMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFWatermarkMode.swift; path = Source/EFWatermarkMode.swift; sourceTree = "<group>"; };
+		C2F02E38B658E02A6A9988F59893CE0B /* CGFloat+constrainToRange.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGFloat+constrainToRange.swift"; path = "SheetyColors/Classes/Common/Models/Extensions/CGFloat+constrainToRange.swift"; sourceTree = "<group>"; };
+		C3FFFF67D1EDB878B1EF1B3972C627E5 /* SheetyColorsViewProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorsViewProtocol.swift; path = SheetyColors/Classes/Common/Views/Protocols/SheetyColorsViewProtocol.swift; sourceTree = "<group>"; };
+		C460512C62B5A681FDA7A8C6C2A91E88 /* Capable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Capable.xcconfig; sourceTree = "<group>"; };
+		C5AC2905BE51DBADAC40B676C00FC21F /* SheetyColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SheetyColors-dummy.m"; sourceTree = "<group>"; };
+		C5F5BBA58DFA5FF5860F7CE1920F8F39 /* SheetyColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SheetyColors.modulemap; sourceTree = "<group>"; };
+		C65F9ECC60E80BDF3234F8B0FB07A7E2 /* UIImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+.swift"; path = "Source/UIImage+.swift"; sourceTree = "<group>"; };
+		CA6A1D9E8DE6896E9AD87BC6B0941F0C /* NSFont+fontProps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSFont+fontProps.swift"; path = "Source/Colors/Extensions/NSFont+fontProps.swift"; sourceTree = "<group>"; };
+		CED4C124A90B4AB4F593728B7D73A5B2 /* SheetyColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SheetyColors-prefix.pch"; sourceTree = "<group>"; };
 		D186748F89CD6874FC7C98E327581CD9 /* Pods-TapQRCode-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TapQRCode-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		D18CF50A78765D66315C090D23E388CF /* NSColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSColor+.swift"; path = "Source/NSColor+.swift"; sourceTree = "<group>"; };
+		D18ED3DDBAB869DBB07E6B50D083A5E9 /* UIFont+fontProps.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+fontProps.swift"; path = "Source/Colors/Extensions/UIFont+fontProps.swift"; sourceTree = "<group>"; };
 		D47FC938707D6717994640B381D96631 /* Pods-TapQRCodeExample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapQRCodeExample-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		D516F6D49C5A67F3AA7E3D2E1228207F /* Pods-TapQRCodeExample-iOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TapQRCodeExample-iOS-Info.plist"; sourceTree = "<group>"; };
+		D593AB8343546E6A8D77A5787F2AF889 /* EFQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFQRCode-dummy.m"; sourceTree = "<group>"; };
+		D5C96F84FD2399E4A3C41087D8463FF2 /* EFQRCodeGenerator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeGenerator.swift; path = Source/EFQRCodeGenerator.swift; sourceTree = "<group>"; };
+		D69597722DB6D20F5096BC5C876AB288 /* CGImage+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGImage+.swift"; path = "Source/CGImage+.swift"; sourceTree = "<group>"; };
 		D71A02EBAB32C981C4B9659FABC74C2F /* Pods-TapQRCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapQRCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		D78CE5C3F7A7C3A7132E247B6B875002 /* EFQRCode-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EFQRCode-Info.plist"; sourceTree = "<group>"; };
-		DA7BE615C9FB1064B24E4F111DE51F87 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E05E59F66815F9C7B400D38CB2B05B1C /* EFQRCode-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EFQRCode-dummy.m"; sourceTree = "<group>"; };
-		E08336D4D04FA533CEDB2C32A6A18BF0 /* EFQRCode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCode.swift; path = Source/EFQRCode.swift; sourceTree = "<group>"; };
-		E0EAB1B4C3B253B5AE90B4E100530439 /* EFQRCode.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = EFQRCode.modulemap; sourceTree = "<group>"; };
+		D77CFCC237B1C92D43901C1418564378 /* AppearenceProviderProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AppearenceProviderProtocol.swift; path = SheetyColors/Classes/Common/Models/Protocols/AppearenceProviderProtocol.swift; sourceTree = "<group>"; };
+		DC5C850E848FAC7BCF82F5B35D67C007 /* Capable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Capable-prefix.pch"; sourceTree = "<group>"; };
+		DCD8D554D7886E126FB25C37F74A66A0 /* CIImage+initWithImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIImage+initWithImage.swift"; path = "Source/Colors/Extensions/CIImage+initWithImage.swift"; sourceTree = "<group>"; };
+		E0165FC2131EA618994FAF0ED02A6469 /* SheetyColorsConfigProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorsConfigProtocol.swift; path = SheetyColors/Classes/Common/Models/Protocols/SheetyColorsConfigProtocol.swift; sourceTree = "<group>"; };
 		E2E629EE77B58F5B99F1DD6622B8D31C /* Pods-TapQRCode-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TapQRCode-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E6304B3CBA5A0A4DA11103A18D87598F /* EFQRCodeRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFQRCodeRecognizer.swift; path = Source/EFQRCodeRecognizer.swift; sourceTree = "<group>"; };
-		E65D393BA0D1C172F2CD5CC61B269D54 /* EFIntSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFIntSize.swift; path = Source/EFIntSize.swift; sourceTree = "<group>"; };
-		E797ED259353EBA9E627469231507FE1 /* EFUIntPixel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EFUIntPixel.swift; path = Source/EFUIntPixel.swift; sourceTree = "<group>"; };
+		E40860E238D3ADF73ABC6D4BD2376AF7 /* UIColor+rgbaColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+rgbaColor.swift"; path = "SheetyColors/Classes/RGB/Models/Extensions/UIColor+rgbaColor.swift"; sourceTree = "<group>"; };
+		E83D66DCB4FE0476EF2F1D6B9EE43F05 /* EFQRCode.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EFQRCode.xcconfig; sourceTree = "<group>"; };
+		E98244E464A18533BC5A633022E89D13 /* SheetyColorsViewFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SheetyColorsViewFactory.swift; path = SheetyColors/Classes/Common/Factory/SheetyColorsViewFactory.swift; sourceTree = "<group>"; };
+		E9B76107B3B23D5560A270D799674A65 /* UIColor+rgbaColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+rgbaColor.swift"; path = "Source/Colors/Extensions/UIColor+rgbaColor.swift"; sourceTree = "<group>"; };
+		EF5D8C3AC51A26AC4EE26A36C1D1808C /* EFQRCode+GIF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "EFQRCode+GIF.swift"; path = "Source/EFQRCode+GIF.swift"; sourceTree = "<group>"; };
+		F16EC822E941CC401EC94A04E17BB5F2 /* EFQRCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EFQRCode.h; path = Source/EFQRCode.h; sourceTree = "<group>"; };
+		F25D6606F6FAAD3B0F83078D6E7C789C /* UIColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+.swift"; path = "Source/UIColor+.swift"; sourceTree = "<group>"; };
+		F39AA588B45E16A45BE1264B9EE83F13 /* CGColor+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGColor+.swift"; path = "Source/CGColor+.swift"; sourceTree = "<group>"; };
 		F4A53B744D586E03204FF655D048475C /* Pods-TapQRCode-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TapQRCode-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		F6E46EA1297F161B1DCEFFB1E15FE157 /* BinaryInteger+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BinaryInteger+.swift"; path = "Source/BinaryInteger+.swift"; sourceTree = "<group>"; };
+		FC2FA665C98511C00DE661E8281EAF8F /* BinaryFloatingPoint+.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BinaryFloatingPoint+.swift"; path = "Source/BinaryFloatingPoint+.swift"; sourceTree = "<group>"; };
+		FD29060DF1D4484CF8B5DF6F87900BC7 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Source/Common/Logger/Logger.swift; sourceTree = "<group>"; };
+		FD8031B427874F32B795AFFA67CA003E /* Capable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Capable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,11 +255,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		095049E9A51442ADD4774FEF6BA1F69A /* Frameworks */ = {
+		26F9C2586E7DF5061B5BCD9E2563B89B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8073BFD5DA2DB9D9166BB5F219E8FAD8 /* Foundation.framework in Frameworks */,
+				D542F2806D78202E89894939750D8457 /* Foundation.framework in Frameworks */,
+				A4BA3929D2ABDB7A3A30D66F228B565B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +269,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				64FB4092793AFD2EE037F735BBDAE255 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F71F0DB14B583051FE741AA146D164F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFAD816E3F75BD1F6E69BEC2E917C40D /* Capable.framework in Frameworks */,
+				5731F5AA571DF585B8FF5ED55934735F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0AFFFFD15FFCB6104B577DCA0CDA773 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDEB6A1CC58A4C11D5970D1AD4071230 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,66 +309,86 @@
 			path = "Target Support Files/Pods-TapQRCodeExample-iOS";
 			sourceTree = "<group>";
 		};
-		0C7E2F227C1E4BFD36F62E007A8E9E5A /* Core */ = {
+		19A02CF3A3A3575ACE449ED7AF52BB1C /* EFQRCode */ = {
 			isa = PBXGroup;
 			children = (
-				540F47CF1D72FFCBDDB6DD78B5009FD1 /* BinaryFloatingPoint+.swift */,
-				F6E46EA1297F161B1DCEFFB1E15FE157 /* BinaryInteger+.swift */,
-				61FFEB426639E4DE594DEF9FD29D63C5 /* CGColor+.swift */,
-				9F65D3628FC9D524DF8002C97473E976 /* CGImage+.swift */,
-				9B22608DE773E6F5959AA56FCF3C9514 /* CIColor+.swift */,
-				7C06DBC6BFC3765E064B9A8F3C03911A /* CIImage+.swift */,
-				8C2E1764B4472F92F914219509FB81AB /* EFInputCorrectionLevel.swift */,
-				E65D393BA0D1C172F2CD5CC61B269D54 /* EFIntSize.swift */,
-				8DDE20F0790DCDAF1732FB3AC5F49099 /* EFPointShape.swift */,
-				059A015534D0029B51E0CEFA99BCF77A /* EFQRCode.h */,
-				E08336D4D04FA533CEDB2C32A6A18BF0 /* EFQRCode.swift */,
-				A2ED4D9A11B9C6ADECF0C632FAE05379 /* EFQRCode+GIF.swift */,
-				68C219DDB5E9DD2FD30A83F0B7D1F6FF /* EFQRCodeGenerator.swift */,
-				930A93F0AE81F9BE038EE2B14B3B72BD /* EFQRCodeMode.swift */,
-				E6304B3CBA5A0A4DA11103A18D87598F /* EFQRCodeRecognizer.swift */,
-				E797ED259353EBA9E627469231507FE1 /* EFUIntPixel.swift */,
-				761A9C330B76F871BDBA4ED910F784B2 /* EFWatermarkMode.swift */,
-				D18CF50A78765D66315C090D23E388CF /* NSColor+.swift */,
-				31E70365B46E362AA8C58A23400C4196 /* NSImage+.swift */,
-				125698E86A3511286D53FB6249D25A7E /* UIColor+.swift */,
-				49DD5199D0818526BC3A94FE3F6CADE2 /* UIImage+.swift */,
+				A772CCBAD3061B3DDB6CB1F34E510D3F /* Core */,
+				3F9EB7DF0CF158DBB58DE1AD33545D10 /* Support Files */,
 			);
-			name = Core;
+			name = EFQRCode;
+			path = EFQRCode;
 			sourceTree = "<group>";
 		};
-		1C3EB752C75059FD0BEDA64C90EA1409 /* Products */ = {
+		2077F40105766FF4082FD2010295EB25 /* Capable */ = {
 			isa = PBXGroup;
 			children = (
-				4919E5F2B6A6807BB518ABF82953B627 /* EFQRCode.framework */,
-				1E00D140C6524584DA75E683ABB61890 /* Pods_TapQRCode_iOS.framework */,
-				5E84D108D19D38F88246DF472F8BAB4B /* Pods_TapQRCodeExample_iOS.framework */,
+				D1398EF598CA16892C6C56DBF7AE4D6D /* Colors */,
+				49212C407938B5B4AE5048737B35E115 /* Support Files */,
 			);
-			name = Products;
+			name = Capable;
+			path = Capable;
 			sourceTree = "<group>";
 		};
-		392B37DBDFB4E42E9B75AD39D347E0B6 /* Support Files */ = {
+		3F9EB7DF0CF158DBB58DE1AD33545D10 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E0EAB1B4C3B253B5AE90B4E100530439 /* EFQRCode.modulemap */,
-				025FE78B0C1AB885BCD273512EE1FB1E /* EFQRCode.xcconfig */,
-				E05E59F66815F9C7B400D38CB2B05B1C /* EFQRCode-dummy.m */,
-				D78CE5C3F7A7C3A7132E247B6B875002 /* EFQRCode-Info.plist */,
-				70941C7A37AF872D34B1BC2C15C8E772 /* EFQRCode-prefix.pch */,
-				C607E29A9F86621CB14E56F53564FC82 /* EFQRCode-umbrella.h */,
+				0283513C60BE999BA457B6F8E3BB58D3 /* EFQRCode.modulemap */,
+				E83D66DCB4FE0476EF2F1D6B9EE43F05 /* EFQRCode.xcconfig */,
+				D593AB8343546E6A8D77A5787F2AF889 /* EFQRCode-dummy.m */,
+				16008633F1BFE2C9DB34CDA957D93034 /* EFQRCode-Info.plist */,
+				B922D53BE1C9FF7441FB6CD1C34F98DA /* EFQRCode-prefix.pch */,
+				043D0904789AA23893F5736A0C75227F /* EFQRCode-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/EFQRCode";
 			sourceTree = "<group>";
 		};
-		830E7F187E6FB1717905D3CE32A661CD /* EFQRCode */ = {
+		49212C407938B5B4AE5048737B35E115 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0C7E2F227C1E4BFD36F62E007A8E9E5A /* Core */,
-				392B37DBDFB4E42E9B75AD39D347E0B6 /* Support Files */,
+				02748B8E08E9A2DA7FD2C904F86231A5 /* Capable.modulemap */,
+				C460512C62B5A681FDA7A8C6C2A91E88 /* Capable.xcconfig */,
+				8BA9FD0F0EEB8A92015DB8C3771AFD7E /* Capable-dummy.m */,
+				AF89DBE0E5B1C0A41A39119F5FFE9946 /* Capable-Info.plist */,
+				DC5C850E848FAC7BCF82F5B35D67C007 /* Capable-prefix.pch */,
+				B60DAD0FE2945E5CE476D0572602452D /* Capable-umbrella.h */,
 			);
-			name = EFQRCode;
-			path = EFQRCode;
+			name = "Support Files";
+			path = "../Target Support Files/Capable";
+			sourceTree = "<group>";
+		};
+		50070199017557AAD2621C83B990109D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B1CEF86249CBC0EB22308731BDB4D8E4 /* CoreGraphics.framework */,
+				6464B16F59FD11FCE2B7F4C5823C2437 /* CoreImage.framework */,
+				1F0DA8B2F203EACA99F0DE1EEA8EC4AD /* Foundation.framework */,
+				08993CFFFC289CDAE29CCCF83CA0B9AE /* ImageIO.framework */,
+				23671BF59C0B946D38F06D7B4252ADAC /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		75094CE52A0FB95A33F64B02D6534569 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9120C67981AA9382FF51BCB67CC6D7EA /* Colors.xcassets */,
+				8F3037592A803DACAB646FFFEA84536C /* Images.xcassets */,
+				5A2A503372DE41F2B9258A01E2B9EC6B /* SheetyColorsViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		89F59FFC8DA7BC83363F238D89F777C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABF8E3755C9EF06F8451DABA57387327 /* Capable.framework */,
+				4919E5F2B6A6807BB518ABF82953B627 /* EFQRCode.framework */,
+				1E00D140C6524584DA75E683ABB61890 /* Pods_TapQRCode_iOS.framework */,
+				5E84D108D19D38F88246DF472F8BAB4B /* Pods_TapQRCodeExample_iOS.framework */,
+				6DF9CE64945973EAB64D298F0DBB8525 /* SheetyColors.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		95C624F7DF2167C099E680CCD7A0A922 /* Pods-TapQRCode-iOS */ = {
@@ -240,6 +407,80 @@
 			path = "Target Support Files/Pods-TapQRCode-iOS";
 			sourceTree = "<group>";
 		};
+		9866ABA93AF1649F8C5453B610A5BE9F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2077F40105766FF4082FD2010295EB25 /* Capable */,
+				19A02CF3A3A3575ACE449ED7AF52BB1C /* EFQRCode */,
+				9CAE79C385990259A79BAA0AED179751 /* SheetyColors */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9CAE79C385990259A79BAA0AED179751 /* SheetyColors */ = {
+			isa = PBXGroup;
+			children = (
+				251FF5EF7C9B3D8F9D914AEE36FDBB00 /* AppearenceProvider.swift */,
+				D77CFCC237B1C92D43901C1418564378 /* AppearenceProviderProtocol.swift */,
+				464AC32A0DECEAA55DF7D963C6A1CD45 /* Bundle+framework.swift */,
+				C2F02E38B658E02A6A9988F59893CE0B /* CGFloat+constrainToRange.swift */,
+				7B6F9EA7C81C984BEDC5C5123A2C6644 /* GradientSlider.swift */,
+				BE84429A397C5CFC6B838471F737A4DF /* GrayscaleColor.swift */,
+				76610719F4CA36EA770143A14DFCE815 /* GrayscaleViewModel.swift */,
+				13886BD8E103253655066A2923B05CAC /* HSBAColor.swift */,
+				3B716BF7EC1BDE256501EF621681C6D0 /* HSBViewModel.swift */,
+				A3A27CF540F2E45F0F0B277C3D4AAB3B /* PreviewColorView.swift */,
+				B30238AC1C480C2172B1AAFEA1C4D1C9 /* RGBAColor.swift */,
+				709C2EEBC13BB83D78BCEFD38DBD0B35 /* RGBViewModel.swift */,
+				59D69487DCEE54B2CDCB3ABDF5481E00 /* SheetyColorProtocol.swift */,
+				4D46C93D616E314384ED8B599C372C06 /* SheetyColorsConfig.swift */,
+				E0165FC2131EA618994FAF0ED02A6469 /* SheetyColorsConfigProtocol.swift */,
+				2D4FF4B013F1D86A632B003054095A3C /* SheetyColorsType.swift */,
+				0CE0B5E42C3B8B8CFF3A6E7F47A101DE /* SheetyColorsViewController.swift */,
+				E98244E464A18533BC5A633022E89D13 /* SheetyColorsViewFactory.swift */,
+				48F44ABA3F118AD6F9F9E79EB76C6860 /* SheetyColorsViewModelDelegate.swift */,
+				8C3A0A2DF5C06D6E3FFAAF142B71FABD /* SheetyColorsViewModelProtocol.swift */,
+				C3FFFF67D1EDB878B1EF1B3972C627E5 /* SheetyColorsViewProtocol.swift */,
+				A5CBACB95C862F8D248C3868FD681B3A /* UIAlertController+customView.swift */,
+				7B9615F1231DE345F16BFCBC5FDB167A /* UIColor+grayscaleColor.swift */,
+				A1BD6465F992B516E18188D3DEFE5CEE /* UIColor+hsbaColor.swift */,
+				E40860E238D3ADF73ABC6D4BD2376AF7 /* UIColor+rgbaColor.swift */,
+				2854B99729361055CAA0A773C3562566 /* UIView+anchor.swift */,
+				75094CE52A0FB95A33F64B02D6534569 /* Resources */,
+				F5BDD2C6126E350057FD822B543CAF50 /* Support Files */,
+			);
+			name = SheetyColors;
+			path = SheetyColors;
+			sourceTree = "<group>";
+		};
+		A772CCBAD3061B3DDB6CB1F34E510D3F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FC2FA665C98511C00DE661E8281EAF8F /* BinaryFloatingPoint+.swift */,
+				374CF786500CF00FA208DBC91849E90A /* BinaryInteger+.swift */,
+				F39AA588B45E16A45BE1264B9EE83F13 /* CGColor+.swift */,
+				D69597722DB6D20F5096BC5C876AB288 /* CGImage+.swift */,
+				8288BA9D759369FF5B3CDFF6561EB58F /* CIColor+.swift */,
+				838F36CCB892D8EC72A480E39F5FBFE9 /* CIImage+.swift */,
+				BFB273F3BD10EA573A2BEBDBB9B4AA8C /* EFInputCorrectionLevel.swift */,
+				6FB3705534C65029B41396372E00D12D /* EFIntSize.swift */,
+				0E32D72001EB3DD16CAAA085B6C13F09 /* EFPointShape.swift */,
+				F16EC822E941CC401EC94A04E17BB5F2 /* EFQRCode.h */,
+				8148092622EDCCDD91A9BDBDFA3AE3C3 /* EFQRCode.swift */,
+				EF5D8C3AC51A26AC4EE26A36C1D1808C /* EFQRCode+GIF.swift */,
+				D5C96F84FD2399E4A3C41087D8463FF2 /* EFQRCodeGenerator.swift */,
+				46AEC3B1891FB29D006941960D34D0D4 /* EFQRCodeMode.swift */,
+				0B9FF8D87997B87C0DBEDAFEB9DB9767 /* EFQRCodeRecognizer.swift */,
+				5EB0D27DB499FA06AEB258D607BD2819 /* EFUIntPixel.swift */,
+				C1AF966638774B6D9A8E2E435D431F5F /* EFWatermarkMode.swift */,
+				200B10A2B1F67B4A68F060E23DA65DB7 /* NSColor+.swift */,
+				1FBCCF2BF4D64D817607A7191C4B5A36 /* NSImage+.swift */,
+				F25D6606F6FAAD3B0F83078D6E7C789C /* UIColor+.swift */,
+				C65F9ECC60E80BDF3234F8B0FB07A7E2 /* UIImage+.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		B666C7A73C8D44AF5A2DB32A8F6986BC /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,10 +490,11 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+		BC6EB48823E338CCA8E10B7B0ABE408A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E4F935C7DF84E1312C4C0F2FC316B346 /* iOS */,
+				FD8031B427874F32B795AFFA67CA003E /* Capable.framework */,
+				50070199017557AAD2621C83B990109D /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -261,40 +503,63 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				DDECF83B9545BEAEFBD8CFFF69CFC04B /* Pods */,
-				1C3EB752C75059FD0BEDA64C90EA1409 /* Products */,
+				BC6EB48823E338CCA8E10B7B0ABE408A /* Frameworks */,
+				9866ABA93AF1649F8C5453B610A5BE9F /* Pods */,
+				89F59FFC8DA7BC83363F238D89F777C3 /* Products */,
 				B666C7A73C8D44AF5A2DB32A8F6986BC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		DDECF83B9545BEAEFBD8CFFF69CFC04B /* Pods */ = {
+		D1398EF598CA16892C6C56DBF7AE4D6D /* Colors */ = {
 			isa = PBXGroup;
 			children = (
-				830E7F187E6FB1717905D3CE32A661CD /* EFQRCode */,
+				DCD8D554D7886E126FB25C37F74A66A0 /* CIImage+initWithImage.swift */,
+				5B6CD38319D053A78E17C8B4AED4623A /* Color+wcag.swift */,
+				7775FF01405CEFD3374475E811EDDE9F /* ConformanceLevel.swift */,
+				887F209B96E15B2C82103BDF55203082 /* FontProps.swift */,
+				A07D0FCEBAAE00E50A13932D084C3BE9 /* Image+averageColor.swift */,
+				41E69BF2A94AB3AF14943CFE4AE2BFFE /* ImageArea.swift */,
+				FD29060DF1D4484CF8B5DF6F87900BC7 /* Logger.swift */,
+				28194FBCEFD9A26582CC730DC7A862D0 /* NSColor+rgbaColor.swift */,
+				CA6A1D9E8DE6896E9AD87BC6B0941F0C /* NSFont+fontProps.swift */,
+				9B3BBE0CBC5A11F0A6ED989809A577E5 /* OSLogType+greaterEqual.swift */,
+				0031E821F86471B3636C0A7E92518D54 /* RGBAColor.swift */,
+				E9B76107B3B23D5560A270D799674A65 /* UIColor+rgbaColor.swift */,
+				D18ED3DDBAB869DBB07E6B50D083A5E9 /* UIFont+fontProps.swift */,
 			);
-			name = Pods;
+			name = Colors;
 			sourceTree = "<group>";
 		};
-		E4F935C7DF84E1312C4C0F2FC316B346 /* iOS */ = {
+		F5BDD2C6126E350057FD822B543CAF50 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4DCE7344823D8AFA960E180DB840E5D7 /* CoreGraphics.framework */,
-				0FF06C1E112DDC5FFFFEE98A639A3104 /* CoreImage.framework */,
-				DA7BE615C9FB1064B24E4F111DE51F87 /* Foundation.framework */,
-				57D5A06506ADDB5EAEC8DC974719C3DD /* ImageIO.framework */,
+				C5F5BBA58DFA5FF5860F7CE1920F8F39 /* SheetyColors.modulemap */,
+				524F554538795BB7E266AA58D7BACAC0 /* SheetyColors.xcconfig */,
+				C5AC2905BE51DBADAC40B676C00FC21F /* SheetyColors-dummy.m */,
+				3B7E4AA3201E76F78326015A295A3C22 /* SheetyColors-Info.plist */,
+				CED4C124A90B4AB4F593728B7D73A5B2 /* SheetyColors-prefix.pch */,
+				4EF73DFAF11D8776BC3D58CC7FC8FB15 /* SheetyColors-umbrella.h */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/SheetyColors";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		56AC92B5A9F604C03AC42C82A6F4ADDD /* Headers */ = {
+		3BEF36DC778EAFDF769935089233EA04 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966F33A05F55F9707E09E788D40220F2 /* Pods-TapQRCodeExample-iOS-umbrella.h in Headers */,
+				FE4104BF18D4D78A4D90E46C4B33F315 /* Capable-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A17B11E7C9546277B4B733C86AA577C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D21084051570AC5807440E56821595 /* Pods-TapQRCodeExample-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,22 +580,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FF48EE7E179802A22DE75D7730A1F128 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94216C4658A417F38E4EE5C53E1C64D3 /* SheetyColors-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3095BCDB1B4639C625A6F634D84F6A3F /* Pods-TapQRCodeExample-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3C314ADC7D98299DA12F6633FDFE83C6 /* Build configuration list for PBXNativeTarget "Pods-TapQRCodeExample-iOS" */;
+			buildConfigurationList = D217AC257F38F562EDE3A9BA43BCFC73 /* Build configuration list for PBXNativeTarget "Pods-TapQRCodeExample-iOS" */;
 			buildPhases = (
-				56AC92B5A9F604C03AC42C82A6F4ADDD /* Headers */,
-				41336B868B6FD98DA5F4A8620EB4C7D3 /* Sources */,
-				095049E9A51442ADD4774FEF6BA1F69A /* Frameworks */,
-				55FAEB30FBD59B646DECA55218D58F34 /* Resources */,
+				6A17B11E7C9546277B4B733C86AA577C /* Headers */,
+				1C7019D820FE50B782DA0D0F454B4BC1 /* Sources */,
+				A0AFFFFD15FFCB6104B577DCA0CDA773 /* Frameworks */,
+				DBE407696067D120A1B79AE0248B73E0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4F48B2E7D6EBCF8EAA8B7E2F946DBA4F /* PBXTargetDependency */,
+				02EDE7B5E81AA416F4EEA653A932CA7F /* PBXTargetDependency */,
+				C277193F1DC5A51A01294BB7DA4B01E6 /* PBXTargetDependency */,
+				7B60F624EABF13273DCA66A653AD9433 /* PBXTargetDependency */,
 			);
 			name = "Pods-TapQRCodeExample-iOS";
 			productName = "Pods-TapQRCodeExample-iOS";
@@ -374,6 +649,43 @@
 			productReference = 1E00D140C6524584DA75E683ABB61890 /* Pods_TapQRCode_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		ECE08F087467D1E7D49C414E560769CE /* SheetyColors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD03F248CEA0B4C13CE8A313797B2779 /* Build configuration list for PBXNativeTarget "SheetyColors" */;
+			buildPhases = (
+				FF48EE7E179802A22DE75D7730A1F128 /* Headers */,
+				46757E80C6132F90B20CD8A55D7D9814 /* Sources */,
+				9F71F0DB14B583051FE741AA146D164F /* Frameworks */,
+				9FF0F705769D0C322C1F903CB6F7AE44 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D300D1860610499651136554ECCCB442 /* PBXTargetDependency */,
+			);
+			name = SheetyColors;
+			productName = SheetyColors;
+			productReference = 6DF9CE64945973EAB64D298F0DBB8525 /* SheetyColors.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F691C395A15AB6A5F19A00E280D57E0F /* Capable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE7732A11754A43947B2CB3571278E58 /* Build configuration list for PBXNativeTarget "Capable" */;
+			buildPhases = (
+				3BEF36DC778EAFDF769935089233EA04 /* Headers */,
+				7C0D6ABF6D75F73AEBFFE5C70FD8AFC8 /* Sources */,
+				26F9C2586E7DF5061B5BCD9E2563B89B /* Frameworks */,
+				DF3BF2145F0CD240CE0715959D9B5B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Capable;
+			productName = Capable;
+			productReference = ABF8E3755C9EF06F8451DABA57387327 /* Capable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -384,7 +696,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -392,26 +704,45 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1C3EB752C75059FD0BEDA64C90EA1409 /* Products */;
+			productRefGroup = 89F59FFC8DA7BC83363F238D89F777C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				F691C395A15AB6A5F19A00E280D57E0F /* Capable */,
 				4B97B69C9C0EFA8C1D26B782223AE6EE /* EFQRCode */,
 				7B2FBDE08F15F959F3720F009B3B9C6D /* Pods-TapQRCode-iOS */,
 				3095BCDB1B4639C625A6F634D84F6A3F /* Pods-TapQRCodeExample-iOS */,
+				ECE08F087467D1E7D49C414E560769CE /* SheetyColors */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		55FAEB30FBD59B646DECA55218D58F34 /* Resources */ = {
+		6A64DCC495F1B5B4DE41C8DE76F3F3F0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A64DCC495F1B5B4DE41C8DE76F3F3F0 /* Resources */ = {
+		9FF0F705769D0C322C1F903CB6F7AE44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1393ECFE3E2FE6892082509B8234F4E4 /* Colors.xcassets in Resources */,
+				E042A4B064675A65ADB9D7488F911BE4 /* Images.xcassets in Resources */,
+				0CB933D9409EC9E812EB4EB838AED5D5 /* SheetyColorsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBE407696067D120A1B79AE0248B73E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3BF2145F0CD240CE0715959D9B5B24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,6 +759,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C7019D820FE50B782DA0D0F454B4BC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4FFAA735C3E28883E2DA3F349E6BB76 /* Pods-TapQRCodeExample-iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		360EEA1B7D78EC6505FCA45C3A9CC59F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,11 +795,58 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		41336B868B6FD98DA5F4A8620EB4C7D3 /* Sources */ = {
+		46757E80C6132F90B20CD8A55D7D9814 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D883534EA6928A6120AEB30FC527B531 /* Pods-TapQRCodeExample-iOS-dummy.m in Sources */,
+				97AB8723F14EB49E766C4FE450E480FA /* AppearenceProvider.swift in Sources */,
+				27E369EBE1DAFF0564E5DAE0EF719B9D /* AppearenceProviderProtocol.swift in Sources */,
+				CA1940150CB01743CF82DD18D602FFA4 /* Bundle+framework.swift in Sources */,
+				6EA6C3894C63CB147213E1DFB3A9DFF1 /* CGFloat+constrainToRange.swift in Sources */,
+				247E723AB499ED7CE06C76A87719BD9B /* GradientSlider.swift in Sources */,
+				2344501E78D93C70401F7D680DFC12FA /* GrayscaleColor.swift in Sources */,
+				79A8EA8EE1DC41E2EE7A9BF2E2D2D69E /* GrayscaleViewModel.swift in Sources */,
+				B4652984E852907A5A50CB620E43EE28 /* HSBAColor.swift in Sources */,
+				64C89B5124D2DB0BB9CB45B47F7D070F /* HSBViewModel.swift in Sources */,
+				A10B7683D5B189DE20E98333FCDB3EAF /* PreviewColorView.swift in Sources */,
+				489660142F806FDD2740479865373F76 /* RGBAColor.swift in Sources */,
+				F17D86C84572047500394AC464FE37DA /* RGBViewModel.swift in Sources */,
+				8F646124024FA624FD7794EB09A454FE /* SheetyColorProtocol.swift in Sources */,
+				43B547B21A6BE47B8DF9647B525A1F85 /* SheetyColors-dummy.m in Sources */,
+				3FDC9E96391273010174796380BA56B8 /* SheetyColorsConfig.swift in Sources */,
+				1B03BB0E87E84D44DE9BED619A8D897B /* SheetyColorsConfigProtocol.swift in Sources */,
+				2AA2306BF7544D7A2BC70356592E3955 /* SheetyColorsType.swift in Sources */,
+				9192AC8ADF1C4054440EF649CB3B8BD5 /* SheetyColorsViewController.swift in Sources */,
+				9A7DB8FD4EDEF40A8082FBC4C04D5B90 /* SheetyColorsViewFactory.swift in Sources */,
+				A3FB1491A1A3B81152AF673DADCD2F34 /* SheetyColorsViewModelDelegate.swift in Sources */,
+				BC0621156106076938EE4CB260141F0F /* SheetyColorsViewModelProtocol.swift in Sources */,
+				37A5E39E3F161E150AB642CC8FD91421 /* SheetyColorsViewProtocol.swift in Sources */,
+				921408FB339B026EFDBF354A482CE862 /* UIAlertController+customView.swift in Sources */,
+				66006286ABD101780D02CFE886513F94 /* UIColor+grayscaleColor.swift in Sources */,
+				68CA7BD2DDAE18370B5CD443C1B0B0C0 /* UIColor+hsbaColor.swift in Sources */,
+				9E184920C60E52CB36D03187FD6A7C2F /* UIColor+rgbaColor.swift in Sources */,
+				04C1171221CE3E0C9F0A7195827F6116 /* UIView+anchor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C0D6ABF6D75F73AEBFFE5C70FD8AFC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D1E72A6BA27450809F69DB8DBCCF654 /* Capable-dummy.m in Sources */,
+				83EE63509DDE46A301FDB352973327E2 /* CIImage+initWithImage.swift in Sources */,
+				3EA07194D2A2C60ED0313F110376232A /* Color+wcag.swift in Sources */,
+				E4E88BC89BAD91A2CFED33C63A48F16D /* ConformanceLevel.swift in Sources */,
+				8010AB8B9E544F88E90E3E762143C071 /* FontProps.swift in Sources */,
+				6A009E335A4087A3D5FD7A1D31C403EC /* Image+averageColor.swift in Sources */,
+				8507700E00DC3C13923B6F3299B2F1D7 /* ImageArea.swift in Sources */,
+				846DF0A83838C09FD6A4385B41F44378 /* Logger.swift in Sources */,
+				92B234B5FAEBD1B3E937EB7081FA68FE /* NSColor+rgbaColor.swift in Sources */,
+				7F580FA35BD86EDA98F6E29F0B75630B /* NSFont+fontProps.swift in Sources */,
+				386F3436307ED18774FD30FEC49279C6 /* OSLogType+greaterEqual.swift in Sources */,
+				13F117DF238B21F347E7589E00B97337 /* RGBAColor.swift in Sources */,
+				9A8AE51AEEBA70E08A430B406E264CE8 /* UIColor+rgbaColor.swift in Sources */,
+				8F2C1826D5312139D6B198682916C7B9 /* UIFont+fontProps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,11 +861,29 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4F48B2E7D6EBCF8EAA8B7E2F946DBA4F /* PBXTargetDependency */ = {
+		02EDE7B5E81AA416F4EEA653A932CA7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Capable;
+			target = F691C395A15AB6A5F19A00E280D57E0F /* Capable */;
+			targetProxy = BA17D69127D9BE1907DDD401C7196418 /* PBXContainerItemProxy */;
+		};
+		7B60F624EABF13273DCA66A653AD9433 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SheetyColors;
+			target = ECE08F087467D1E7D49C414E560769CE /* SheetyColors */;
+			targetProxy = A84D9C28DEBEA8598246CCCF872E5586 /* PBXContainerItemProxy */;
+		};
+		C277193F1DC5A51A01294BB7DA4B01E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EFQRCode;
 			target = 4B97B69C9C0EFA8C1D26B782223AE6EE /* EFQRCode */;
-			targetProxy = 80D1A79262B61C5E312134E4484CC078 /* PBXContainerItemProxy */;
+			targetProxy = 5B595892AE9A9A33A2D6780B02466BAC /* PBXContainerItemProxy */;
+		};
+		D300D1860610499651136554ECCCB442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Capable;
+			target = F691C395A15AB6A5F19A00E280D57E0F /* Capable */;
+			targetProxy = 121E0C0371F51D0A14F7507CBC878BD1 /* PBXContainerItemProxy */;
 		};
 		F370B974164444F5F11EC069E0DDAB12 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -490,9 +894,47 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		08339F50AC47E9A48D8450874A1BDAE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B8482A54FD850F1004C83209CDBAC5 /* Pods-TapQRCodeExample-iOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		106993CBF8F13186B53DFB7292B93F11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 025FE78B0C1AB885BCD273512EE1FB1E /* EFQRCode.xcconfig */;
+			baseConfigurationReference = E83D66DCB4FE0476EF2F1D6B9EE43F05 /* EFQRCode.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -528,7 +970,7 @@
 		};
 		1228086134DF781351DF45C5F211101E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 025FE78B0C1AB885BCD273512EE1FB1E /* EFQRCode.xcconfig */;
+			baseConfigurationReference = E83D66DCB4FE0476EF2F1D6B9EE43F05 /* EFQRCode.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -663,6 +1105,117 @@
 			};
 			name = Debug;
 		};
+		38BFE92FC7F785EBC3BDB29CA1C986A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D47FC938707D6717994640B381D96631 /* Pods-TapQRCodeExample-iOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5DFD28D11C06837B45D2BC7F275737B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C460512C62B5A681FDA7A8C6C2A91E88 /* Capable.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Capable/Capable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable/Capable-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Capable/Capable.modulemap";
+				PRODUCT_MODULE_NAME = Capable;
+				PRODUCT_NAME = Capable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E7A5815DCB10A716CE94A0A75D9E051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 524F554538795BB7E266AA58D7BACAC0 /* SheetyColors.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SheetyColors/SheetyColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SheetyColors/SheetyColors-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SheetyColors/SheetyColors.modulemap";
+				PRODUCT_MODULE_NAME = SheetyColors;
+				PRODUCT_NAME = SheetyColors;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		5FC882062B195669433BE7EB6491281A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D71A02EBAB32C981C4B9659FABC74C2F /* Pods-TapQRCode-iOS.release.xcconfig */;
@@ -702,11 +1255,10 @@
 			};
 			name = Release;
 		};
-		90B583D95F88E7C938262CB75E97028A /* Debug */ = {
+		8E4D577BF5DDE08F5AF3D842511CFFC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06B8482A54FD850F1004C83209CDBAC5 /* Pods-TapQRCodeExample-iOS.debug.xcconfig */;
+			baseConfigurationReference = C460512C62B5A681FDA7A8C6C2A91E88 /* Capable.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -717,34 +1269,33 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Capable/Capable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Capable/Capable-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Capable/Capable.modulemap";
+				PRODUCT_MODULE_NAME = Capable;
+				PRODUCT_NAME = Capable;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		A84E889282B899598DE26BF4A9B56364 /* Release */ = {
+		E807926A0F085256426D0C5786B74D3E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D47FC938707D6717994640B381D96631 /* Pods-TapQRCodeExample-iOS.release.xcconfig */;
+			baseConfigurationReference = 524F554538795BB7E266AA58D7BACAC0 /* SheetyColors.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -755,23 +1306,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SheetyColors/SheetyColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SheetyColors/SheetyColors-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SheetyColors/SheetyColors.modulemap";
+				PRODUCT_MODULE_NAME = SheetyColors;
+				PRODUCT_NAME = SheetyColors;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -842,15 +1392,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3C314ADC7D98299DA12F6633FDFE83C6 /* Build configuration list for PBXNativeTarget "Pods-TapQRCodeExample-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90B583D95F88E7C938262CB75E97028A /* Debug */,
-				A84E889282B899598DE26BF4A9B56364 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -860,11 +1401,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		AD03F248CEA0B4C13CE8A313797B2779 /* Build configuration list for PBXNativeTarget "SheetyColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E7A5815DCB10A716CE94A0A75D9E051 /* Debug */,
+				E807926A0F085256426D0C5786B74D3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BF4F242BFBDD55AB63B32B2CD6F9A8E0 /* Build configuration list for PBXNativeTarget "EFQRCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1228086134DF781351DF45C5F211101E /* Debug */,
 				106993CBF8F13186B53DFB7292B93F11 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D217AC257F38F562EDE3A9BA43BCFC73 /* Build configuration list for PBXNativeTarget "Pods-TapQRCodeExample-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				08339F50AC47E9A48D8450874A1BDAE0 /* Debug */,
+				38BFE92FC7F785EBC3BDB29CA1C986A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE7732A11754A43947B2CB3571278E58 /* Build configuration list for PBXNativeTarget "Capable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DFD28D11C06837B45D2BC7F275737B1 /* Debug */,
+				8E4D577BF5DDE08F5AF3D842511CFFC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
