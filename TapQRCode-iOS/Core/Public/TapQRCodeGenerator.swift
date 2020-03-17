@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MPQRCoreSDK.PushPaymentData
+import MasterpassQRCoreSDK.PushPaymentData
 import EFQRCode
 
 /// This provides the public interface for the caller to create QRCode images

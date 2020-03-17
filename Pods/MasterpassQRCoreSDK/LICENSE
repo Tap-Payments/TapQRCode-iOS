@@ -1,0 +1,244 @@
+
+------------------------------------------------------------------------------------------------------------
+Mastercard Masterpass QR App and Software Development Kit Terms of Use
+------------------------------------------------------------------------------------------------------------
+
+These Masterpass QR ("MPQR") App and Software Development Kit Terms of Use 
+("TOU") are a binding legal contract between you (a legal entity) and MasterCard 
+International Incorporated, a Delaware corporation, having its principal place of 
+business at 2000 Purchase Street, Purchase, New York 10577 ("MasterCard" or "we").  
+
+"Licensed Materials" means the software development kit and the mobile 
+app, that comprise source code, code libraries, application programming 
+interface specifications, developer guides, brand guidelines and other documentation 
+associated with MasterCard's MPQR, Moneysend and Optical Code Standards.
+
+By downloading, installing, accessing or using the Licensed Materials you will
+be bound by the terms of these TOU.  If you do not agree to the terms of these
+TOU, MasterCard is not willing to grant you any right to use or access the 
+Licensed Materials. In such event, you may not download, install, access, use 
+or copy the Licensed Materials.
+
+MasterCard may amend these TOU at any time by posting a revised version on 
+https://developer.mastercard.com/product/masterpass-qr.  
+The revised version will be effective at the time MasterCard posts it.
+
+1.	License Grant.
+----------------------------------
+
+(a)	Subject to the terms and conditions herein, MasterCard grants you a 
+non-exclusive, non-transferable, non-sublicensable right and license to use the 
+Licensed Materials for the purposes of their evaluation and to assist in the 
+development of production versions of applications (each a "Licensee Application")
+to facilitate MPQR payments to merchants with an MPQR code or equivalent 
+acceptance device including but not limited to Near Field Communication, Bluetooth 
+or SMS based acceptance, provided that such Licensee Applications shall solely 
+support transactions using MasterCard and Maestro cards, or transactions using 
+Mastercard Digital Enablement Service ("MDES") tokens. The Licensed Materials 
+must not be used to develop any technology, product or materials which are designed 
+for use in relation to non-Mastercard or non-MDES payment transactions, without 
+MasterCard's prior written approval.
+
+(b) You may sublicense your rights under section 1(a)(i) to one or more subcontractors 
+that is/are creating the Licensee Application on your behalf, provided that, 
+(i)  you enter into a written agreement with such subcontractor that contains confidentiality 
+provisions as least as protective of the Licensed Materials as the provisions of these TOU and; 
+(ii) you retain responsibility for all obligations under these TOU.
+
+(c) All rights not expressly granted herein to you are reserved to MasterCard.  You shall not use 
+or exploit the Licensed Materials or any of the data, information, methodologies or concepts 
+therein in any manner not expressly authorized by these TOU, regardless of whether any of 
+same are protected by patent, copyright or trade secret or other law.  For the avoidance of doubt, 
+without limiting the foregoing, no licenses or other rights of any kind are granted hereunder with 
+respect to MDES, Masterpass and/or Mastercard Mobile PayPass.
+    
+(d) No fees shall be due in connection with this license agreement.  MasterCard shall not be 
+obligated to perform any maintenance or provide any updates and/or upgrades relating to the 
+Licensed Materials.
+
+(e) Nothing in this license gives you a right to use any of MasterCard's trade names, 
+trademarks, service marks, logos, domain names, or other distinctive brand features.
+
+2.	Your Obligations.
+-------------------------------------
+
+(a)	You shall use the Licensed Materials solely in compliance with the terms and 
+conditions set forth in these TOU and all applicable statutes, laws, regulations, industry 
+rules and reputable business practices. You are responsibile for ensuring that such 
+activities are legally permitted under applicable law.
+
+(b)	Absent the prior written consent of MasterCard, which MasterCard may provide 
+in its sole discretion, you shall not 
+(i)  combine any Licensed Materials or portion thereof with any content or data from you or 
+third-party sources in any manner that states or suggests that MasterCard, its affiliates or 
+any Licensed Materials is endorsing, sponsoring or affiliated with any of your or such third 
+party's products or services.
+(ii)  copy or duplicate, permit any person or entity to copy or duplicate, create or attempt to 
+create, or permit others to create or attempt to create derivative works from, by reverse 
+engineering, decompilation or otherwise, or sublicense any portion of the Licensed Materials 
+or any documentation furnished therewith, other than as specifically permitted in this License 
+Agreement; and
+(iii)  change, obscure or remove any copyright or other notice or legend on or within any 
+Licensed Materials.
+
+(c)	You shall notify MasterCard of any consumer inquiries, complaints or quality 
+control issues relating to the Licensed Materials within thirty (30) days of receipt thereof 
+by you. MasterCard may determine in its sole discretion whether the Licensed Materials 
+or any data or information contained therein should be updated, changed or modified on 
+the basis of any such inquiries, complaints or quality control issues.
+
+(d)	You understand and acknowledge that MasterCard is subject to regulation by 
+agencies of the U.S. government, including the U.S. Department of Commerce, which prohibits 
+export or diversion of certain products and technology to certain countries.  Any and all 
+obligations of MasterCard to provide software, technology, technical assistance or any media 
+in which the foregoing is contained, training and any technical information or data shall be subject 
+in all respects to such United States laws and regulations as shall from time to time govern the 
+license and delivery of technology and products abroad by persons subject to the jurisdiction 
+of the United States, including Export Administration Act of 1979, as amended, any successor 
+legislation, and the Export Administration Regulations issued by the Department of Commerce, 
+Bureau of Export Administration.   You agree that you will comply with all foreign and U.S. export 
+and import regulations as applicable.  In the event you export or import the materials created or 
+provided hereunder, you shall be solely responsible for compliance with all foreign and U.S. export 
+and import regulations.  
+As used in this Section "materials" shall include, but not be limited to, Licensed Materials, manuals 
+and other written documentation, tools, equipment, technical data and other materials provided to 
+or created by you in connection with this TOU. 
+
+(e)	You shall comply, and shall ensure that each of your subcontractors and personnel 
+complies, with all applicable anti-bribery and corruption laws for all work provided in any capacity 
+in connection with this license.   Violation of this clause will constitute a material breach of this 
+license agreement.
+
+3.	Ownership.
+-----------------------------
+
+You agree that, as between the parties, MasterCard and/or its retained third parties, shall retain title 
+to and ownership of the Licensed Materials, as well as any corrections, additions, enhancements fixes, 
+updates or other modifications thereto, whether made by MasterCard or any other party as well as all 
+data, methodologies and concepts therein.  The Licensed Materials are protected by United States 
+and international copyright and other intellectual property laws and international treaty provisions.  
+You may not remove, obscure, or alter any notice of patent, copyright, trademark, trade secret or other 
+proprietary rights.  All copyrights, design rights, trade secrets and other proprietary rights in or related 
+to the Licensed Materials will remain the exclusive property of MasterCard or its retained third parties, 
+whether or not specifically recognized or registered.  You will not directly or indirectly question or contest 
+the validity and/or value of the Licensed Materials or MasterCard's rights therein.  
+
+4.	Warranty/Limitation of Liability/Indemnity.
+----------------------------------------------------------------------
+
+(a)	MASTERCARD DOES NOT MAKE ANY, AND EXPRESSLY DISCLAIMS ALL, 
+REPRESENTATIONS, GUARANTEES AND WARRANTIES, EITHER EXPRESS OR IMPLIED, WITH 
+RESPECT TO THE LICENSED MATERIALS AND YOUR USE THEREOF, INCLUDING WITHOUT 
+LIMITATION, ANY WARRANTIES AND GUARANTEES OF TITLE, NON-INFRINGEMENT, VALUE, ACCURACY, COMPLETENESS, RELIABILITY, SATISFACTORY QUALITY, SUITABILITY, COMPATIBILITY WITH ALL 
+SYSTEMS, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  EXCEPT AS OTHERWISE 
+SET FORTH HEREIN, LICENSED MATERIALS ARE PROVIDED HEREUNDER ON AN "AS IS" BASIS AND 
+YOU USE THEM ENTIRELY AT YOUR OWN RISK.  IN ADDITION THERE IS NO WARRANTY OR 
+COMMITTED SUPPORT FOR DEVELOPMENT AND OPERATION OF THE RESULTING 
+DEVELOPED/DEPLOYED PRODUCT OR THE LICENSEE APPLICATION. YOU ARE FULLY RESPONSIBLE 
+FOR THE TESTING, VALIDATION, PERFORMANCE AND THE ACCEPTANCE OF THE 
+DEVELOPED/DEPLOYED PRODUCT AND THE LICENSEE APPLICATION.
+
+(b)	IN NO EVENT SHALL MASTERCARD BE LIABLE UNDER THESE TOU FOR ANY 
+CONSEQUENTIAL, INDIRECT, EXEMPLARY, SPECIAL OR INCIDENTAL DAMAGES (INCLUDING 
+WITHOUT LIMITATION DAMAGES FOR LOST PROFITS, INVESTMENTS OR SALES OR BUSINESS 
+INTERRUPTION) RELATING TO THESE TOU OR YOUR USE OF, OR INABILITY TO USE THE 
+LICENSED MATERIALS (AND ANY INTELLECTUAL PROPERTY SUBSISTING THEREIN), WHETHER 
+OR NOT FORESEEABLE, EVEN IF MASTERCARD HAS BEEN ADVISED OF THE POSSIBILITY OF 
+SUCH LIABILITIES OR DAMAGES. UNDER NO CIRCUMSTANCES SHALL MASTERCARD HAVE 
+ANY LIABILITY TO YOU OR ANY THIRD PARTY FOR ANY CLAIM ARISING FROM OR RELATING TO 
+THESE TOU IN EXCESS OF ONE THOUSAND DOLLARS ($1,000).
+
+(c)	You agree to indemnify, defend and hold MasterCard and its affiliates, directors, officers, agents, 
+employees and software component suppliers harmless from and against any and all liability, costs, damages, 
+claims and actions arising as a result of your use of any Licensed Materials or the making, distributing, 
+importing, offer for sale, sale or other commercial exploitation of the Implementation by you or any third party.
+
+5.	Termination.
+------------------------------
+
+(a)	MasterCard may terminate these TOU without cause effective upon written notice to you.  Further, 
+You may terminate these TOU without cause effective upon ten (10) days written notice to MasterCard.  
+
+(b)	After expiration or termination of these TOU, you shall promptly return or destroy all copies of the 
+Licensed Materials. Sections 2(d), 3, 4(c), 6 and 9 shall survive the expiration or termination of these TOU 
+for any reason.
+
+6.	Confidential Information.
+-----------------------------------------------
+
+Except as expressly permitted hereunder, you agree to keep the Licensed Materials confidential, and not 
+use or disclose them to any other persons. You acknowledge and agree that, in connection with 
+MasterCard's performance hereunder and the licensing of the Licensed Materials to you, MasterCard 
+may communicate to you, orally and in writing, or you may learn, confidential information of MasterCard 
+("Confidential Information").  
+
+Confidential Information shall mean all or any part of, and originals or copies of, any information, materials, 
+trade secrets, know-how, techniques, inventions, processes, algorithms, concepts, methodologies, research, 
+software programs, software source documents, functional requirements, design details, business 
+requirements, fees, business activities, marketing plans or other proprietary information owned or maintained 
+by MasterCard, its affiliates or subsidiaries; or related to the Licensed Materials; or any and all non-public 
+information about MasterCard, no matter how or by what party such information, materials, or concepts were 
+transmitted or learned.  Confidential Information may be embodied and conveyed in any form, including oral, 
+written, or electronic. 
+
+Confidential Information excludes: 
+
+(a) information that at the time of disclosure was, or becomes, part of the public domain (through a source other 
+than you); 
+(b) information lawfully obtained by you from a third party that was not under, and did not impose, an obligation of confidentiality with respect to such information; 
+(c) information that is independently developed by you without use of or reference to Confidential Information; and 
+(d) information that was lawfully known by you prior to disclosure by MasterCard (as evidenced by written records).  
+
+You agree to protect such Confidential Information in strict confidence and you shall not, without the express prior 
+written consent of MasterCard, disclose or use any part of the Confidential Information other than for its internal 
+business purposes as contemplated in this license.  
+
+You acknowledge that: 
+(i) the restrictions contained in this agreement are reasonable and necessary to protect MasterCard's legitimate 
+proprietary interest in the Confidential Information, 
+(ii) remedies at law will be inadequate and any violation of these restrictions will cause irreparable damage to 
+MasterCard not compensable in monetary damages, and 
+(iii) MasterCard will be entitled to injunctive relief against each violation. 
+
+7.	Assignment.
+-------------------------------
+
+You may not assign or sublicense these TOU, in whole or in part, without MasterCard's prior written consent 
+in its sole discretion. For the avoidance of doubt, a change of control, merger, reorganization or sale of your 
+equity or assets shall be deemed an "assignment" requiring such consent, even if you survive the transaction.  
+In the event of a permitted assignment, these TOU shall be binding upon the parties and their permitted 
+successors and assigns.
+
+8.	Branding.
+---------------------------
+
+Any use of the MasterCard and Maestro logos by you in relation to the Licensee Application is subject to 
+the requirements set out in the relevant branding standards made available by MasterCard.
+
+9.	Miscellaneous.
+----------------------------------
+
+(a)	Choice of Law/Venue.  These TOU shall be construed in accordance with the laws of the State of New York.  
+The federal and state courts located in Westchester County, New York will have exclusive jurisdiction over all 
+proceedings related to these TOU.  You agree that MasterCard may seek injunctive relief,  including specific 
+performance, for any breach or threatened breach of these TOU by you.
+
+(b)	Entire Agreement.  These TOU constitutes the entire agreement between the parties with respect to the 
+subject matter hereof and supersedes all prior discussions, documents and agreements (whether oral or in writing) 
+relating to its subject matter.  You are responsible for all acts or omissions of its employees (including Users) under 
+these TOU, but such parties are not third party beneficiaries hereof.  
+
+(c)	Notices. MasterCard primarily communicates with you via your registered email address. By accepting the 
+terms of these TOU, you affirmatively consent to receive notices electronically from MasterCard (your "Consent"). You 
+agree that MasterCard may provide all communications and transactions related to these TOU, including without, amendments or changes to such agreements, disclosures, notices, policies (including without limitation notices about MasterCard's Privacy Notice), and other communications that MasterCard may be required to provide to you by law in electronic format (collectively, "Communications"). All Communications by MasterCard will  be sent either (a) via e-mail, 
+or (b) by providing access to the https://developer.mastercard.com/product/masterpass-qr.
+    
+All Communications will be deemed to be in "writing" and received by you when sent to you or when posted on the 
+above weblink, as applicable. You are responsible for creating and maintaining your own records of such 
+Communications. MasterCard reserves the right to discontinue or modify how MasterCard provides Communications. MasterCard will give you prior notice of any change.  Your continued Consent is required to use the Licensed Materials. 
+To withdraw your Consent, you will need to terminate these TOU.
+
+(d)	Severability. Any provision of these TOU that is deemed unenforceable shall not invalidate the remaining 
+provisions hereof.  Failure to enforce any provision of these TOU shall not constitute a waiver of any other provision 
+herein.
+

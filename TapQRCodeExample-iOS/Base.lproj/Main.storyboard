@@ -18,14 +18,18 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKw-Zs-GBK">
                                 <rect key="frame" x="155" y="433" width="104" height="30"/>
-                                <state key="normal" title="Generate Code"/>
+                                <state key="normal" title="Generate Code">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="hCb-BF-mf7" kind="show" id="iUg-uU-wKc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhY-s9-oLC">
                                 <rect key="frame" x="169.5" y="471" width="75" height="30"/>
-                                <state key="normal" title="Scan Code"/>
+                                <state key="normal" title="Scan Code">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -135,14 +139,18 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i9w-dZ-BWU">
                                 <rect key="frame" x="142.5" y="322" width="129" height="30"/>
-                                <state key="normal" title="Foreground Colour"/>
+                                <state key="normal" title="Foreground Colour">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="foregroundButtonClicked:" destination="1qm-U4-opO" eventType="touchUpInside" id="Baq-hR-sWh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paX-cY-Q8K">
                                 <rect key="frame" x="141" y="372" width="132" height="30"/>
-                                <state key="normal" title="Background Colour"/>
+                                <state key="normal" title="Background Colour">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="backgroundButtonClicked:" destination="1qm-U4-opO" eventType="touchUpInside" id="8uE-yb-gy4"/>
                                 </connections>

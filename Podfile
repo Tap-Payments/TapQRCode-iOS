@@ -11,9 +11,11 @@ end
 
 target 'TapQRCode-iOS' do
   default_pods
+  pod 'MasterpassQRCoreSDK'
 end
 
 target 'TapQRCodeExample-iOS' do
   default_pods
   pod 'SheetyColors'
+  pod 'Firebase/Analytics'
 end

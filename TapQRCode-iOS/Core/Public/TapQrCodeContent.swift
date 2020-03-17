@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import MPQRCoreSDK
 
 /// Provides a unified way to provide different content for different qr code types
 public class TapQrCodeContent:NSObject

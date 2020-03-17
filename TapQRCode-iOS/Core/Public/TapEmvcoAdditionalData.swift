@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import class MPQRCoreSDK.AdditionalData
+import class MasterpassQRCoreSDK.AdditionalData
 /// This is a class model to representAdditional Data Field Template (ID "62")
 @objc public class TapEmvcoAdditionalData:NSObject
 {

@@ -6,7 +6,7 @@
 //  Copyright © 2020 Tap Payments. All rights reserved.
 //
 
-import class MPQRCoreSDK.PushPaymentData
+import class MasterpassQRCoreSDK.PushPaymentData
 /// This is a class model to represent a supported network payment for EMVCO merchant identefiers networks tags
 @objc public class TapEmvcoPaymentNetwork:NSObject
 {

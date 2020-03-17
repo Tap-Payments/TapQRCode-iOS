@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import class MPQRCoreSDK.PushPaymentData
-import class MPQRCoreSDK.AdditionalData
+import class MasterpassQRCoreSDK.PushPaymentData
+import class MasterpassQRCoreSDK.AdditionalData
 
 /// Class represents the Push Payment data object, which matches the given merchant value to the Standardized format of Emvco Push Data
 @objc public class TapEmvcoPushData:NSObject

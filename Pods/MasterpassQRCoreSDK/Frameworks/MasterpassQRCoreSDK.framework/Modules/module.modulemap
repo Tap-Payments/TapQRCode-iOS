@@ -1,0 +1,6 @@
+framework module MasterpassQRCoreSDK {
+  umbrella header "MasterpassQRCoreSDK.h"
+
+  export *
+  module * { export * }
+}

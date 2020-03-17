@@ -23,6 +23,11 @@ class QRImageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if #available(iOS 13.0, *) {
+            if self.traitCollection.userInterfaceStyle == .dark {
+                currentForeground = .white
+            }
+        }
         drawQR()
         // Do any additional setup after loading the view.
     }
@@ -92,5 +97,19 @@ class QRImageViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if #available(iOS 13.0, *) {
+            if self.traitCollection.userInterfaceStyle == .dark {
+                currentForeground = .white
+            } else {
+                currentForeground = .black
+            }
+            currentBackground = .clear
+            drawQR()
+        }
+    }
 
 }
