@@ -130,25 +130,25 @@ extension QRGeneratorSettingsViewController:UITableViewDelegate
             }
             
             let inputTitle:String = "New value for \(key)"
-            let inputMessage:String = "Current value \(emvcoQRdataSource[key])"
+            let inputMessage:String = "Current value \(emvcoQRdataSource[key] ?? "")"
             alertTextQR(with: inputTitle, message: inputMessage,keyboardType: keyBoardType, Emvco: true,key: key,selectedIndexPath: indexPath)
         }else if indexPath.section == 2 {
             // Check if Generate Code cell
             if indexPath.row >= emvcoQRPaymentTagsSource.count {
-                var tempDict:[String:Any] = self.emvcoQRdataSource ?? [:]
+                var tempDict:[String:Any] = self.emvcoQRdataSource
                 tempDict["paymentNetworks"] = self.emvcoQRPaymentTagsSource
                 
                 do {
                     let pushData:TapEmvcoPushData = try TapEmvcoPushData.init(withDictionary: tempDict)
-                    let emvcoCodeString:String = try pushData.generateEmvcoString()
+                    let _:String = try pushData.generateEmvcoString()
                     self.showQR(for: pushData)
                 }catch {
                     self.showError(with: error)
                 }
             }else {
                 let keyBoardType:UIKeyboardType = .default
-                let inputTitle:String = "New value for \(self.emvcoQRPaymentTagsSource[indexPath.row]["tag"])"
-                let inputMessage:String = "Current value \(self.emvcoQRPaymentTagsSource[indexPath.row]["value"])"
+                let inputTitle:String = "New value for \(self.emvcoQRPaymentTagsSource[indexPath.row]["tag"] ?? "")"
+                let inputMessage:String = "Current value \(self.emvcoQRPaymentTagsSource[indexPath.row]["value"] ?? "")"
                 alertTextQR(with: inputTitle, message: inputMessage,keyboardType: keyBoardType, Emvco: true,selectedIndexPath: indexPath)
             }
         }
