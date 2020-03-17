@@ -1015,7 +1015,7 @@ import Foundation
     }
     
     public init?(rawValue: RawValue) {
-        switch rawValue.lowercased() {
+        switch rawValue.uppercased() {
             case "AD":
                 self = .AD
             case "AE":

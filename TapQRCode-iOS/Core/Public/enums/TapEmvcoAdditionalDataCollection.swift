@@ -51,7 +51,7 @@ import Foundation
     }
     
     public init?(rawValue: RawValue) {
-        switch rawValue.lowercased() {
+        switch rawValue.uppercased() {
             case "E":
                 self = .Email
             case "M":

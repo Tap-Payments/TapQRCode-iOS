@@ -3,22 +3,4 @@
    uuid = "9264FFE4-14BA-4ACF-A0B4-9F7D9F80040E"
    type = "0"
    version = "2.0">
-   <Breakpoints>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B51C830-EC19-48E0-BF27-A4821EEBBF3D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TapQRCode-iOS/Core/Public/TapEmvcoAdditionalData.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "init(billNumber:customerLabel:loyaltyNumber:mobileNumber:purposeForTransaction:storeLabel:terminalLabel:additionalCustomerDataCollection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-   </Breakpoints>
 </Bucket>
