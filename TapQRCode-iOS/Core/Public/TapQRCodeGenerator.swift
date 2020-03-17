@@ -13,11 +13,16 @@ import EFQRCode
 /// This provides the public interface for the caller to create QRCode images
 public class TapQRCodeGenerator:NSObject
 {
+    /**
+     The public and only inerface for generting a QR code image
+     - Parameter qrCodeContent: The TapQrCodeContent which hilds the type and content of the required qr code
+     - Returns: UIImage of the qr code if valid or nil otherwise
+     */
     @objc public static func generateQrCode(with qrCodeContent:TapQrCodeContent)->UIImage?
     {
         
         var qrString:String = ""
-        
+        // Get the qr string based on the passed TapQr type
         switch qrCodeContent.value() {
             case .textCode(let stringData):
                 qrString = stringData
@@ -38,7 +43,11 @@ public class TapQRCodeGenerator:NSObject
     
     
     
-    
+    /**
+    The helper method that actually parses a STRING into a QRCode image
+    - Parameter string: The string which holds the content of the qr code
+    - Returns: UIImage of the qr code if valid or nil otherwise
+    */
     internal static func generateQRCode(from string: String) -> UIImage? {
         if string == "" {
             return nil

@@ -257,7 +257,8 @@ import class MPQRCoreSDK.AdditionalData
         if let nonNullAdditionalCustomerDataCollection = withDictionary["additionalCustomerDataCollection"] as? String {
             if let parsedAdditionalCustomerDataCollection:TapEmvcoAdditionalDataCollection = TapEmvcoAdditionalDataCollection.init(rawValue: nonNullAdditionalCustomerDataCollection) {
                 additionalCustomerDataCollection = parsedAdditionalCustomerDataCollection
-            }else { throw "Invalid additionalCustomerDataCollection" }
+            }else { let values: String = TapEmvcoAdditionalDataCollection.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+            throw "Invalid additionalCustomerDataCollection. Allowed values:\n\(values)"}
         }
         
         do {

@@ -9,7 +9,7 @@
 import Foundation
 //If present, the Additional Consumer Data Request (ID "09"). Where it asks the mobile application to provide the required data whether Email, Phone, Address or any coombination of them.
 
-@objc public enum TapEmvcoAdditionalDataCollection: Int, RawRepresentable {
+@objc public enum TapEmvcoAdditionalDataCollection: Int, RawRepresentable,CaseIterable {
     /// Represents the additional data of email "E"
     case Email
     /// Represents the additional data of phone "M"
