@@ -14,7 +14,7 @@ import Foundation
 - A value of “03” shall be used to indicate inclusion of the data object Value of Convenience Fee Percentage (ID “57”).
 **/
 
-@objc public enum TapEmvcoExtraFees: Int, RawRepresentable {
+@objc public enum TapEmvcoExtraFees: Int, RawRepresentable, CaseIterable {
     /// A value of "01" shall be used if the mobile application should prompt the consumer to enter a tip to be paid to the merchant.
     case PromptPayer
     /// A value of "02" shall be used to indicate inclusion of the data object Value of Convenience Fee Fixed (ID "56").

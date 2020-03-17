@@ -8,7 +8,7 @@
 
 
 /// Enum to define  the supported types of qr codes
-@objc public enum TapEmvcoNetworkTags: Int, RawRepresentable {
+@objc public enum TapEmvcoNetworkTags: Int, RawRepresentable, CaseIterable {
     /// Merchant identefier for visa tag 02
     case VisaTag02
     /// Merchant identefier for visa tag 03

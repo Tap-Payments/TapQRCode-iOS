@@ -8,7 +8,7 @@
 
 ///If present, the Point of Initiation Method shall contain a value of "11" or "12". All other values are RFU. The value of "11" should be used when the same QR Code is shown for more than one transaction and the value of “12” should be used when a new QR Code is shown for each transaction.
 
-@objc public enum TapEmvcoOfInitiation: Int, RawRepresentable {
+@objc public enum TapEmvcoOfInitiation: Int, RawRepresentable,CaseIterable {
     /// Represents the qr code is a static code and payable more than once, this translates to the EMVCO code of Point of Initiation Method "11"
     case Static
     /// Represents the qr code is a dynamic code and payable once, this translates to the EMVCO code of Point of Initiation Method "12"

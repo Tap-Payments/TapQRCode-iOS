@@ -8,7 +8,7 @@
 
 import Foundation
 ///The Country Code shall contain a value as defined by [ISO 3166-1 alpha 2]. The Country Code should indicate the country in which the merchant transacts.
-@objc public enum TapEmvcoCountryCode: Int, RawRepresentable {
+@objc public enum TapEmvcoCountryCode: Int, RawRepresentable, CaseIterable {
    
     /// Andorra Country Code
         case AD

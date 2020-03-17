@@ -8,7 +8,7 @@
 
 import Foundation
 ///This is a representable and easy representation for the ISO 4217 currency code list. To be used in forming the Transaction Currency (ID "53") in EMVCO push payment data
-@objc public enum TapEmvcoCurrencyCode: Int, RawRepresentable {
+@objc public enum TapEmvcoCurrencyCode: Int, RawRepresentable, CaseIterable {
     
     case AED
     case AFN

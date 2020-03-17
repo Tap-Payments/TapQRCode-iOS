@@ -157,7 +157,10 @@ import class MPQRCoreSDK.AdditionalData
         if let nonNullPointOfInitiation = withDictionary["pointOfInitiation"] as? String {
                    if let parsedPointOfInitiation:TapEmvcoOfInitiation = TapEmvcoOfInitiation.init(rawValue: nonNullPointOfInitiation) {
                        pointOfInitiation = parsedPointOfInitiation
-                   }else { throw "Invalid pointOfInitiation" }
+                   }else {
+                    let values: String = TapEmvcoOfInitiation.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+                        throw "Invalid pointOfInitiation. Allowed values:\n\(values)"
+                    }
                }else { throw "You have to enter a pointOfInitiation" }
         
         // Next we will collect the required merchant info data
@@ -183,7 +186,9 @@ import class MPQRCoreSDK.AdditionalData
                 {
                     let paymentNetworkValue:TapEmvcoPaymentNetwork = TapEmvcoPaymentNetwork(with: paymentTag, value: paymentValue)
                     merchantPaymentTags.append(paymentNetworkValue)
-                }else { throw "Enter a valid Payment Network Tag and Values" }
+                }else {
+                    let values: String = TapEmvcoNetworkTags.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+                    throw "Enter a valid Payment Network Tag and Values. Allowed values:\n\(values)" }
             }
         }else { throw "You need to provide paymentNetworks tags and values" }
         
@@ -193,7 +198,8 @@ import class MPQRCoreSDK.AdditionalData
         if let nonNullCountryCode = withDictionary["countryCode"] as? String {
             if let parsedCountryCode:TapEmvcoCountryCode = TapEmvcoCountryCode.init(rawValue: nonNullCountryCode) {
                 countryCode = parsedCountryCode
-            }else { throw "Invalid countryCode" }
+            }else { let values: String = TapEmvcoCountryCode.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+            throw "Invalid Country code. Allowed values:\n\(values)" }
         }else { throw "You have to enter a countryCode" }
         
         if let nonNullPostalCode = withDictionary["postalCode"] as? String {
@@ -212,7 +218,8 @@ import class MPQRCoreSDK.AdditionalData
         if let nonNulltransactionCurrencyCode = withDictionary["transactionCurrencyCode"] as? String {
             if let parsedTransactionCurrencyCode:TapEmvcoCurrencyCode = TapEmvcoCurrencyCode.init(rawValue: nonNulltransactionCurrencyCode) {
                 transactionCurrencyCode = parsedTransactionCurrencyCode
-            }else { throw "Invalid transactionCurrencyCode" }
+            }else { let values: String = TapEmvcoCurrencyCode.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+            throw "Invalid Currency code. Allowed values:\n\(values)" }
         }else { throw "You have to enter a transactionCurrencyCode" }
         
         if let nonNullTransactionAmount = withDictionary["transactionAmount"] as? Float {
@@ -222,7 +229,8 @@ import class MPQRCoreSDK.AdditionalData
         if let nonNullExtraFeesMode = withDictionary["extraFeesMode"] as? String {
             if let parsedExtraFeesMode:TapEmvcoExtraFees = TapEmvcoExtraFees.init(rawValue: nonNullExtraFeesMode) {
                 extraFeesMode = parsedExtraFeesMode
-            }else { throw "Invalid extraFeesMode" }
+            }else { let values: String = TapEmvcoExtraFees.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+            throw "Invalid extraFeesMode. Allowed values:\n\(values)" }
         }
         
         if let nonNullExtraFeesAmount = withDictionary["extraFeesAmount"] as? Float {
@@ -266,6 +274,21 @@ import class MPQRCoreSDK.AdditionalData
                     postalCode:postalCode,
                     additionData:.init(billNumber: billNumber, customerLabel: customerLabel, loyaltyNumber: loyaltyNumber, mobileNumber: mobileNumber, purposeForTransaction: purposeForTransaction, storeLabel: storeLabel, terminalLabel: terminalLabel, additionalCustomerDataCollection: additionalCustomerDataCollection))
         }catch{ throw error }
+    }
+    
+    /**
+     An interface when needed the emvco string not the qr code image
+     - Returns: An EMVCO representable string
+     - Throws: different errors while validating the emvco data attributes before generating an emvco string
+     */
+    @objc public func generateEmvcoString() throws -> String
+    {
+        do {
+            let emvcoString = try pushPaymentData.generatePushPaymentString()
+            return emvcoString
+        }catch {
+            throw "Error occurred during validation \(error)"
+        }
     }
 }
 
