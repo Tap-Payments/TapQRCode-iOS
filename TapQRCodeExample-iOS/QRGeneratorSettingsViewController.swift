@@ -139,8 +139,9 @@ extension QRGeneratorSettingsViewController:UITableViewDelegate
                 tempDict["paymentNetworks"] = self.emvcoQRPaymentTagsSource
                 
                 do {
-                    let emvcoCodeString:String = try TapEmvcoPushData.init(withDictionary: tempDict).generateEmvcoString()
-                    self.showQR(for: emvcoCodeString)
+                    let pushData:TapEmvcoPushData = try TapEmvcoPushData.init(withDictionary: tempDict)
+                    let emvcoCodeString:String = try pushData.generateEmvcoString()
+                    self.showQR(for: pushData)
                 }catch {
                     self.showError(with: error)
                 }
@@ -234,6 +235,13 @@ extension QRGeneratorSettingsViewController:UITableViewDelegate
     {
         let qrImageView:QRImageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRImageViewController") as! QRImageViewController
         qrImageView.tapQrCodeContent = TapQrCodeContent(withText: content)
+        self.navigationController?.pushViewController(qrImageView, animated: true)
+    }
+    
+    func showQR(for content:TapEmvcoPushData)
+    {
+        let qrImageView:QRImageViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QRImageViewController") as! QRImageViewController
+        qrImageView.tapQrCodeContent = TapQrCodeContent(withEmv: content)
         self.navigationController?.pushViewController(qrImageView, animated: true)
     }
 }
