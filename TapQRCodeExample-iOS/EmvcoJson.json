@@ -5,12 +5,36 @@
     "merchantCity": "Kuwait",
     "paymentNetworks": [
         {
-            "tag": "02",
+            "tag": "VisaTag02",
             "value": "4600678934521435"
         },
         {
-            "tag": "03",
+            "tag": "VisaTag03",
             "value": "4600678934521467"
+        },
+        {
+            "tag": "MasterTag04",
+            "value": "555544443333111"
+        },
+        {
+            "tag": "MasterTag05",
+            "value": "555544443333222"
+        },
+        {
+            "tag": "NPCITag06",
+            "value": ""
+        },
+        {
+            "tag": "NPCITag07",
+            "value": ""
+        },
+        {
+            "tag": "AmexTag011",
+            "value": ""
+        },
+        {
+            "tag": "AmexTag012",
+            "value": ""
         }
     ],
     "countryCode": "KW",

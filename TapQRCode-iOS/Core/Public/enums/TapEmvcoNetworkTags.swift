@@ -30,21 +30,21 @@
     /// Coming constcutors to spport creating enums from String in case of parsing it from JSON
     public init?(rawValue: String) {
         switch rawValue.lowercased() {
-            case "02":
+            case "visatag02":
                 self = .VisaTag02
-            case "03":
+            case "visatag03":
                 self = .VisaTag03
-            case "04":
+            case "mastertag04":
                 self = .MasterTag04
-            case "05":
+            case "mastertag05":
                 self = .MasterTag05
-            case "06":
+            case "npcitag06":
                 self = .NPCITag06
-            case "07":
+            case "npcitag07":
                 self = .NPCITag07
-            case "11":
+            case "amextag011":
                 self = .AmexTag011
-            case "12":
+            case "amextag012":
                 self = .AmexTag012
             default:
                 return nil
@@ -56,21 +56,21 @@
     public var rawValue: RawValue {
         switch self {
             case .VisaTag02:
-                return "02"
+                return "VisaTag02"
             case .VisaTag03:
-                return "03"
+                return "VisaTag03"
             case .MasterTag04:
-                return "04"
+                return "MasterTag04"
             case .MasterTag05:
-                return "05"
+                return "MasterTag05"
             case .NPCITag06:
-                return "06"
+                return "NPCITag06"
             case .NPCITag07:
-                return "07"
+                return "NPCITag07"
             case .AmexTag011:
-                return "11"
+                return "AmexTag011"
             case .AmexTag012:
-                return "12"
+                return "AmexTag012"
         }
     }
     

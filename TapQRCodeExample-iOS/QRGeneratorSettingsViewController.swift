@@ -12,14 +12,22 @@ import TapQRCode_iOS
 class QRGeneratorSettingsViewController: UIViewController {
 
     @IBOutlet weak var qrSettingsTableView: UITableView!
-    var dataSource:[[[String:String]]] = []
+    var textualQRdataSource:[[[String:String]]] = []
+    var emvcoQRdataSource:[String:Any] = [:]
+    var emvcoQRPaymentTagsSource:[[String:String]] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
-        dataSource.append([["title":"URL QR Code","value":"http://tap.company","type":"text","code":"url"],["title":"Text QR Code","value":"Tap QR Code Kit 2020","type":"text","code":"text"]])
-        dataSource.append([["title":"URL QR Code","value":"http://tap.company","type":"text","code":"url"],["title":"Text QR Code","value":"Tap QR Code Kit 2020","type":"text","code":"text"]])
+        textualQRdataSource.append([["title":"URL QR Code","value":"http://tap.company","type":"text","code":"url"],["title":"Text QR Code","value":"Tap QR Code Kit 2020","type":"text","code":"text"]])
+        
+        
+        let url = Bundle.main.url(forResource: "EmvcoJson", withExtension: "json")!
+        let data = try! Data(contentsOf: url)
+        emvcoQRdataSource = try! JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String : Any]
+        emvcoQRPaymentTagsSource = emvcoQRdataSource["paymentNetworks"] as! [[String : String]]
+        emvcoQRdataSource.removeValue(forKey: "paymentNetworks")
         
         qrSettingsTableView.dataSource = self
         qrSettingsTableView.delegate = self
@@ -44,28 +52,51 @@ class QRGeneratorSettingsViewController: UIViewController {
 extension QRGeneratorSettingsViewController:UITableViewDataSource
 {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return dataSource.count
+        return 3
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
             return "Textual Based QR Codes"
         }else if section == 1 {
-            return "EMVCO Based QR Codes"
+            return "EMVCO QR Codes Transaction Data"
+        }else if section == 2 {
+            return "EMVCO QR Codes Merchant Tags"
         }else {
             return ""
         }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource[section].count
+        if section == 0 {
+            return textualQRdataSource[section].count
+        }else if section == 1 {
+            return emvcoQRdataSource.count
+        }else {
+            return emvcoQRPaymentTagsSource.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "QRSettingsCell", for: indexPath)
         
-        cell.textLabel?.text = dataSource[indexPath.section][indexPath.row]["title"]
-        cell.detailTextLabel?.text = dataSource[indexPath.section][indexPath.row]["value"]
+        if indexPath.section == 0 {
+            cell.textLabel?.text = textualQRdataSource[indexPath.section][indexPath.row]["title"]
+            cell.detailTextLabel?.text = textualQRdataSource[indexPath.section][indexPath.row]["value"]
+        }else if indexPath.section == 1 {
+            let key:String = Array(emvcoQRdataSource.keys)[indexPath.row]
+            cell.textLabel?.text = key
+            // for float values
+            if let floatValue:Float = emvcoQRdataSource[key] as? Float {
+                cell.detailTextLabel?.text = String(floatValue)
+            }else if let stringValue:String = emvcoQRdataSource[key] as? String {// For string vales
+                cell.detailTextLabel?.text = stringValue
+            }
+        }else if indexPath.section == 2 {
+            let paymentTag:[String:String] = emvcoQRPaymentTagsSource[indexPath.row]
+            cell.textLabel?.text = paymentTag["tag"]
+            cell.detailTextLabel?.text = paymentTag["value"]
+        }
         
         return cell
     }
@@ -77,7 +108,7 @@ extension QRGeneratorSettingsViewController:UITableViewDataSource
 extension QRGeneratorSettingsViewController:UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = dataSource[indexPath.section][indexPath.row]
+        let data = textualQRdataSource[indexPath.section][indexPath.row]
         if indexPath.section == 0 {
             // URL/Text qr codes
             let inputTitle:String = (data["code"] == "url") ? "Enter a url" : "Enter a text"

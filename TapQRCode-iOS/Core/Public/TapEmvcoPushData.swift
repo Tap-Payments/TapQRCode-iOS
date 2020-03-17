@@ -43,11 +43,12 @@ import class MPQRCoreSDK.AdditionalData
                merchantCity:String,
                postalCode:String? = nil,
                additionData:TapEmvcoAdditionalData?
-               )
+               ) throws
     {
         super.init()
         
-        commonInit(pointOfInitiation:pointOfInitiation,
+        do {
+            try commonInit(pointOfInitiation:pointOfInitiation,
                     merchantPaymentTags:merchantPaymentTags,
                     transactionAmount:transactionAmount,
                     transactionCurrency:transactionCurrency,
@@ -59,9 +60,7 @@ import class MPQRCoreSDK.AdditionalData
                     merchantCity:merchantName,
                     postalCode:postalCode,
                     additionData:additionData)
-        
-        
-        
+        }catch{ throw error }
     }
     
     /**
@@ -91,7 +90,7 @@ import class MPQRCoreSDK.AdditionalData
                             merchantName:String,
                             merchantCity:String,
                             postalCode:String? = nil,
-                            additionData:TapEmvcoAdditionalData?)
+                            additionData:TapEmvcoAdditionalData?) throws
     {
         // This is by default
           pushPaymentData.payloadFormatIndicator = "01"
@@ -133,6 +132,16 @@ import class MPQRCoreSDK.AdditionalData
             let nonNullEmvcoAdditionalData:AdditionalData = nonNullAditionalData.additionalData
         {
             pushPaymentData.additionalData = nonNullEmvcoAdditionalData
+        }
+        
+        
+        // Validate everything
+        do {
+            // Validate generated data
+            try pushPaymentData.generatePushPaymentString()
+        } catch {
+            print("Error occurred during validation \(error)")
+            throw error
         }
     }
     /**
@@ -243,7 +252,8 @@ import class MPQRCoreSDK.AdditionalData
             }else { throw "Invalid additionalCustomerDataCollection" }
         }
         
-        commonInit(pointOfInitiation:pointOfInitiation,
+        do {
+            try commonInit(pointOfInitiation:pointOfInitiation,
                     merchantPaymentTags:merchantPaymentTags,
                     transactionAmount:transactionAmount,
                     transactionCurrency:transactionCurrencyCode,
@@ -255,6 +265,7 @@ import class MPQRCoreSDK.AdditionalData
                     merchantCity:merchantCity,
                     postalCode:postalCode,
                     additionData:.init(billNumber: billNumber, customerLabel: customerLabel, loyaltyNumber: loyaltyNumber, mobileNumber: mobileNumber, purposeForTransaction: purposeForTransaction, storeLabel: storeLabel, terminalLabel: terminalLabel, additionalCustomerDataCollection: additionalCustomerDataCollection))
+        }catch{ throw error }
     }
 }
 
