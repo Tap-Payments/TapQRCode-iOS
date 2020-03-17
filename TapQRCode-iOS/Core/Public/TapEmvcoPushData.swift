@@ -137,6 +137,7 @@ import class MPQRCoreSDK.AdditionalData
     }
     /**
      Provides an interface to create TapEmvcoPushData from a given Dictionary
+     - Parameter withDictionary: The Dictionary that holds the data needed for the emvco code. Please see the format at [Tap Emvco JSON Template](https://api.myjson.com/bins/qyagi)
      */
     @objc public init(withDictionary:[String:Any]) throws
     {
