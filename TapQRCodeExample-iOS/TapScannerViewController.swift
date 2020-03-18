@@ -39,7 +39,8 @@ class TapScannerViewController: UIViewController {
                                             self?.showAlert(with: "Scanned", message: tapScanResult.scannedText!)
                                         },scannerRemovedCallBack: { [weak self] in
                                             self?.inlineSwitch.setOn(false, animated: true)
-                                        })
+                                        },introFadeIn: true,
+                                          outroFadeOut: true)
         }else {
             TapQRCodeScanner.stopInlineScanning()
         }

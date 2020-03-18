@@ -51,8 +51,10 @@ import QRCodeReader
      - Parameter erroCallBack: Closure used to send a string description of any error prevented the scannr to start
      - Parameter scannedCodeCallBack: Closure used to send a string description of the scanned code
      - Parameter scannerRemovedCallBack: Closure used to inform when the scanner is removed
+     - Parameter introFadeIn: When set tthe scanner will fade in when ready
+     - Parameter outroFadeOut: When set the scanner will fde out upon completion
      */
-    @objc public class func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil) {
+    @objc public class func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil, introFadeIn:Bool = false, outroFadeOut:Bool = false) {
         
         // First of all we need to check we can start the scanner
         guard canStartScanner(), !reader.isRunning else {
@@ -78,13 +80,20 @@ import QRCodeReader
         
         DispatchQueue.main.async {
             // Add the preview frame to the passed subview
+            previewView?.alpha = introFadeIn ? 0 : 1
             holdingView.addSubview(previewView!)
+            
+            if introFadeIn {
+                UIView.animate(withDuration: 0.3) {
+                  previewView?.alpha = 1
+                }
+            }
         }
         
         reader.didFindCode = { result in
           print("Completion with result: \(result.value) of type \(result.metadataType)")
             if shouldHideUponScanning {
-                stopInlineScanning(scannerRemovedCallBack: scannerRemovedCallBack)
+                stopInlineScanning(scannerRemovedCallBack: scannerRemovedCallBack,shouldFadeOut:outroFadeOut)
             }
             
             if let scannedBlock = scannedCodeCallBack {
@@ -110,10 +119,24 @@ import QRCodeReader
     
     /**
      Interface to remove and stop the inline scanner. Can be used only if the caller needs tto handle himself dismissing the inline scanner
+     - Parameter scannerRemovedCallBack: Closure used to inform when the scanner is removed
+     - Parameter shouldFadeOut: When set the scanner will fde out upon completion
      */
-    @objc public class func stopInlineScanning(scannerRemovedCallBack:(() -> ())? = nil) {
-        previewView?.removeFromSuperview()
-        reader.stopScanning()
+    @objc public class func stopInlineScanning(scannerRemovedCallBack:(() -> ())? = nil,shouldFadeOut:Bool = false) {
+        if shouldFadeOut {
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: 0.3, animations: {
+                    previewView?.alpha = 0
+                }) { (_) in
+                    previewView?.removeFromSuperview()
+                    reader.stopScanning()
+                }
+            }
+        }else {
+            previewView?.removeFromSuperview()
+            reader.stopScanning()
+        }
+        
         if let scannerRemovedBlock = scannerRemovedCallBack {
             scannerRemovedBlock()
         }
