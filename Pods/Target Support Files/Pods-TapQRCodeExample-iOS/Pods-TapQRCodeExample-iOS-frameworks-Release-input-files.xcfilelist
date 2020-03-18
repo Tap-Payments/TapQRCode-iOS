@@ -6,3 +6,4 @@ ${BUILT_PRODUCTS_DIR}/SheetyColors/SheetyColors.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework
 ${BUILT_PRODUCTS_DIR}/EFQRCode/EFQRCode.framework
 ${PODS_ROOT}/MasterpassQRCoreSDK/Frameworks/MasterpassQRCoreSDK.framework
+${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework

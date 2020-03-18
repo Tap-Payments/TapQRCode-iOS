@@ -70,6 +70,7 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
+  - QRCodeReader.swift (10.1.0)
   - SheetyColors (1.0.2):
     - Capable/Colors (~> 1.1)
 
@@ -77,6 +78,7 @@ DEPENDENCIES:
   - EFQRCode
   - Firebase/Analytics
   - MasterpassQRCoreSDK
+  - QRCodeReader.swift
   - SheetyColors
 
 SPEC REPOS:
@@ -96,6 +98,7 @@ SPEC REPOS:
     - MasterpassQRCoreSDK
     - nanopb
     - PromisesObjC
+    - QRCodeReader.swift
     - SheetyColors
 
 SPEC CHECKSUMS:
@@ -114,8 +117,9 @@ SPEC CHECKSUMS:
   MasterpassQRCoreSDK: 5d4af69a72fbf6919afa888864a019b6b4b8c1bf
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
   SheetyColors: 1d0d56e5ee7923b3f12eea59a2815eae826479ee
 
-PODFILE CHECKSUM: ba373918752836f5e1a9e37a50012d30777d68c2
+PODFILE CHECKSUM: 7de6cc4971775ead28c7536036e883fa00059765
 
 COCOAPODS: 1.8.4

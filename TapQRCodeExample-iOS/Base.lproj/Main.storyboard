@@ -30,6 +30,9 @@
                                 <state key="normal" title="Scan Code">
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="AuI-Gx-hqA" kind="show" id="nQV-FW-reX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -194,6 +197,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SrM-TU-oj6" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2911.594202898551" y="137.94642857142856"/>
+        </scene>
+        <!--Tap Scanner View Controller-->
+        <scene sceneID="LTq-Rz-EIz">
+            <objects>
+                <viewController id="AuI-Gx-hqA" customClass="TapScannerViewController" customModule="TapQRCodeExample_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JzF-dV-UA5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCh-yr-iKm">
+                                <rect key="frame" x="82" y="96" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="bb8-Ph-hnn"/>
+                                    <constraint firstAttribute="width" constant="250" id="lJv-jZ-2TA"/>
+                                </constraints>
+                            </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AEi-KW-4ez">
+                                <rect key="frame" x="345" y="361" width="51" height="31"/>
+                                <connections>
+                                    <action selector="inlineScanningSwitch:" destination="AuI-Gx-hqA" eventType="valueChanged" id="Oqe-Uz-FaI"/>
+                                    <action selector="logoSwitchChanged:" destination="1qm-U4-opO" eventType="valueChanged" id="Ddd-Dc-euQ"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inline Scanning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSk-BU-bsW">
+                                <rect key="frame" x="20" y="366" width="305" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JCh-yr-iKm" firstAttribute="centerX" secondItem="JzF-dV-UA5" secondAttribute="centerX" id="1im-9F-wid"/>
+                            <constraint firstItem="AEi-KW-4ez" firstAttribute="centerY" secondItem="qSk-BU-bsW" secondAttribute="centerY" id="GMo-mO-l1u"/>
+                            <constraint firstItem="qSk-BU-bsW" firstAttribute="leading" secondItem="fCg-oV-0jh" secondAttribute="leading" constant="20" id="HCm-oy-vG4"/>
+                            <constraint firstItem="fCg-oV-0jh" firstAttribute="trailing" secondItem="AEi-KW-4ez" secondAttribute="trailing" constant="20" id="JeA-fy-EqV"/>
+                            <constraint firstItem="JCh-yr-iKm" firstAttribute="top" secondItem="fCg-oV-0jh" secondAttribute="top" constant="8" id="an2-KG-PdT"/>
+                            <constraint firstItem="AEi-KW-4ez" firstAttribute="leading" secondItem="qSk-BU-bsW" secondAttribute="trailing" constant="20" id="vX9-Pd-an2"/>
+                            <constraint firstItem="qSk-BU-bsW" firstAttribute="top" secondItem="JCh-yr-iKm" secondAttribute="bottom" constant="20" id="vue-6Y-ScA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fCg-oV-0jh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fym-3e-DH3"/>
+                    <connections>
+                        <outlet property="inlineView" destination="JCh-yr-iKm" id="oCh-GB-Kge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0G-fa-aS2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="836"/>
         </scene>
     </scenes>
 </document>

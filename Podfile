@@ -6,6 +6,7 @@ target 'TapQRCode-iOS' do
   use_frameworks!
   pod 'EFQRCode'
   pod 'MasterpassQRCoreSDK'
+  pod 'QRCodeReader.swift'
 end
 
 target 'TapQRCodeExample-iOS' do
