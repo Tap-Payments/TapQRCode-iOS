@@ -8,15 +8,23 @@
 
 import UIKit
 import TapQRCode_iOS
+import TactileSlider
 
 class TapScannerViewController: UIViewController {
 
     @IBOutlet weak var inlineView: UIView!
     @IBOutlet weak var inlineSwitch: UISwitch!
+    @IBOutlet weak var introSwitch: UISwitch!
+    @IBOutlet weak var outroSwitch: UISwitch!
+    @IBOutlet weak var dismissAfterScanningSwitch: UISwitch!
+    @IBOutlet weak var widthSlider: TactileSlider!
+    @IBOutlet weak var previewFrameWidthConstraint: NSLayoutConstraint!
+    lazy var tapBarCodeScanner:TapQRCodeScanner = TapQRCodeScanner()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        inlineView.translatesAutoresizingMaskIntoConstraints = false
         // Do any additional setup after loading the view.
     }
     
@@ -31,18 +39,19 @@ class TapScannerViewController: UIViewController {
     }
     */
     @IBAction func inlineScanningSwitch(_ sender: Any) {
-        if (sender as! UISwitch).isOn {
-            TapQRCodeScanner.scanInline(inside: inlineView,
+        if inlineSwitch.isOn {
+            tapBarCodeScanner.scanInline(inside: inlineView,
+                                        shouldHideUponScanning: dismissAfterScanningSwitch.isOn,
                                         erroCallBack: { [weak self] error in
                                             self?.showAlert(with: "Error", message: error)
                                         },scannedCodeCallBack: { [weak self] tapScanResult in
                                             self?.showAlert(with: "Scanned", message: tapScanResult.scannedText!)
                                         },scannerRemovedCallBack: { [weak self] in
                                             self?.inlineSwitch.setOn(false, animated: true)
-                                        },introFadeIn: true,
-                                          outroFadeOut: true)
+                                        },introFadeIn: introSwitch.isOn,
+                                          outroFadeOut: outroSwitch.isOn)
         }else {
-            TapQRCodeScanner.stopInlineScanning()
+            tapBarCodeScanner.stopInlineScanning()
         }
     }
     
@@ -57,5 +66,26 @@ class TapScannerViewController: UIViewController {
         
         alertControl.addAction(okAction)
         self.present(alertControl,animated: true)
+    }
+    
+    @IBAction func widthValueChanged(_ sender: Any) {
+        inlineView.setNeedsDisplay()
+        inlineView.updateConstraints()
+        previewFrameWidthConstraint.constant = CGFloat((sender as! TactileSlider).value)
+        inlineView.setNeedsDisplay()
+        inlineView.updateConstraints()
+    }
+    
+    @IBAction func dimissAfterScanChanged(_ sender: Any) {
+        inlineSwitch.setOn(false, animated: true)
+    }
+    
+    
+    @IBAction func introChanged(_ sender: Any) {
+        inlineSwitch.setOn(false, animated: true)
+    }
+    
+    @IBAction func outroChanged(_ sender: Any) {
+        inlineSwitch.setOn(false, animated: true)
     }
 }

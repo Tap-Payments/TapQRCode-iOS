@@ -16,11 +16,30 @@ import QRCodeReader
     
     
     
-    
-    internal static var previewView: QRCodeReaderView?
+    private  var  observer: NSKeyValueObservation?
+
+    internal  var previewView: QRCodeReaderView?
       
-    internal static var reader: QRCodeReader = QRCodeReader()
+    internal  var reader: QRCodeReader = QRCodeReader()
     
+    internal var holdingView:UIView?
+    internal var shouldHideUponScanning:Bool = true
+    internal var erroCallBack:((String) -> ())? = nil
+    internal var scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil
+    internal var scannerRemovedCallBack:(() -> ())? = nil
+    internal var introFadeIn:Bool = false
+    internal var outroFadeOut:Bool = false
+    internal var top:CGFloat = 0
+    internal var bottom:CGFloat = 0
+    internal var right:CGFloat = 0
+    internal var left:CGFloat = 0
+    
+    
+    @objc public var isScanning:Bool  {
+        get {
+            return reader.isRunning
+        }
+    }
     /**
      The method checks for camera existance and permissions.
      - Returns: True if the camera exists in the device and the user granted the camera usage permission for the app. False othweise
@@ -53,11 +72,27 @@ import QRCodeReader
      - Parameter scannerRemovedCallBack: Closure used to inform when the scanner is removed
      - Parameter introFadeIn: When set tthe scanner will fade in when ready
      - Parameter outroFadeOut: When set the scanner will fde out upon completion
+     - Parameter top: Top margin from the holder uiview. Default is 0
+     - Parameter bottom: Bottom margin from the holder uiview. Default is 0
+     - Parameter left: Left margin from the holder uiview. Default is 0
+     - Parameter right: Right margin from the holder uiview. Default is 0
      */
-    @objc public class func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil, introFadeIn:Bool = false, outroFadeOut:Bool = false) {
+    @objc public func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil, introFadeIn:Bool = false, outroFadeOut:Bool = false,top:CGFloat = 0,bottom:CGFloat = 0,right:CGFloat = 0, left:CGFloat = 0) {
+        
+        self.holdingView = holdingView
+        self.shouldHideUponScanning = shouldHideUponScanning
+        self.erroCallBack = erroCallBack
+        self.scannedCodeCallBack = scannedCodeCallBack
+        self.scannerRemovedCallBack = scannerRemovedCallBack
+        self.introFadeIn = introFadeIn
+        self.outroFadeOut = outroFadeOut
+        self.top = top
+        self.bottom = bottom
+        self.right = right
+        self.left = left
         
         // First of all we need to check we can start the scanner
-        guard canStartScanner(), !reader.isRunning else {
+        guard TapQRCodeScanner.canStartScanner(), !reader.isRunning else {
             print("Camera permission is required")
             if let erroCallBackBlock = erroCallBack {
                 erroCallBackBlock("Camera permission is required")
@@ -67,38 +102,46 @@ import QRCodeReader
         
         if let _ = previewView{
             // Defensive code to remove any preview view before to make sure memory is always clean
-            DispatchQueue.main.async {
-                previewView?.removeFromSuperview()
+            DispatchQueue.main.async { [weak self] in
+                self?.previewView?.removeFromSuperview()
             }
         }
         
         // Assing the new frame given to the preview scanner
-        previewView = QRCodeReaderView(frame: CGRect(x: 0, y: 0, width: holdingView.frame.width, height: holdingView.frame.height))
+        previewView = QRCodeReaderView(frame: CGRect(x: 0+left, y: 0+top, width: holdingView.frame.width-(right+left), height: holdingView.frame.height-(bottom+top)))
         
         // This will setup the inline scanner with the default attribtes and assigns the camera reader to the preview frame
         setupInlineQRScanner()
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
             // Add the preview frame to the passed subview
-            previewView?.alpha = introFadeIn ? 0 : 1
-            holdingView.addSubview(previewView!)
+            self?.previewView?.alpha = introFadeIn ? 0 : 1
+            holdingView.addSubview((self?.previewView!)!)
             
             if introFadeIn {
                 UIView.animate(withDuration: 0.3) {
-                  previewView?.alpha = 1
+                  self?.previewView?.alpha = 1
                 }
             }
         }
         
-        reader.didFindCode = { result in
+        reader.didFindCode = { [weak self] result in
           print("Completion with result: \(result.value) of type \(result.metadataType)")
             if shouldHideUponScanning {
-                stopInlineScanning(scannerRemovedCallBack: scannerRemovedCallBack,shouldFadeOut:outroFadeOut)
+                self?.stopInlineScanning()
             }
             
             if let scannedBlock = scannedCodeCallBack {
                 scannedBlock(.init(scannedText:result.value))
             }
+        }
+        
+        
+        //self.addObserver(holdingView, forKeyPath: "center", options: NSKeyValueObservingOptions.new, context: nil)
+        observer = holdingView.observe(\.bounds) { [weak self] newFrame, _ in
+            
+            self?.updateInlineScannerFrame(with:CGRect(x: 0+left, y: 0+top, width: newFrame.frame.width-(right+left), height: newFrame.frame.height-(bottom+top)))
+            
         }
         
         // All good!
@@ -107,29 +150,30 @@ import QRCodeReader
     }
     
     
-    @objc public class func updateInlineScannerFrame(with frame:CGRect) {
+    
+    private func updateInlineScannerFrame(with frame:CGRect) {
         
-        DispatchQueue.main.async {
-            previewView?.frame = frame
-            previewView?.setNeedsLayout()
-            previewView?.setNeedsDisplay()
+        DispatchQueue.main.async { [weak self] in
+            self?.previewView?.frame = frame
+            self?.previewView?.setNeedsLayout()
+            self?.previewView?.setNeedsDisplay()
+            self?.previewView?.overlayView?.setNeedsDisplay()
+            self?.previewView?.overlayView?.setNeedsDisplay()
         }
         
     }
     
     /**
      Interface to remove and stop the inline scanner. Can be used only if the caller needs tto handle himself dismissing the inline scanner
-     - Parameter scannerRemovedCallBack: Closure used to inform when the scanner is removed
-     - Parameter shouldFadeOut: When set the scanner will fde out upon completion
      */
-    @objc public class func stopInlineScanning(scannerRemovedCallBack:(() -> ())? = nil,shouldFadeOut:Bool = false) {
-        if shouldFadeOut {
-            DispatchQueue.main.async {
+    @objc public func stopInlineScanning() {
+        if outroFadeOut {
+            DispatchQueue.main.async {[weak self] in
                 UIView.animate(withDuration: 0.3, animations: {
-                    previewView?.alpha = 0
+                    self?.previewView?.alpha = 0
                 }) { (_) in
-                    previewView?.removeFromSuperview()
-                    reader.stopScanning()
+                    self?.previewView?.removeFromSuperview()
+                    self?.reader.stopScanning()
                 }
             }
         }else {
@@ -140,12 +184,14 @@ import QRCodeReader
         if let scannerRemovedBlock = scannerRemovedCallBack {
             scannerRemovedBlock()
         }
+        
+        observer?.invalidate()
     }
     
     /**
      This is a private helper method that will configure the qr code scanner view, it will dismiss all the buttons like flip camera or torch as in inline. Also defines the default area of interest
      */
-    private class func setupInlineQRScanner() {
+    private func setupInlineQRScanner() {
         previewView?.setupComponents(with: QRCodeReaderViewControllerBuilder {
           $0.reader                 = reader
           $0.showTorchButton        = false
