@@ -13,4 +13,5 @@ target 'TapQRCodeExample-iOS' do
   use_frameworks!
   pod 'SheetyColors'
   pod 'Firebase/Analytics'
+  pod 'TactileSlider'
 end

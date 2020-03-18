@@ -73,6 +73,7 @@ PODS:
   - QRCodeReader.swift (10.1.0)
   - SheetyColors (1.0.2):
     - Capable/Colors (~> 1.1)
+  - TactileSlider (1.2.0)
 
 DEPENDENCIES:
   - EFQRCode
@@ -80,6 +81,7 @@ DEPENDENCIES:
   - MasterpassQRCoreSDK
   - QRCodeReader.swift
   - SheetyColors
+  - TactileSlider
 
 SPEC REPOS:
   trunk:
@@ -100,6 +102,7 @@ SPEC REPOS:
     - PromisesObjC
     - QRCodeReader.swift
     - SheetyColors
+    - TactileSlider
 
 SPEC CHECKSUMS:
   Capable: 9f420f2a80a12144814ea2f0ba196516a0827ca1
@@ -119,7 +122,8 @@ SPEC CHECKSUMS:
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   QRCodeReader.swift: 373a389fe9a22d513c879a32a6f647c58f4ef572
   SheetyColors: 1d0d56e5ee7923b3f12eea59a2815eae826479ee
+  TactileSlider: a08b2b40bafa0717e606123fec0c11174d039d54
 
-PODFILE CHECKSUM: 7de6cc4971775ead28c7536036e883fa00059765
+PODFILE CHECKSUM: c90a5d08e2f335e232c7380a97d1524d47b3e340
 
 COCOAPODS: 1.8.4

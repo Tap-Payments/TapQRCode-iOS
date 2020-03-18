@@ -52,7 +52,7 @@ import QRCodeReader
      - Parameter scannedCodeCallBack: Closure used to send a string description of the scanned code
      - Parameter scannerRemovedCallBack: Closure used to inform when the scanner is removed
      */
-    @objc public class func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((String) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil) {
+    @objc public class func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil) {
         
         // First of all we need to check we can start the scanner
         guard canStartScanner(), !reader.isRunning else {
@@ -88,13 +88,24 @@ import QRCodeReader
             }
             
             if let scannedBlock = scannedCodeCallBack {
-                scannedBlock(result.value)
+                scannedBlock(.init(scannedText:result.value))
             }
         }
         
         // All good!
         reader.stopScanningWhenCodeIsFound = shouldHideUponScanning
         reader.startScanning()
+    }
+    
+    
+    @objc public class func updateInlineScannerFrame(with frame:CGRect) {
+        
+        DispatchQueue.main.async {
+            previewView?.frame = frame
+            previewView?.setNeedsLayout()
+            previewView?.setNeedsDisplay()
+        }
+        
     }
     
     /**

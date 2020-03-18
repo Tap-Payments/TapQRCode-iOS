@@ -210,7 +210,7 @@
                                 <rect key="frame" x="82" y="96" width="250" height="250"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="bb8-Ph-hnn"/>
+                                    <constraint firstAttribute="width" secondItem="JCh-yr-iKm" secondAttribute="height" multiplier="1:1" id="36K-Dz-M8E"/>
                                     <constraint firstAttribute="width" constant="250" id="lJv-jZ-2TA"/>
                                 </constraints>
                             </view>

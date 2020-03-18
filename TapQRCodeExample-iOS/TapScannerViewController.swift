@@ -35,8 +35,8 @@ class TapScannerViewController: UIViewController {
             TapQRCodeScanner.scanInline(inside: inlineView,
                                         erroCallBack: { [weak self] error in
                                             self?.showAlert(with: "Error", message: error)
-                                        },scannedCodeCallBack: { [weak self] scannedCode in
-                                            self?.showAlert(with: "Scanned", message: scannedCode)
+                                        },scannedCodeCallBack: { [weak self] tapScanResult in
+                                            self?.showAlert(with: "Scanned", message: tapScanResult.scannedText!)
                                         },scannerRemovedCallBack: { [weak self] in
                                             self?.inlineSwitch.setOn(false, animated: true)
                                         })
