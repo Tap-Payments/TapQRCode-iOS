@@ -7,11 +7,13 @@
 //
 
 import Foundation
-import MasterpassQRCoreSDK.PushPaymentData
-import EFQRCode
+import class UIKit.UIImage
+import class UIKit.UIColor
+import class MasterpassQRCoreSDK.PushPaymentData
+import class EFQRCode.EFQRCode
 
 /// This provides the public interface for the caller to create QRCode images
-public class TapQRCodeGenerator:NSObject
+@objc public class TapQRCodeGenerator:NSObject
 {
     /**
      The public and only inerface for generting a QR code image

@@ -42,6 +42,7 @@
 		E81A7DFF2421307700836547 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E81A7DFE2421307700836547 /* GoogleService-Info.plist */; };
 		E81A7E0F242144FA00836547 /* TapQRCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81A7D46241E3DA900836547 /* TapQRCode_iOS.framework */; };
 		E81A7E10242144FA00836547 /* TapQRCode_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E81A7D46241E3DA900836547 /* TapQRCode_iOS.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E82E50FC2421F6E2007E9905 /* TapQRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E50FB2421F6E2007E9905 /* TapQRCodeScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		E81A7DE9241FAAB800836547 /* QRImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRImageViewController.swift; sourceTree = "<group>"; };
 		E81A7DEF2420BFEB00836547 /* EmvcoJson.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmvcoJson.json; sourceTree = "<group>"; };
 		E81A7DFE2421307700836547 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E82E50FB2421F6E2007E9905 /* TapQRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQRCodeScanner.swift; sourceTree = "<group>"; };
 		ED1A1C9D6A47713B541EAE7B /* Pods-TapQRCodeExample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCodeExample-iOS.release.xcconfig"; path = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EF3494C5B30E96B8C7D482AB /* Pods-TapQRCodeExample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCodeExample-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FD3592FAE2619D3AD3AEB296 /* Pods_TapQRCodeExample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapQRCodeExample_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,16 +232,8 @@
 			children = (
 				E81A7DCC241E760200836547 /* Private */,
 				E81A7DA8241E6FAF00836547 /* Public */,
-				E81A7D9F241E43DF00836547 /* Frameworks */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		E81A7D9F241E43DF00836547 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Frameworks;
 			sourceTree = "<group>";
 		};
 		E81A7DA0241E441300836547 /* enums */ = {
@@ -260,11 +254,8 @@
 			isa = PBXGroup;
 			children = (
 				E81A7DA0241E441300836547 /* enums */,
-				E81A7DA9241E6FFA00836547 /* TapQRCodeGenerator.swift */,
-				E81A7DCA241E732400836547 /* TapQrCodeContent.swift */,
-				E81A7DD5241E897C00836547 /* TapEmvcoPushData.swift */,
-				E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */,
-				E81A7DE3241F5E0900836547 /* TapEmvcoAdditionalData.swift */,
+				E82E50FE2421F722007E9905 /* TapQRCodeScanner */,
+				E82E50FD2421F711007E9905 /* TapQRCodeGenerator */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -301,6 +292,26 @@
 				E81A7DD2241E870900836547 /* QrCodeValue.swift */,
 			);
 			path = enums;
+			sourceTree = "<group>";
+		};
+		E82E50FD2421F711007E9905 /* TapQRCodeGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				E81A7DA9241E6FFA00836547 /* TapQRCodeGenerator.swift */,
+				E81A7DCA241E732400836547 /* TapQrCodeContent.swift */,
+				E81A7DD5241E897C00836547 /* TapEmvcoPushData.swift */,
+				E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */,
+				E81A7DE3241F5E0900836547 /* TapEmvcoAdditionalData.swift */,
+			);
+			path = TapQRCodeGenerator;
+			sourceTree = "<group>";
+		};
+		E82E50FE2421F722007E9905 /* TapQRCodeScanner */ = {
+			isa = PBXGroup;
+			children = (
+				E82E50FB2421F6E2007E9905 /* TapQRCodeScanner.swift */,
+			);
+			path = TapQRCodeScanner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -522,6 +533,7 @@
 				E81A7DCB241E732400836547 /* TapQrCodeContent.swift in Sources */,
 				E81A7DE4241F5E0900836547 /* TapEmvcoAdditionalData.swift in Sources */,
 				E81A7DDC241F416E00836547 /* TapEmvcoOfInitiation.swift in Sources */,
+				E82E50FC2421F6E2007E9905 /* TapQRCodeScanner.swift in Sources */,
 				E81A7DDE241F4D3C00836547 /* TapEmvcoCurrencyCode.swift in Sources */,
 				E81A7DAA241E6FFA00836547 /* TapQRCodeGenerator.swift in Sources */,
 				E81A7DE0241F532000836547 /* TapEmvcoExtraFees.swift in Sources */,
