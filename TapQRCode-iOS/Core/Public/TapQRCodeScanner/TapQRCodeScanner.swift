@@ -164,6 +164,27 @@ import QRCodeReader
     }
     
     /**
+     This interface will return back the qr code if found from a given static image
+     - Parameter image : The image you want to see if it contains a qr code
+     - Returns:TapQRCodeScannerResult with text filled with scanned qr code (empty if not found) and emvco data if the parsed string is a valid emvco data
+     */
+    @objc public class func scan(from image:UIImage)->TapQRCodeScannerResult {
+        
+        var qrCodeLink:String = ""
+        // define the detector to get qr codes from the image
+        let detector:CIDetector=CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])!
+        let ciImage:CIImage=CIImage(image:image)!
+        let features=detector.features(in: ciImage)
+        
+        // Parse each feature to get the result back as a full
+        for feature in features as! [CIQRCodeFeature] {
+          qrCodeLink += feature.messageString!
+        }
+        
+        return .init(scannedText:qrCodeLink)
+    }
+    
+    /**
      Interface to remove and stop the inline scanner. Can be used only if the caller needs tto handle himself dismissing the inline scanner
      */
     @objc public func stopInlineScanning() {

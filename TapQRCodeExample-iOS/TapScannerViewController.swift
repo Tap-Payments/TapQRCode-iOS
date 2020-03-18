@@ -43,6 +43,7 @@ class TapScannerViewController: UIViewController {
             tapBarCodeScanner.scanInline(inside: inlineView,
                                         shouldHideUponScanning: dismissAfterScanningSwitch.isOn,
                                         erroCallBack: { [weak self] error in
+                                            self?.inlineSwitch.setOn(false, animated: true)
                                             self?.showAlert(with: "Error", message: error)
                                         },scannedCodeCallBack: { [weak self] tapScanResult in
                                             self?.showAlert(with: "Scanned", message: tapScanResult.scannedText!)

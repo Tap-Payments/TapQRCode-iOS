@@ -825,9 +825,9 @@
 			baseConfigurationReference = EF3494C5B30E96B8C7D482AB /* Pods-TapQRCodeExample-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.4;
 				DEVELOPMENT_TEAM = G46S76PUH4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -843,7 +843,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "company.tap.TapQRCodeExample-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = TapQRCodeExampleDevelopment;
+				PROVISIONING_PROFILE_SPECIFIER = TapQRCodeExampleAdHoc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -854,9 +854,9 @@
 			baseConfigurationReference = ED1A1C9D6A47713B541EAE7B /* Pods-TapQRCodeExample-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.4;
 				DEVELOPMENT_TEAM = G46S76PUH4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -872,7 +872,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "company.tap.TapQRCodeExample-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE_SPECIFIER = TapQRCodeExampleAdHoc;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

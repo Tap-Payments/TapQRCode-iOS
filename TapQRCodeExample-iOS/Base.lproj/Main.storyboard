@@ -31,20 +31,29 @@
                                     <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="AuI-Gx-hqA" kind="show" id="nQV-FW-reX"/>
+                                    <action selector="scanClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8sX-Ip-Knt"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="nye-kB-CNj">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="mhY-s9-oLC" firstAttribute="top" secondItem="xKw-Zs-GBK" secondAttribute="bottom" constant="8" id="0Vg-OG-aLo"/>
+                            <constraint firstItem="nye-kB-CNj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="O3j-FB-jVo"/>
                             <constraint firstItem="xKw-Zs-GBK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Yee-P9-tJu"/>
+                            <constraint firstItem="nye-kB-CNj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fr0-nP-Ugt"/>
                             <constraint firstItem="xKw-Zs-GBK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gl6-T7-4I4"/>
                             <constraint firstItem="mhY-s9-oLC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ib7-LX-Z2a"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="hDc-3N-mCa"/>
+                    <connections>
+                        <outlet property="loadingActivity" destination="nye-kB-CNj" id="JsT-Ia-Xim"/>
+                        <segue destination="AuI-Gx-hqA" kind="show" identifier="scanSeg" id="ySY-Yw-car"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
