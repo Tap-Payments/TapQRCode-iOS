@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D48EBCAF02201E863438914B /* Pods_TapQRCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69E5153634EA0FB53CCB2C3A /* Pods_TapQRCode_iOS.framework */; platformFilter = ios; };
+		79BAC01490500B796460D60F /* Pods_TapQRCodeExample_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD3592FAE2619D3AD3AEB296 /* Pods_TapQRCodeExample_iOS.framework */; };
+		7A6AB79801696629EC472B13 /* Pods_TapQRCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C70417C664D6A1B72D97C11A /* Pods_TapQRCode_iOS.framework */; };
 		E81A7D4B241E3DA900836547 /* TapQRCode_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E81A7D49241E3DA900836547 /* TapQRCode_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E81A7D8D241E433200836547 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7D8C241E433200836547 /* AppDelegate.swift */; };
 		E81A7D8F241E433200836547 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7D8E241E433200836547 /* SceneDelegate.swift */; };
@@ -38,7 +39,6 @@
 		E81A7DE8241F80EA00836547 /* QRGeneratorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE7241F80EA00836547 /* QRGeneratorSettingsViewController.swift */; };
 		E81A7DEA241FAAB800836547 /* QRImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE9241FAAB800836547 /* QRImageViewController.swift */; };
 		E81A7DF02420BFEB00836547 /* EmvcoJson.json in Resources */ = {isa = PBXBuildFile; fileRef = E81A7DEF2420BFEB00836547 /* EmvcoJson.json */; };
-		E81A7DF124211E1600836547 /* Pods_TapQRCodeExample_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E027DBC7E621D8F2CA8F601E /* Pods_TapQRCodeExample_iOS.framework */; };
 		E81A7DFF2421307700836547 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E81A7DFE2421307700836547 /* GoogleService-Info.plist */; };
 		E81A7E0F242144FA00836547 /* TapQRCode_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E81A7D46241E3DA900836547 /* TapQRCode_iOS.framework */; };
 		E81A7E10242144FA00836547 /* TapQRCode_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E81A7D46241E3DA900836547 /* TapQRCode_iOS.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -80,9 +80,8 @@
 
 /* Begin PBXFileReference section */
 		38C47572AE4D23338B31ECE6 /* Pods-TapQRCode-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCode-iOS.release.xcconfig"; path = "Target Support Files/Pods-TapQRCode-iOS/Pods-TapQRCode-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		69E5153634EA0FB53CCB2C3A /* Pods_TapQRCode_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapQRCode_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70417C664D6A1B72D97C11A /* Pods_TapQRCode_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapQRCode_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E8866CDE058D89627C90EB /* Pods-TapQRCode-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCode-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TapQRCode-iOS/Pods-TapQRCode-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		E027DBC7E621D8F2CA8F601E /* Pods_TapQRCodeExample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapQRCodeExample_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81A7D46241E3DA900836547 /* TapQRCode_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TapQRCode_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81A7D49241E3DA900836547 /* TapQRCode_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TapQRCode_iOS.h; sourceTree = "<group>"; };
 		E81A7D4A241E3DA900836547 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		E81A7DFE2421307700836547 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED1A1C9D6A47713B541EAE7B /* Pods-TapQRCodeExample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCodeExample-iOS.release.xcconfig"; path = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EF3494C5B30E96B8C7D482AB /* Pods-TapQRCodeExample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCodeExample-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		FD3592FAE2619D3AD3AEB296 /* Pods_TapQRCodeExample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapQRCodeExample_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D48EBCAF02201E863438914B /* Pods_TapQRCode_iOS.framework in Frameworks */,
+				7A6AB79801696629EC472B13 /* Pods_TapQRCode_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,7 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81A7E0F242144FA00836547 /* TapQRCode_iOS.framework in Frameworks */,
-				E81A7DF124211E1600836547 /* Pods_TapQRCodeExample_iOS.framework in Frameworks */,
+				79BAC01490500B796460D60F /* Pods_TapQRCodeExample_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +201,8 @@
 		E81A7D51241E41AC00836547 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				69E5153634EA0FB53CCB2C3A /* Pods_TapQRCode_iOS.framework */,
-				E027DBC7E621D8F2CA8F601E /* Pods_TapQRCodeExample_iOS.framework */,
+				C70417C664D6A1B72D97C11A /* Pods_TapQRCode_iOS.framework */,
+				FD3592FAE2619D3AD3AEB296 /* Pods_TapQRCodeExample_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -807,7 +807,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = G46S76PUH4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -834,9 +834,9 @@
 			baseConfigurationReference = ED1A1C9D6A47713B541EAE7B /* Pods-TapQRCodeExample-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_TEAM = G46S76PUH4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -852,7 +852,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "company.tap.TapQRCodeExample-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = TapQRCodeExampleDevelopment;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

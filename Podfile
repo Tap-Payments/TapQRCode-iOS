@@ -2,20 +2,14 @@
 # platform :ios, '9.0'
 
 
-def default_pods
-  # Comment the next line if you don't want to use dynamic frameworks
+target 'TapQRCode-iOS' do
   use_frameworks!
   pod 'EFQRCode'
-end
-
-
-target 'TapQRCode-iOS' do
-  default_pods
   pod 'MasterpassQRCoreSDK'
 end
 
 target 'TapQRCodeExample-iOS' do
-  default_pods
+  use_frameworks!
   pod 'SheetyColors'
   pod 'Firebase/Analytics'
 end

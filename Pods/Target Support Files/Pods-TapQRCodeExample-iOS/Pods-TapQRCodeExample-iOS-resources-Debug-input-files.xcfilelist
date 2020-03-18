@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS-resources.sh
+${PODS_ROOT}/SheetyColors/SheetyColors/Classes/Common/Views/SheetyColorsViewController.xib
+${PODS_ROOT}/SheetyColors/SheetyColors/Classes/Common/Resources/Colors.xcassets
+${PODS_ROOT}/SheetyColors/SheetyColors/Classes/Common/Resources/Images.xcassets
