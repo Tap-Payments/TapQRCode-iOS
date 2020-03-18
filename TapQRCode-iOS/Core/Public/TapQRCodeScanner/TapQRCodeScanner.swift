@@ -14,6 +14,9 @@ import QRCodeReader
 /// This provides the public interface for the caller to the Tap QR code Scanner
 @objc public class TapQRCodeScanner:NSObject {
     
+    
+    
+    
     internal static var previewView: QRCodeReaderView?
       
     internal static var reader: QRCodeReader = QRCodeReader()
@@ -44,13 +47,19 @@ import QRCodeReader
     /**
         Interface to start the scanner if all requirments are met, inside a bounvded uiview
      - Parameter holdingView: The subview the caller wants to show  the scanner in
-     - Parameter shouldHideUponScanning: if true, then the scanner will dismiss itself after reading a code
+     - Parameter shouldHideUponScanning: if true, then the scanner will dismiss itself after reading a code. Default True
+     - Parameter erroCallBack: Closure used to send a string description of any error prevented the scannr to start
+     - Parameter scannedCodeCallBack: Closure used to send a string description of the scanned code
+     - Parameter scannerRemovedCallBack: Closure used to inform when the scanner is removed
      */
-    @objc public class func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool) {
+    @objc public class func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((String) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil) {
         
         // First of all we need to check we can start the scanner
         guard canStartScanner(), !reader.isRunning else {
             print("Camera permission is required")
+            if let erroCallBackBlock = erroCallBack {
+                erroCallBackBlock("Camera permission is required")
+            }
             return
         }
         
@@ -75,21 +84,28 @@ import QRCodeReader
         reader.didFindCode = { result in
           print("Completion with result: \(result.value) of type \(result.metadataType)")
             if shouldHideUponScanning {
-                
+                stopInlineScanning(scannerRemovedCallBack: scannerRemovedCallBack)
+            }
+            
+            if let scannedBlock = scannedCodeCallBack {
+                scannedBlock(result.value)
             }
         }
         
-        
         // All good!
+        reader.stopScanningWhenCodeIsFound = shouldHideUponScanning
         reader.startScanning()
     }
     
     /**
      Interface to remove and stop the inline scanner. Can be used only if the caller needs tto handle himself dismissing the inline scanner
      */
-    @objc public class func stopInlineScanning() {
+    @objc public class func stopInlineScanning(scannerRemovedCallBack:(() -> ())? = nil) {
         previewView?.removeFromSuperview()
         reader.stopScanning()
+        if let scannerRemovedBlock = scannerRemovedCallBack {
+            scannerRemovedBlock()
+        }
     }
     
     /**

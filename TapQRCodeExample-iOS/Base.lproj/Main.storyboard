@@ -218,7 +218,6 @@
                                 <rect key="frame" x="345" y="361" width="51" height="31"/>
                                 <connections>
                                     <action selector="inlineScanningSwitch:" destination="AuI-Gx-hqA" eventType="valueChanged" id="Oqe-Uz-FaI"/>
-                                    <action selector="logoSwitchChanged:" destination="1qm-U4-opO" eventType="valueChanged" id="Ddd-Dc-euQ"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inline Scanning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSk-BU-bsW">
@@ -242,6 +241,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fym-3e-DH3"/>
                     <connections>
+                        <outlet property="inlineSwitch" destination="AEi-KW-4ez" id="UzL-oe-9xb"/>
                         <outlet property="inlineView" destination="JCh-yr-iKm" id="oCh-GB-Kge"/>
                     </connections>
                 </viewController>
