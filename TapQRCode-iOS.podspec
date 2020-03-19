@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TapQRCode-iOS"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "QR code kit for both generating and parsing a QR code"
 
   spec.description  = "1- Tap qr generate kit  2- Generate URL, Text and EMVCO code.  3- Scan a qr code from camera  4- Scan a qr code from gallery  5- Scan a qr code in a full screen mode"
