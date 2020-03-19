@@ -1,5 +1,5 @@
 //
-//  EFIntSize.swift
+//  EFUIntPixel.swift
 //  EFQRCode
 //
 //  Created by EyreFree on 2018/11/14.
@@ -26,26 +26,16 @@
 
 import CoreGraphics
 
-#if canImport(CoreImage)
-import CoreImage
-#endif
+internal struct EFUIntPixel {
+    public var red: UInt8 = 0
+    public var green: UInt8 = 0
+    public var blue: UInt8 = 0
+    public var alpha: UInt8 = 0
 
-@objcMembers
-public class EFIntSize: NSObject {
-    public private(set) var width: Int = 0
-    public private(set) var height: Int = 0
-
-    public init(width: Int, height: Int) {
-        self.width = width
-        self.height = height
-    }
-    
-    public init(size: CGSize) {
-        self.width = Int(size.width)
-        self.height = Int(size.height)
-    }
-
-    public var cgSize: CGSize {
-        return CGSize(width: width, height: height)
+    init(red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
+        self.red = red
+        self.green = green
+        self.blue = blue
+        self.alpha = alpha
     }
 }

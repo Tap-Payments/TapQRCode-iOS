@@ -27,7 +27,7 @@
 import UIKit
 
 /// The overlay state
-public enum QRCodeReaderViewOverlayState {
+internal enum QRCodeReaderViewOverlayState {
   /// The overlay is in normal state
   case normal
   /// The overlay is in valid state
@@ -37,13 +37,13 @@ public enum QRCodeReaderViewOverlayState {
 }
 
 /// The overlay protocol
-public protocol QRCodeReaderViewOverlay: UIView {
+internal protocol QRCodeReaderViewOverlay: UIView {
   /// Set the state of the overlay
   func setState(_ state: QRCodeReaderViewOverlayState)
 }
 
 /// Overlay over the camera view to display the area (a square) where to scan the code.
-public final class ReaderOverlayView: UIView {
+internal final class ReaderOverlayView: UIView {
   private var overlay: CAShapeLayer = {
     var overlay             = CAShapeLayer()
     overlay.backgroundColor = UIColor.clear.cgColor
@@ -72,13 +72,13 @@ public final class ReaderOverlayView: UIView {
   }
   
   /// The default overlay color
-  public var defaultColor: UIColor = .white
+  internal var defaultColor: UIColor = .white
   
   /// The overlay color when a valid code has been scanned
-  public var highlightValidColor: UIColor = .green
+  internal var highlightValidColor: UIColor = .green
   
   /// The overlay color when a wrong code has been scanned
-  public var highlightWrongColor: UIColor = .red
+  internal var highlightWrongColor: UIColor = .red
 
   override init(frame: CGRect) {
     super.init(frame: frame)
@@ -86,7 +86,7 @@ public final class ReaderOverlayView: UIView {
     setupOverlay()
   }
 
-  required public init?(coder aDecoder: NSCoder) {
+  required internal init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
 
     setupOverlay()
@@ -104,7 +104,7 @@ public final class ReaderOverlayView: UIView {
     }
   }
 
-  public override func draw(_ rect: CGRect) {
+  internal override func draw(_ rect: CGRect) {
     let innerRect = CGRect(
       x: rect.width * rectOfInterest.minX,
       y: rect.height * rectOfInterest.minY,
@@ -117,7 +117,7 @@ public final class ReaderOverlayView: UIView {
 }
 
 extension ReaderOverlayView: QRCodeReaderViewOverlay {
-  public func setState(_ state: QRCodeReaderViewOverlayState) {
+  internal func setState(_ state: QRCodeReaderViewOverlayState) {
     self.state = state
   }
 }

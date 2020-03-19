@@ -33,7 +33,7 @@ protocol QRCodeReaderLifeCycleDelegate: class {
 }
 
 /// Reader object base on the `AVCaptureDevice` to read / scan 1D and 2D codes.
-public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegate {
+internal final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegate {
   private let sessionQueue         = DispatchQueue(label: "session queue")
   private let metadataObjectsQueue = DispatchQueue(label: "com.yannickloriot.qr", attributes: [], target: nil)
   
@@ -75,28 +75,28 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
   // MARK: - Managing the Properties
 
   /// CALayer that you use to display video as it is being captured by an input device.
-  public let previewLayer: AVCaptureVideoPreviewLayer
+  internal let previewLayer: AVCaptureVideoPreviewLayer
 
   /// An array of object identifying the types of metadata objects to process.
-  public let metadataObjectTypes: [AVMetadataObject.ObjectType]
+  internal let metadataObjectTypes: [AVMetadataObject.ObjectType]
 
   // MARK: - Managing the Code Discovery
 
   /// Flag to know whether the scanner should stop scanning when a code is found.
-  public var stopScanningWhenCodeIsFound: Bool = true
+  internal var stopScanningWhenCodeIsFound: Bool = true
 
   /// Block is executed when a metadata object is found.
-  public var didFindCode: ((QRCodeReaderResult) -> Void)?
+  internal var didFindCode: ((QRCodeReaderResult) -> Void)?
 
   /// Block is executed when a found metadata object string could not be decoded.
-  public var didFailDecoding: (() -> Void)?
+  internal var didFailDecoding: (() -> Void)?
 
   // MARK: - Creating the Code Reade
 
   /**
    Initializes the code reader with the QRCode metadata type object.
    */
-  public convenience override init() {
+  internal convenience override init() {
     self.init(metadataObjectTypes: [AVMetadataObject.ObjectType.qr], captureDevicePosition: .back)
   }
 
@@ -105,7 +105,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
    - parameter metadataObjectTypes: An array of objects identifying the types of metadata objects to process.
    */
-  public convenience init(metadataObjectTypes types: [AVMetadataObject.ObjectType]) {
+  internal convenience init(metadataObjectTypes types: [AVMetadataObject.ObjectType]) {
     self.init(metadataObjectTypes: types, captureDevicePosition: .back)
   }
 
@@ -114,7 +114,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
    - parameter captureDevicePosition: The capture position to use on start of scanning
    */
-  public convenience init(captureDevicePosition position: AVCaptureDevice.Position) {
+  internal convenience init(captureDevicePosition position: AVCaptureDevice.Position) {
     self.init(metadataObjectTypes: [AVMetadataObject.ObjectType.qr], captureDevicePosition: position)
   }
 
@@ -124,7 +124,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
    - parameter metadataObjectTypes: An array of objects identifying the types of metadata objects to process.
    - parameter captureDevicePosition: The Camera to use on start of scanning.
    */
-  public init(metadataObjectTypes types: [AVMetadataObject.ObjectType], captureDevicePosition: AVCaptureDevice.Position) {
+  internal init(metadataObjectTypes types: [AVMetadataObject.ObjectType], captureDevicePosition: AVCaptureDevice.Position) {
     metadataObjectTypes = types
     previewLayer        = AVCaptureVideoPreviewLayer(session: session)
 
@@ -174,7 +174,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
   /// Switch between the back and the front camera.
   @discardableResult
-  public func switchDeviceInput() -> AVCaptureDeviceInput? {
+  internal func switchDeviceInput() -> AVCaptureDeviceInput? {
     if let _frontDeviceInput = frontDeviceInput {
       session.beginConfiguration()
 
@@ -198,7 +198,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
    *Notes: if `stopScanningWhenCodeIsFound` is sets to true (default behaviour), each time the scanner found a code it calls the `stopScanning` method.*
    */
-  public func startScanning() {
+  internal func startScanning() {
     sessionQueue.async {
       guard !self.session.isRunning else { return }
 
@@ -211,7 +211,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
   }
 
   /// Stops scanning the codes.
-  public func stopScanning() {
+  internal func stopScanning() {
     sessionQueue.async {
       guard self.session.isRunning else { return }
 
@@ -230,7 +230,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
    Clients can key value observe the value of this property to be notified when
    the session automatically starts or stops running.
    */
-  public var isRunning: Bool {
+  internal var isRunning: Bool {
     return session.isRunning
   }
 
@@ -239,7 +239,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
    - returns: true whether the device has a front device.
    */
-  public var hasFrontDevice: Bool {
+  internal var hasFrontDevice: Bool {
     return frontDevice != nil
   }
 
@@ -248,14 +248,14 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
    - returns: true if a torch is available.
    */
-  public var isTorchAvailable: Bool {
+  internal var isTorchAvailable: Bool {
     return defaultDevice?.isTorchAvailable ?? false
   }
 
   /**
    Toggles torch on the default device.
    */
-  public func toggleTorch() {
+  internal func toggleTorch() {
     do {
       try defaultDevice?.lockForConfiguration()
 
@@ -275,7 +275,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
    - parameter supportedOrientations: The supported orientations of the application.
    - parameter fallbackOrientation: The video orientation if the device orientation is FaceUp or FaceDown.
    */
-  public class func videoOrientation(deviceOrientation orientation: UIDeviceOrientation, withSupportedOrientations supportedOrientations: UIInterfaceOrientationMask, fallbackOrientation: AVCaptureVideoOrientation? = nil) -> AVCaptureVideoOrientation {
+  internal class func videoOrientation(deviceOrientation orientation: UIDeviceOrientation, withSupportedOrientations supportedOrientations: UIInterfaceOrientationMask, fallbackOrientation: AVCaptureVideoOrientation? = nil) -> AVCaptureVideoOrientation {
     let result: AVCaptureVideoOrientation
 
     switch (orientation, fallbackOrientation) {
@@ -333,7 +333,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
    - returns: A boolean value that indicates whether the reader is available.
    */
-  public class func isAvailable() -> Bool {
+  internal class func isAvailable() -> Bool {
     guard let captureDevice = AVCaptureDevice.default(for: .video) else { return false }
 
     return (try? AVCaptureDeviceInput(device: captureDevice)) != nil
@@ -346,7 +346,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
    - returns: A boolean value that indicates whether the device supports the given metadata object types.
    */
-  public class func supportsMetadataObjectTypes(_ metadataTypes: [AVMetadataObject.ObjectType]? = nil) throws -> Bool {
+  internal class func supportsMetadataObjectTypes(_ metadataTypes: [AVMetadataObject.ObjectType]? = nil) throws -> Bool {
     guard let captureDevice = AVCaptureDevice.default(for: .video) else {
       throw NSError(domain: "com.yannickloriot.error", code: -1001, userInfo: nil)
     }
@@ -376,7 +376,7 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
   // MARK: - AVCaptureMetadataOutputObjects Delegate Methods
 
-  public func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+  internal func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
     sessionQueue.async { [weak self] in
       guard let weakSelf = self else { return }
 

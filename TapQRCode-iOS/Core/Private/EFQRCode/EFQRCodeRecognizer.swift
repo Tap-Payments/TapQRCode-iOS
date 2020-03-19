@@ -1,8 +1,8 @@
 //
-//  EFUIntPixel.swift
+//  EFQRCodeRecognizer.swift
 //  EFQRCode
 //
-//  Created by EyreFree on 2018/11/14.
+//  Created by EyreFree on 2017/3/28.
 //
 //  Copyright (c) 2017 EyreFree <eyrefree@eyrefree.org>
 //
@@ -24,18 +24,45 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-import CoreGraphics
+#if canImport(CoreImage)
+import CoreImage
 
-public struct EFUIntPixel {
-    public var red: UInt8 = 0
-    public var green: UInt8 = 0
-    public var blue: UInt8 = 0
-    public var alpha: UInt8 = 0
+internal class EFQRCodeRecognizer: NSObject {
 
-    init(red: UInt8, green: UInt8, blue: UInt8, alpha: UInt8) {
-        self.red = red
-        self.green = green
-        self.blue = blue
-        self.alpha = alpha
+    private var image: CGImage? {
+        didSet {
+            contentArray = nil
+        }
+    }
+    internal func setImage(image: CGImage?) {
+        self.image = image
+    }
+
+    private var contentArray: [String]?
+
+    internal init(image: CGImage) {
+        self.image = image
+    }
+
+    internal func recognize() -> [String]? {
+        if nil == contentArray {
+            contentArray = getQRString()
+        }
+        return contentArray
+    }
+
+    // Get QRCodes from image
+    private func getQRString() -> [String]? {
+        guard let finalImage = image else {
+            return nil
+        }
+        let result = finalImage.ciImage().recognizeQRCode(options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
+        if result.isEmpty {
+            return finalImage.grayscale?.ciImage().recognizeQRCode(
+                options: [CIDetectorAccuracy: CIDetectorAccuracyLow]
+            )
+        }
+        return result
     }
 }
+#endif

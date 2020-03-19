@@ -26,8 +26,8 @@
 
 import UIKit
 
-final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
-  public lazy var overlayView: QRCodeReaderViewOverlay? = {
+final internal class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
+  internal lazy var overlayView: QRCodeReaderViewOverlay? = {
     let ov = ReaderOverlayView()
 
     ov.backgroundColor                           = .clear
@@ -37,7 +37,7 @@ final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
     return ov
   }()
 
-  public let cameraView: UIView = {
+  internal let cameraView: UIView = {
     let cv = UIView()
 
     cv.clipsToBounds                             = true
@@ -46,7 +46,7 @@ final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
     return cv
   }()
 
-  public lazy var cancelButton: UIButton? = {
+  internal lazy var cancelButton: UIButton? = {
     let cb = UIButton()
 
     cb.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +55,7 @@ final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
     return cb
   }()
 
-  public lazy var switchCameraButton: UIButton? = {
+  internal lazy var switchCameraButton: UIButton? = {
     let scb = SwitchCameraButton()
 
     scb.translatesAutoresizingMaskIntoConstraints = false
@@ -63,7 +63,7 @@ final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
     return scb
   }()
 
-  public lazy var toggleTorchButton: UIButton? = {
+  internal lazy var toggleTorchButton: UIButton? = {
     let ttb = ToggleTorchButton()
 
     ttb.translatesAutoresizingMaskIntoConstraints = false
@@ -73,7 +73,7 @@ final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
 
   private weak var reader: QRCodeReader?
 
-  public func setupComponents(with builder: QRCodeReaderViewControllerBuilder) {
+  internal func setupComponents(with builder: QRCodeReaderViewControllerBuilder) {
     self.reader               = builder.reader
     reader?.lifeCycleDelegate = self
 
@@ -117,7 +117,7 @@ final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
     }
   }
 
-  public override func layoutSubviews() {
+  internal override func layoutSubviews() {
     super.layoutSubviews()
 
     reader?.previewLayer.frame = bounds
@@ -143,7 +143,7 @@ final public class QRCodeReaderView: UIView, QRCodeReaderDisplayable {
     self.overlayView?.setState(.valid)
   }
 
-  @objc public func setNeedsUpdateOrientation() {
+  @objc internal func setNeedsUpdateOrientation() {
     setNeedsDisplay()
 
     overlayView?.setNeedsDisplay()

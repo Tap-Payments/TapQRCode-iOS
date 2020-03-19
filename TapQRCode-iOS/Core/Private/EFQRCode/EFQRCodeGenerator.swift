@@ -32,8 +32,7 @@ import swift_qrcodejs
 #endif
 
 // EFQRCode+Create
-@objcMembers
-public class EFQRCodeGenerator: NSObject {
+internal class EFQRCodeGenerator: NSObject {
 
     // MARK: - Parameters
 
@@ -44,7 +43,7 @@ public class EFQRCodeGenerator: NSObject {
             imageCodes = nil
         }
     }
-    public func setContent(content: String) {
+    internal func setContent(content: String) {
         self.content = content
     }
 
@@ -54,7 +53,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setMode(mode: EFQRCodeMode) {
+    internal func setMode(mode: EFQRCodeMode) {
         self.mode = mode
     }
 
@@ -69,7 +68,7 @@ public class EFQRCodeGenerator: NSObject {
             imageCodes = nil
         }
     }
-    public func setInputCorrectionLevel(inputCorrectionLevel: EFInputCorrectionLevel) {
+    internal func setInputCorrectionLevel(inputCorrectionLevel: EFInputCorrectionLevel) {
         self.inputCorrectionLevel = inputCorrectionLevel
     }
 
@@ -79,7 +78,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setSize(size: EFIntSize) {
+    internal func setSize(size: EFIntSize) {
         self.size = size
     }
 
@@ -90,7 +89,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setMagnification(magnification: EFIntSize?) {
+    internal func setMagnification(magnification: EFIntSize?) {
         self.magnification = magnification
     }
 
@@ -107,13 +106,13 @@ public class EFQRCodeGenerator: NSObject {
         }
     }
     #if canImport(CoreImage)
-    @nonobjc public func setColors(backgroundColor: CIColor, foregroundColor: CIColor) {
+    @nonobjc internal func setColors(backgroundColor: CIColor, foregroundColor: CIColor) {
         self.backgroundColor = backgroundColor.cgColor() ?? CGColor.white()!
         self.foregroundColor = foregroundColor.cgColor() ?? CGColor.black()!
     }
     #endif
 
-    public func setColors(backgroundColor: CGColor, foregroundColor: CGColor) {
+    internal func setColors(backgroundColor: CGColor, foregroundColor: CGColor) {
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
     }
@@ -130,7 +129,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setIcon(icon: CGImage?, size: EFIntSize?) {
+    internal func setIcon(icon: CGImage?, size: EFIntSize?) {
         self.icon = icon
         self.iconSize = size
     }
@@ -147,7 +146,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setWatermark(watermark: CGImage?, mode: EFWatermarkMode? = nil) {
+    internal func setWatermark(watermark: CGImage?, mode: EFWatermarkMode? = nil) {
         self.watermark = watermark
 
         if let mode = mode {
@@ -161,7 +160,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setForegroundPointOffset(foregroundPointOffset: CGFloat) {
+    internal func setForegroundPointOffset(foregroundPointOffset: CGFloat) {
         self.foregroundPointOffset = foregroundPointOffset
     }
 
@@ -171,7 +170,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setAllowTransparent(allowTransparent: Bool) {
+    internal func setAllowTransparent(allowTransparent: Bool) {
         self.allowTransparent = allowTransparent
     }
 
@@ -181,7 +180,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setPointShape(pointShape: EFPointShape) {
+    internal func setPointShape(pointShape: EFPointShape) {
         self.pointShape = pointShape
     }
 
@@ -190,7 +189,7 @@ public class EFQRCodeGenerator: NSObject {
             imageQRCode = nil
         }
     }
-    public func setIgnoreTiming(ignoreTiming: Bool) {
+    internal func setIgnoreTiming(ignoreTiming: Bool) {
         self.ignoreTiming = ignoreTiming
     }
 
@@ -200,7 +199,7 @@ public class EFQRCodeGenerator: NSObject {
     private var minSuitableSize: EFIntSize!
 
     // MARK: - Init
-    public init(
+    internal init(
         content: String,
         size: EFIntSize = EFIntSize(width: 256, height: 256)
     ) {
@@ -209,7 +208,7 @@ public class EFQRCodeGenerator: NSObject {
     }
 
     /// Final QRCode image
-    public func generate() -> CGImage? {
+    internal func generate() -> CGImage? {
         if nil == imageQRCode {
             imageQRCode = createImageQRCode()
         }
@@ -801,7 +800,7 @@ public class EFQRCodeGenerator: NSObject {
     }
 
     /// Recommand magnification
-    public func minMagnificationGreaterThanOrEqualTo(size: CGFloat) -> Int? {
+    internal func minMagnificationGreaterThanOrEqualTo(size: CGFloat) -> Int? {
         guard let codes = generateCodes() else {
             return nil
         }
@@ -821,7 +820,7 @@ public class EFQRCodeGenerator: NSObject {
         return nil
     }
 
-    public func maxMagnificationLessThanOrEqualTo(size: CGFloat) -> Int? {
+    internal func maxMagnificationLessThanOrEqualTo(size: CGFloat) -> Int? {
         guard let codes = generateCodes() else {
             return nil
         }

@@ -1,8 +1,8 @@
 //
-//  EFPointShape.swift
+//  EFDefine.swift
 //  EFQRCode
 //
-//  Created by EyreFree on 2018/11/14.
+//  Created by EyreFree on 2017/4/11.
 //
 //  Copyright (c) 2017 EyreFree <eyrefree@eyrefree.org>
 //
@@ -27,12 +27,17 @@
 import CoreGraphics
 import Foundation
 
-#if canImport(CoreImage)
-import CoreImage
-#endif
-
-@objc public enum EFPointShape: Int {
-    case square         = 0
-    case circle         = 1
-    case diamond        = 2
+internal enum EFWatermarkMode: Int {
+    case scaleToFill        = 0
+    case scaleAspectFit     = 1
+    case scaleAspectFill    = 2
+    case center             = 3
+    case top                = 4
+    case bottom             = 5
+    case left               = 6
+    case right              = 7
+    case topLeft            = 8
+    case topRight           = 9
+    case bottomLeft         = 10
+    case bottomRight        = 11
 }

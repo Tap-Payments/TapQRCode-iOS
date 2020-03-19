@@ -34,7 +34,7 @@ import Foundation // weird we have to do this, but otherwise
 // @objc attribute used without importing module 'Foundation'
 #endif
 
-@objc public enum EFInputCorrectionLevel: Int {
+internal enum EFInputCorrectionLevel: Int {
     case l = 0     // L 7%
     case m = 1     // M 15%
     case q = 2     // Q 25%

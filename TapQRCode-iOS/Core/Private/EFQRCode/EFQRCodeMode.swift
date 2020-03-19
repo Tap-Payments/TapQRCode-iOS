@@ -27,7 +27,7 @@
 import CoreGraphics
 import Foundation
 
-public enum EFQRCodeMode {
+internal enum EFQRCodeMode {
     case none
     case grayscale
     case binarization(threshold: CGFloat)

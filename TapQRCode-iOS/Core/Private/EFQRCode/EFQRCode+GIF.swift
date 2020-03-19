@@ -34,7 +34,7 @@ import MobileCoreServices
 import CoreServices
 #endif
 
-public extension EFQRCode {
+internal extension EFQRCode {
 
     private static let framesPerSecond = 24
 

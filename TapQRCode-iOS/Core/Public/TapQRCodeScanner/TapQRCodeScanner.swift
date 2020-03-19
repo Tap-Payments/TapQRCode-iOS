@@ -9,7 +9,16 @@
 import Foundation
 import class AVFoundation.AVCaptureDevice
 import class UIKit.UIImagePickerController
-import QRCodeReader
+import struct UIKit.CGFloat
+import class UIKit.UIView
+import class UIKit.UIImage
+import struct UIKit.CGRect
+import class UIKit.CIDetector
+import var UIKit.CIDetectorTypeQRCode
+import class UIKit.CIImage
+import var UIKit.CIDetectorAccuracy
+import var UIKit.CIDetectorAccuracyHigh
+import class UIKit.CIQRCodeFeature
 
 /// This provides the public interface for the caller to the Tap QR code Scanner
 @objc public class TapQRCodeScanner:NSObject {

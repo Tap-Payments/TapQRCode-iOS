@@ -1,8 +1,8 @@
 //
-//  EFDefine.swift
+//  EFIntSize.swift
 //  EFQRCode
 //
-//  Created by EyreFree on 2017/4/11.
+//  Created by EyreFree on 2018/11/14.
 //
 //  Copyright (c) 2017 EyreFree <eyrefree@eyrefree.org>
 //
@@ -25,19 +25,26 @@
 //  THE SOFTWARE.
 
 import CoreGraphics
-import Foundation
 
-@objc public enum EFWatermarkMode: Int {
-    case scaleToFill        = 0
-    case scaleAspectFit     = 1
-    case scaleAspectFill    = 2
-    case center             = 3
-    case top                = 4
-    case bottom             = 5
-    case left               = 6
-    case right              = 7
-    case topLeft            = 8
-    case topRight           = 9
-    case bottomLeft         = 10
-    case bottomRight        = 11
+#if canImport(CoreImage)
+import CoreImage
+#endif
+
+internal class EFIntSize: NSObject {
+    internal private(set) var width: Int = 0
+    internal private(set) var height: Int = 0
+
+    internal init(width: Int, height: Int) {
+        self.width = width
+        self.height = height
+    }
+    
+    internal init(size: CGSize) {
+        self.width = Int(size.width)
+        self.height = Int(size.height)
+    }
+
+    internal var cgSize: CGSize {
+        return CGSize(width: width, height: height)
+    }
 }

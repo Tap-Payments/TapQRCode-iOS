@@ -1,8 +1,8 @@
 //
-//  EFQRCodeRecognizer.swift
+//  EFPointShape.swift
 //  EFQRCode
 //
-//  Created by EyreFree on 2017/3/28.
+//  Created by EyreFree on 2018/11/14.
 //
 //  Copyright (c) 2017 EyreFree <eyrefree@eyrefree.org>
 //
@@ -24,46 +24,15 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+import CoreGraphics
+import Foundation
+
 #if canImport(CoreImage)
 import CoreImage
-
-@objcMembers
-public class EFQRCodeRecognizer: NSObject {
-
-    private var image: CGImage? {
-        didSet {
-            contentArray = nil
-        }
-    }
-    public func setImage(image: CGImage?) {
-        self.image = image
-    }
-
-    private var contentArray: [String]?
-
-    public init(image: CGImage) {
-        self.image = image
-    }
-
-    public func recognize() -> [String]? {
-        if nil == contentArray {
-            contentArray = getQRString()
-        }
-        return contentArray
-    }
-
-    // Get QRCodes from image
-    private func getQRString() -> [String]? {
-        guard let finalImage = image else {
-            return nil
-        }
-        let result = finalImage.ciImage().recognizeQRCode(options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])
-        if result.isEmpty {
-            return finalImage.grayscale?.ciImage().recognizeQRCode(
-                options: [CIDetectorAccuracy: CIDetectorAccuracyLow]
-            )
-        }
-        return result
-    }
-}
 #endif
+
+internal enum EFPointShape: Int {
+    case square         = 0
+    case circle         = 1
+    case diamond        = 2
+}

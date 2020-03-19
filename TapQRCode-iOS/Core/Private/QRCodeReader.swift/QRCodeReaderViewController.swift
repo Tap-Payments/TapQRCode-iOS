@@ -28,21 +28,21 @@ import UIKit
 import AVFoundation
 
 /// Convenient controller to display a view to scan/read 1D or 2D bar codes like the QRCodes. It is based on the `AVFoundation` framework from Apple. It aims to replace ZXing or ZBar for iOS 7 and over.
-public class QRCodeReaderViewController: UIViewController {
+internal class QRCodeReaderViewController: UIViewController {
   private let builder: QRCodeReaderViewControllerBuilder
 
   /// The code reader object used to scan the bar code.
-  public var codeReader: QRCodeReader {
+  internal var codeReader: QRCodeReader {
     return builder.reader
   }
 
   // MARK: - Managing the Callback Responders
 
   /// The receiver's delegate that will be called when a result is found.
-  public weak var delegate: QRCodeReaderViewControllerDelegate?
+  internal weak var delegate: QRCodeReaderViewControllerDelegate?
 
   /// The completion blocak that will be called when a result is found.
-  public var completionBlock: ((QRCodeReaderResult?) -> Void)?
+  internal var completionBlock: ((QRCodeReaderResult?) -> Void)?
 
   deinit {
     codeReader.stopScanning()
@@ -57,7 +57,7 @@ public class QRCodeReaderViewController: UIViewController {
 
    - parameter builder: A QRCodeViewController builder object.
    */
-  required public init(builder: QRCodeReaderViewControllerBuilder) {
+  required internal init(builder: QRCodeReaderViewControllerBuilder) {
     self.builder = builder
 
     super.init(nibName: nil, bundle: nil)
@@ -83,7 +83,7 @@ public class QRCodeReaderViewController: UIViewController {
     setupUIComponentsWithCancelButtonTitle(builder.cancelButtonTitle)
   }
 
-  required public init?(coder aDecoder: NSCoder) {
+  required internal init?(coder aDecoder: NSCoder) {
     self.builder = QRCodeReaderViewControllerBuilder()
 
     super.init(coder: aDecoder)
@@ -91,7 +91,7 @@ public class QRCodeReaderViewController: UIViewController {
 
   // MARK: - Responding to View Events
 
-  override public func viewWillAppear(_ animated: Bool) {
+  override internal func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
 
     if builder.startScanningAtLoad {
@@ -101,19 +101,19 @@ public class QRCodeReaderViewController: UIViewController {
     }
   }
 
-  override public func viewWillDisappear(_ animated: Bool) {
+  override internal func viewWillDisappear(_ animated: Bool) {
     stopScanning()
 
     super.viewWillDisappear(animated)
   }
 
-  override public func viewWillLayoutSubviews() {
+  override internal func viewWillLayoutSubviews() {
     super.viewWillLayoutSubviews()
 
     codeReader.previewLayer.frame = view.bounds
   }
 
-  public override var preferredStatusBarStyle: UIStatusBarStyle {
+  internal override var preferredStatusBarStyle: UIStatusBarStyle {
     return builder.preferredStatusBarStyle ?? super.preferredStatusBarStyle
   }
 
@@ -149,12 +149,12 @@ public class QRCodeReaderViewController: UIViewController {
   // MARK: - Controlling the Reader
 
   /// Starts scanning the codes.
-  public func startScanning() {
+  internal func startScanning() {
     codeReader.startScanning()
   }
 
   /// Stops scanning the codes.
-  public func stopScanning() {
+  internal func stopScanning() {
     codeReader.stopScanning()
   }
 

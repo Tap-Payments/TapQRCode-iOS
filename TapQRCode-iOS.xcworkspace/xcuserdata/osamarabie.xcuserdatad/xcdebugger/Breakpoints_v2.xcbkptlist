@@ -14,9 +14,9 @@
             filePath = "TapQRCode-iOS/Core/Public/TapQRCodeScanner/TapQRCodeScanner.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "updateInlineScannerFrame(with:)"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "scanInline(inside:shouldHideUponScanning:erroCallBack:scannedCodeCallBack:scannerRemovedCallBack:introFadeIn:outroFadeOut:top:bottom:right:left:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -30,8 +30,8 @@
             filePath = "TapQRCode-iOS/Core/Public/TapQRCodeScanner/TapQRCodeScanner.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "143"
-            endingLineNumber = "143"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "scanInline(inside:shouldHideUponScanning:erroCallBack:scannedCodeCallBack:scannerRemovedCallBack:introFadeIn:outroFadeOut:top:bottom:right:left:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "TapQRCode-iOS/Core/Public/TapQRCodeScanner/TapQRCodeScanner.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "scanInline(inside:shouldHideUponScanning:erroCallBack:scannedCodeCallBack:scannerRemovedCallBack:introFadeIn:outroFadeOut:top:bottom:right:left:)"
             landmarkType = "7">
             <Locations>
@@ -62,23 +62,23 @@
                   urlString = "file:///Users/osamarabie/Desktop/Tap%20Payments/Tap2020/TapQRCode-iOS/TapQRCode-iOS/Core/Public/TapQRCodeScanner/TapQRCodeScanner.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
                   offsetFromSymbolStart = "2891">
                </Location>
                <Location
-                  uuid = "39EEC98B-07A4-4574-BC03-53F5A933955B - ece4d19c01c5f319"
+                  uuid = "39EEC98B-07A4-4574-BC03-53F5A933955B - 4c814c9fa044892c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (QRCodeReader.QRCodeReaderResult) -&gt; () in TapQRCode_iOS.TapQRCodeScanner.scanInline(inside: __C.UIView, shouldHideUponScanning: Swift.Bool, erroCallBack: Swift.Optional&lt;(Swift.String) -&gt; ()&gt;, scannedCodeCallBack: Swift.Optional&lt;(TapQRCode_iOS.TapQRCodeScannerResult) -&gt; ()&gt;, scannerRemovedCallBack: Swift.Optional&lt;() -&gt; ()&gt;, introFadeIn: Swift.Bool, outroFadeOut: Swift.Bool, top: CoreGraphics.CGFloat, bottom: CoreGraphics.CGFloat, right: CoreGraphics.CGFloat, left: CoreGraphics.CGFloat) -&gt; ()"
+                  symbolName = "closure #3 (TapQRCode_iOS.QRCodeReaderResult) -&gt; () in TapQRCode_iOS.TapQRCodeScanner.scanInline(inside: __C.UIView, shouldHideUponScanning: Swift.Bool, erroCallBack: Swift.Optional&lt;(Swift.String) -&gt; ()&gt;, scannedCodeCallBack: Swift.Optional&lt;(TapQRCode_iOS.TapQRCodeScannerResult) -&gt; ()&gt;, scannerRemovedCallBack: Swift.Optional&lt;() -&gt; ()&gt;, introFadeIn: Swift.Bool, outroFadeOut: Swift.Bool, top: CoreGraphics.CGFloat, bottom: CoreGraphics.CGFloat, right: CoreGraphics.CGFloat, left: CoreGraphics.CGFloat) -&gt; ()"
                   moduleName = "TapQRCode_iOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/osamarabie/Desktop/Tap%20Payments/Tap2020/TapQRCode-iOS/TapQRCode-iOS/Core/Public/TapQRCodeScanner/TapQRCodeScanner.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "128"
-                  endingLineNumber = "128"
+                  startingLineNumber = "137"
+                  endingLineNumber = "137"
                   offsetFromSymbolStart = "340">
                </Location>
             </Locations>

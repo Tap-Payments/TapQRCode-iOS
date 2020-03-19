@@ -28,7 +28,7 @@ import UIKit
 
 /// The camera switch button.
 @IBDesignable
-public final class SwitchCameraButton: UIButton {
+internal final class SwitchCameraButton: UIButton {
   @IBInspectable var edgeColor: UIColor = UIColor.white {
     didSet {
       setNeedsDisplay()
@@ -44,7 +44,7 @@ public final class SwitchCameraButton: UIButton {
   @IBInspectable var edgeHighlightedColor: UIColor = UIColor.white
   @IBInspectable var fillHighlightedColor: UIColor = UIColor.black
 
-  public override func draw(_ rect: CGRect) {
+  internal override func draw(_ rect: CGRect) {
     let width  = rect.width
     let height = rect.height
     let center = width / 2
@@ -161,24 +161,24 @@ public final class SwitchCameraButton: UIButton {
 
   // MARK: - UIResponder Methods
 
-  public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+  internal override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesBegan(touches, with: event)
 
     setNeedsDisplay()
   }
 
-  public override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+  internal override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesMoved(touches, with: event)
 
     setNeedsDisplay()
   }
 
-  public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+  internal override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     super.touchesEnded(touches, with: event)
     setNeedsDisplay()
   }
 
-  public override func touchesCancelled(_ touches: Set<UITouch>?, with event: UIEvent?) {
+  internal override func touchesCancelled(_ touches: Set<UITouch>?, with event: UIEvent?) {
     super.touchesCancelled(touches!, with: event)
     
     setNeedsDisplay()

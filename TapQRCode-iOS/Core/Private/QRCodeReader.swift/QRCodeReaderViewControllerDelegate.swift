@@ -29,7 +29,7 @@ import AVFoundation
 /**
  This protocol defines delegate methods for objects that implements the `QRCodeReaderDelegate`. The methods of the protocol allow the delegate to be notified when the reader did scan result and or when the user wants to stop to read some QRCodes.
  */
-public protocol QRCodeReaderViewControllerDelegate: class {
+internal protocol QRCodeReaderViewControllerDelegate: class {
   /**
    Tells the delegate that the reader did scan a code.
 
@@ -62,5 +62,5 @@ extension QRCodeReaderViewControllerDelegate {
    - parameter reader: A code reader object informing the delegate about the scan result.
    - parameter newCaptureDevice: The capture device that was switched to
    */
-  public func reader(_ reader: QRCodeReaderViewController, didSwitchCamera newCaptureDevice: AVCaptureDeviceInput) {}
+  internal func reader(_ reader: QRCodeReaderViewController, didSwitchCamera newCaptureDevice: AVCaptureDeviceInput) {}
 }

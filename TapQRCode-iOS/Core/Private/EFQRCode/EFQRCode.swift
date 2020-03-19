@@ -31,18 +31,17 @@ import CoreGraphics
 import CoreImage
 #endif
 
-@objcMembers
-public class EFQRCode: NSObject {
+internal class EFQRCode: NSObject {
     
     // MARK: - Recognizer
     #if canImport(CoreImage)
-    public static func recognize(image: CGImage) -> [String]? {
+    internal static func recognize(image: CGImage) -> [String]? {
         return EFQRCodeRecognizer(image: image).recognize()
     }
     #endif
 
     // MARK: - Generator
-    public static func generate(
+    internal static func generate(
         content: String,
         size: EFIntSize = EFIntSize(width: 600, height: 600),
         backgroundColor: CGColor = CGColor.white()!,
@@ -72,7 +71,7 @@ public class EFQRCode: NSObject {
         return generator.generate()
     }
 
-    public static func generateWithGIF(
+    internal static func generateWithGIF(
         content: String,
         size: EFIntSize = EFIntSize(width: 600, height: 600),
         backgroundColor: CGColor = CGColor.white()!,

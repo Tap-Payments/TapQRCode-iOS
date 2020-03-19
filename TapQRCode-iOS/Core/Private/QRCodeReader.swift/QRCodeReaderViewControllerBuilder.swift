@@ -31,44 +31,44 @@ import UIKit
  The QRCodeViewControllerBuilder aims to create a simple configuration object for
  the QRCode view controller.
  */
-public final class QRCodeReaderViewControllerBuilder {
+internal final class QRCodeReaderViewControllerBuilder {
   // MARK: - Configuring the QRCodeViewController Objects
 
   /**
    The builder block.
    The block gives a reference of builder you can configure.
    */
-  public typealias QRCodeReaderViewControllerBuilderBlock = (QRCodeReaderViewControllerBuilder) -> Void
+  internal typealias QRCodeReaderViewControllerBuilderBlock = (QRCodeReaderViewControllerBuilder) -> Void
 
   /**
    The title to use for the cancel button.
    */
-  public var cancelButtonTitle = "Cancel"
+  internal var cancelButtonTitle = "Cancel"
 
   /**
    The code reader object used to scan the bar code.
    */
-  public var reader = QRCodeReader()
+  internal var reader = QRCodeReader()
 
   /**
    The reader container view used to display the video capture and the UI components.
    */
-  public var readerView = QRCodeReaderContainer(displayable: QRCodeReaderView())
+  internal var readerView = QRCodeReaderContainer(displayable: QRCodeReaderView())
 
   /**
    Flag to know whether the view controller start scanning the codes when the view will appear.
    */
-  public var startScanningAtLoad = true
+  internal var startScanningAtLoad = true
 
   /**
    Flag to display the cancel button.
    */
-  public var showCancelButton = true
+  internal var showCancelButton = true
 
   /**
    Flag to display the switch camera button.
    */
-  public var showSwitchCameraButton: Bool {
+  internal var showSwitchCameraButton: Bool {
     get {
       return _showSwitchCameraButton && reader.hasFrontDevice
     }
@@ -81,7 +81,7 @@ public final class QRCodeReaderViewControllerBuilder {
   /**
    Flag to display the toggle torch button. If the value is true and there is no torch the button will not be displayed.
    */
-  public var showTorchButton: Bool {
+  internal var showTorchButton: Bool {
     get {
       return _showTorchButton && reader.isTorchAvailable
     }
@@ -94,25 +94,25 @@ public final class QRCodeReaderViewControllerBuilder {
   /**
    Flag to display the guide view.
    */
-  public var showOverlayView = false
+  internal var showOverlayView = false
 
   /**
     Flag to display the guide view.
   */
-  public var handleOrientationChange = true
+  internal var handleOrientationChange = true
 
   /**
    A UIStatusBarStyle key indicating your preferred status bar style for the view controller.
    Nil by default. It means it'll use the current context status bar style.
   */
-  public var preferredStatusBarStyle: UIStatusBarStyle? = nil
+  internal var preferredStatusBarStyle: UIStatusBarStyle? = nil
 
   /**
    Specifies a rectangle of interest for limiting the search area for visual metadata.
 
    The value of this property is a CGRect that determines the receiver's rectangle of interest for each frame of video. The rectangle's origin is top left and is relative to the coordinate space of the device providing the metadata. Specifying a rectOfInterest may improve detection performance for certain types of metadata. The default value of this property is the value CGRectMake(0, 0, 1, 1). Metadata objects whose bounds do not intersect with the rectOfInterest will not be returned.
   */
-  public var rectOfInterest: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1) {
+  internal var rectOfInterest: CGRect = CGRect(x: 0, y: 0, width: 1, height: 1) {
     didSet {
       reader.metadataOutput.rectOfInterest = CGRect(
         x: min(max(rectOfInterest.origin.x, 0), 1),
@@ -128,14 +128,14 @@ public final class QRCodeReaderViewControllerBuilder {
   /**
    Initialize a QRCodeViewController builder with default values.
    */
-  public init() {}
+  internal init() {}
 
   /**
    Initialize a QRCodeReaderViewController builder with default values.
 
    - parameter buildBlock: A QRCodeReaderViewController builder block to configure itself.
    */
-  public init(buildBlock: QRCodeReaderViewControllerBuilderBlock) {
+  internal init(buildBlock: QRCodeReaderViewControllerBuilderBlock) {
     buildBlock(self)
   }
 }

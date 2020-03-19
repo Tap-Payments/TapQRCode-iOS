@@ -45,6 +45,37 @@
 		E82E50FC2421F6E2007E9905 /* TapQRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E50FB2421F6E2007E9905 /* TapQRCodeScanner.swift */; };
 		E82E5100242213EF007E9905 /* TapScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E50FF242213EF007E9905 /* TapScannerViewController.swift */; };
 		E82E51042422469A007E9905 /* TapQRCodeScannerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E51032422469A007E9905 /* TapQRCodeScannerResult.swift */; };
+		E82E5115242337BD007E9905 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5109242337BD007E9905 /* QRCodeReader.swift */; };
+		E82E5116242337BD007E9905 /* QRCodeReaderViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E510A242337BD007E9905 /* QRCodeReaderViewControllerDelegate.swift */; };
+		E82E5117242337BD007E9905 /* QRCodeReaderViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E510B242337BD007E9905 /* QRCodeReaderViewContainer.swift */; };
+		E82E5118242337BD007E9905 /* QRCodeReaderViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E510C242337BD007E9905 /* QRCodeReaderViewControllerBuilder.swift */; };
+		E82E5119242337BD007E9905 /* QRCodeReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E510D242337BD007E9905 /* QRCodeReaderView.swift */; };
+		E82E511A242337BD007E9905 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E510E242337BD007E9905 /* QRCodeReaderResult.swift */; };
+		E82E511B242337BD007E9905 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E510F242337BD007E9905 /* SwitchCameraButton.swift */; };
+		E82E511C242337BD007E9905 /* QRCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5110242337BD007E9905 /* QRCodeReaderViewController.swift */; };
+		E82E511D242337BD007E9905 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5111242337BD007E9905 /* ToggleTorchButton.swift */; };
+		E82E511E242337BD007E9905 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5112242337BD007E9905 /* ReaderOverlayView.swift */; };
+		E82E5139242337FE007E9905 /* NSImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5122242337FE007E9905 /* NSImage+.swift */; };
+		E82E513A242337FE007E9905 /* EFUIntPixel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5123242337FE007E9905 /* EFUIntPixel.swift */; };
+		E82E513B242337FE007E9905 /* NSColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5124242337FE007E9905 /* NSColor+.swift */; };
+		E82E513C242337FE007E9905 /* EFPointShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5125242337FE007E9905 /* EFPointShape.swift */; };
+		E82E513D242337FE007E9905 /* BinaryInteger+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5126242337FE007E9905 /* BinaryInteger+.swift */; };
+		E82E513E242337FE007E9905 /* EFIntSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5127242337FE007E9905 /* EFIntSize.swift */; };
+		E82E513F242337FE007E9905 /* EFQRCodeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5128242337FE007E9905 /* EFQRCodeMode.swift */; };
+		E82E5140242337FE007E9905 /* CIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5129242337FE007E9905 /* CIImage+.swift */; };
+		E82E5141242337FE007E9905 /* EFQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E512A242337FE007E9905 /* EFQRCode.swift */; };
+		E82E5142242337FE007E9905 /* CIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E512B242337FE007E9905 /* CIColor+.swift */; };
+		E82E5143242337FE007E9905 /* BinaryFloatingPoint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E512C242337FE007E9905 /* BinaryFloatingPoint+.swift */; };
+		E82E5144242337FE007E9905 /* EFWatermarkMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E512D242337FE007E9905 /* EFWatermarkMode.swift */; };
+		E82E5145242337FE007E9905 /* EFQRCode+GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E512E242337FE007E9905 /* EFQRCode+GIF.swift */; };
+		E82E5146242337FE007E9905 /* EFQRCodeRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E512F242337FE007E9905 /* EFQRCodeRecognizer.swift */; };
+		E82E5147242337FE007E9905 /* EFInputCorrectionLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5130242337FE007E9905 /* EFInputCorrectionLevel.swift */; };
+		E82E5148242337FE007E9905 /* CGImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5131242337FE007E9905 /* CGImage+.swift */; };
+		E82E5149242337FE007E9905 /* EFQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5132242337FE007E9905 /* EFQRCodeGenerator.swift */; };
+		E82E514A242337FE007E9905 /* CGColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5133242337FE007E9905 /* CGColor+.swift */; };
+		E82E514B242337FE007E9905 /* EFQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = E82E5134242337FE007E9905 /* EFQRCode.h */; };
+		E82E514C242337FE007E9905 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5135242337FE007E9905 /* UIImage+.swift */; };
+		E82E514D242337FE007E9905 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5136242337FE007E9905 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +159,37 @@
 		E82E50FB2421F6E2007E9905 /* TapQRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQRCodeScanner.swift; sourceTree = "<group>"; };
 		E82E50FF242213EF007E9905 /* TapScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapScannerViewController.swift; sourceTree = "<group>"; };
 		E82E51032422469A007E9905 /* TapQRCodeScannerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapQRCodeScannerResult.swift; sourceTree = "<group>"; };
+		E82E5109242337BD007E9905 /* QRCodeReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReader.swift; sourceTree = "<group>"; };
+		E82E510A242337BD007E9905 /* QRCodeReaderViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewControllerDelegate.swift; sourceTree = "<group>"; };
+		E82E510B242337BD007E9905 /* QRCodeReaderViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewContainer.swift; sourceTree = "<group>"; };
+		E82E510C242337BD007E9905 /* QRCodeReaderViewControllerBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewControllerBuilder.swift; sourceTree = "<group>"; };
+		E82E510D242337BD007E9905 /* QRCodeReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderView.swift; sourceTree = "<group>"; };
+		E82E510E242337BD007E9905 /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderResult.swift; sourceTree = "<group>"; };
+		E82E510F242337BD007E9905 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchCameraButton.swift; sourceTree = "<group>"; };
+		E82E5110242337BD007E9905 /* QRCodeReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeReaderViewController.swift; sourceTree = "<group>"; };
+		E82E5111242337BD007E9905 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleTorchButton.swift; sourceTree = "<group>"; };
+		E82E5112242337BD007E9905 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderOverlayView.swift; sourceTree = "<group>"; };
+		E82E5122242337FE007E9905 /* NSImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSImage+.swift"; sourceTree = "<group>"; };
+		E82E5123242337FE007E9905 /* EFUIntPixel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFUIntPixel.swift; sourceTree = "<group>"; };
+		E82E5124242337FE007E9905 /* NSColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSColor+.swift"; sourceTree = "<group>"; };
+		E82E5125242337FE007E9905 /* EFPointShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFPointShape.swift; sourceTree = "<group>"; };
+		E82E5126242337FE007E9905 /* BinaryInteger+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BinaryInteger+.swift"; sourceTree = "<group>"; };
+		E82E5127242337FE007E9905 /* EFIntSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFIntSize.swift; sourceTree = "<group>"; };
+		E82E5128242337FE007E9905 /* EFQRCodeMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFQRCodeMode.swift; sourceTree = "<group>"; };
+		E82E5129242337FE007E9905 /* CIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+.swift"; sourceTree = "<group>"; };
+		E82E512A242337FE007E9905 /* EFQRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFQRCode.swift; sourceTree = "<group>"; };
+		E82E512B242337FE007E9905 /* CIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIColor+.swift"; sourceTree = "<group>"; };
+		E82E512C242337FE007E9905 /* BinaryFloatingPoint+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BinaryFloatingPoint+.swift"; sourceTree = "<group>"; };
+		E82E512D242337FE007E9905 /* EFWatermarkMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFWatermarkMode.swift; sourceTree = "<group>"; };
+		E82E512E242337FE007E9905 /* EFQRCode+GIF.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EFQRCode+GIF.swift"; sourceTree = "<group>"; };
+		E82E512F242337FE007E9905 /* EFQRCodeRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFQRCodeRecognizer.swift; sourceTree = "<group>"; };
+		E82E5130242337FE007E9905 /* EFInputCorrectionLevel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFInputCorrectionLevel.swift; sourceTree = "<group>"; };
+		E82E5131242337FE007E9905 /* CGImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+.swift"; sourceTree = "<group>"; };
+		E82E5132242337FE007E9905 /* EFQRCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFQRCodeGenerator.swift; sourceTree = "<group>"; };
+		E82E5133242337FE007E9905 /* CGColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+.swift"; sourceTree = "<group>"; };
+		E82E5134242337FE007E9905 /* EFQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFQRCode.h; sourceTree = "<group>"; };
+		E82E5135242337FE007E9905 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		E82E5136242337FE007E9905 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		ED1A1C9D6A47713B541EAE7B /* Pods-TapQRCodeExample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCodeExample-iOS.release.xcconfig"; path = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EF3494C5B30E96B8C7D482AB /* Pods-TapQRCodeExample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCodeExample-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FD3592FAE2619D3AD3AEB296 /* Pods_TapQRCodeExample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapQRCodeExample_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +348,8 @@
 		E81A7DCC241E760200836547 /* Private */ = {
 			isa = PBXGroup;
 			children = (
+				E82E511F242337FE007E9905 /* EFQRCode */,
+				E82E5105242337BD007E9905 /* QRCodeReader.swift */,
 				E81A7DD1241E86F900836547 /* enums */,
 			);
 			path = Private;
@@ -320,6 +384,51 @@
 			path = TapQRCodeScanner;
 			sourceTree = "<group>";
 		};
+		E82E5105242337BD007E9905 /* QRCodeReader.swift */ = {
+			isa = PBXGroup;
+			children = (
+				E82E5109242337BD007E9905 /* QRCodeReader.swift */,
+				E82E510A242337BD007E9905 /* QRCodeReaderViewControllerDelegate.swift */,
+				E82E510B242337BD007E9905 /* QRCodeReaderViewContainer.swift */,
+				E82E510C242337BD007E9905 /* QRCodeReaderViewControllerBuilder.swift */,
+				E82E510D242337BD007E9905 /* QRCodeReaderView.swift */,
+				E82E510E242337BD007E9905 /* QRCodeReaderResult.swift */,
+				E82E510F242337BD007E9905 /* SwitchCameraButton.swift */,
+				E82E5110242337BD007E9905 /* QRCodeReaderViewController.swift */,
+				E82E5111242337BD007E9905 /* ToggleTorchButton.swift */,
+				E82E5112242337BD007E9905 /* ReaderOverlayView.swift */,
+			);
+			path = QRCodeReader.swift;
+			sourceTree = "<group>";
+		};
+		E82E511F242337FE007E9905 /* EFQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				E82E5122242337FE007E9905 /* NSImage+.swift */,
+				E82E5123242337FE007E9905 /* EFUIntPixel.swift */,
+				E82E5124242337FE007E9905 /* NSColor+.swift */,
+				E82E5125242337FE007E9905 /* EFPointShape.swift */,
+				E82E5126242337FE007E9905 /* BinaryInteger+.swift */,
+				E82E5127242337FE007E9905 /* EFIntSize.swift */,
+				E82E5128242337FE007E9905 /* EFQRCodeMode.swift */,
+				E82E5129242337FE007E9905 /* CIImage+.swift */,
+				E82E512A242337FE007E9905 /* EFQRCode.swift */,
+				E82E512B242337FE007E9905 /* CIColor+.swift */,
+				E82E512C242337FE007E9905 /* BinaryFloatingPoint+.swift */,
+				E82E512D242337FE007E9905 /* EFWatermarkMode.swift */,
+				E82E512E242337FE007E9905 /* EFQRCode+GIF.swift */,
+				E82E512F242337FE007E9905 /* EFQRCodeRecognizer.swift */,
+				E82E5130242337FE007E9905 /* EFInputCorrectionLevel.swift */,
+				E82E5131242337FE007E9905 /* CGImage+.swift */,
+				E82E5132242337FE007E9905 /* EFQRCodeGenerator.swift */,
+				E82E5133242337FE007E9905 /* CGColor+.swift */,
+				E82E5134242337FE007E9905 /* EFQRCode.h */,
+				E82E5135242337FE007E9905 /* UIImage+.swift */,
+				E82E5136242337FE007E9905 /* UIColor+.swift */,
+			);
+			path = EFQRCode;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -328,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81A7D4B241E3DA900836547 /* TapQRCode_iOS.h in Headers */,
+				E82E514B242337FE007E9905 /* EFQRCode.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,21 +645,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E82E511D242337BD007E9905 /* ToggleTorchButton.swift in Sources */,
 				E81A7DE6241F632900836547 /* TapEmvcoAdditionalDataCollection.swift in Sources */,
+				E82E513A242337FE007E9905 /* EFUIntPixel.swift in Sources */,
 				E81A7DCB241E732400836547 /* TapQrCodeContent.swift in Sources */,
 				E81A7DE4241F5E0900836547 /* TapEmvcoAdditionalData.swift in Sources */,
+				E82E511A242337BD007E9905 /* QRCodeReaderResult.swift in Sources */,
+				E82E5146242337FE007E9905 /* EFQRCodeRecognizer.swift in Sources */,
 				E81A7DDC241F416E00836547 /* TapEmvcoOfInitiation.swift in Sources */,
+				E82E5143242337FE007E9905 /* BinaryFloatingPoint+.swift in Sources */,
+				E82E511C242337BD007E9905 /* QRCodeReaderViewController.swift in Sources */,
+				E82E5149242337FE007E9905 /* EFQRCodeGenerator.swift in Sources */,
+				E82E513B242337FE007E9905 /* NSColor+.swift in Sources */,
+				E82E5142242337FE007E9905 /* CIColor+.swift in Sources */,
 				E82E50FC2421F6E2007E9905 /* TapQRCodeScanner.swift in Sources */,
+				E82E513E242337FE007E9905 /* EFIntSize.swift in Sources */,
+				E82E514A242337FE007E9905 /* CGColor+.swift in Sources */,
 				E81A7DDE241F4D3C00836547 /* TapEmvcoCurrencyCode.swift in Sources */,
+				E82E5148242337FE007E9905 /* CGImage+.swift in Sources */,
+				E82E513D242337FE007E9905 /* BinaryInteger+.swift in Sources */,
 				E81A7DAA241E6FFA00836547 /* TapQRCodeGenerator.swift in Sources */,
 				E81A7DE0241F532000836547 /* TapEmvcoExtraFees.swift in Sources */,
 				E81A7DC9241E727D00836547 /* TapQRCodeType.swift in Sources */,
+				E82E5141242337FE007E9905 /* EFQRCode.swift in Sources */,
+				E82E5145242337FE007E9905 /* EFQRCode+GIF.swift in Sources */,
+				E82E5119242337BD007E9905 /* QRCodeReaderView.swift in Sources */,
 				E81A7DD6241E897C00836547 /* TapEmvcoPushData.swift in Sources */,
 				E81A7DDA241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift in Sources */,
+				E82E5117242337BD007E9905 /* QRCodeReaderViewContainer.swift in Sources */,
+				E82E5139242337FE007E9905 /* NSImage+.swift in Sources */,
+				E82E5147242337FE007E9905 /* EFInputCorrectionLevel.swift in Sources */,
 				E82E51042422469A007E9905 /* TapQRCodeScannerResult.swift in Sources */,
+				E82E5144242337FE007E9905 /* EFWatermarkMode.swift in Sources */,
 				E81A7DE2241F565400836547 /* TapEmvcoCountryCode.swift in Sources */,
+				E82E5140242337FE007E9905 /* CIImage+.swift in Sources */,
 				E81A7DD8241E8EFA00836547 /* TapEmvcoNetworkTags.swift in Sources */,
+				E82E5118242337BD007E9905 /* QRCodeReaderViewControllerBuilder.swift in Sources */,
+				E82E511E242337BD007E9905 /* ReaderOverlayView.swift in Sources */,
+				E82E5116242337BD007E9905 /* QRCodeReaderViewControllerDelegate.swift in Sources */,
+				E82E513F242337FE007E9905 /* EFQRCodeMode.swift in Sources */,
+				E82E513C242337FE007E9905 /* EFPointShape.swift in Sources */,
+				E82E5115242337BD007E9905 /* QRCodeReader.swift in Sources */,
+				E82E514C242337FE007E9905 /* UIImage+.swift in Sources */,
+				E82E511B242337BD007E9905 /* SwitchCameraButton.swift in Sources */,
 				E81A7DD3241E870900836547 /* QrCodeValue.swift in Sources */,
+				E82E514D242337FE007E9905 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -827,7 +967,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.4;
+				CURRENT_PROJECT_VERSION = 1.5;
 				DEVELOPMENT_TEAM = G46S76PUH4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -856,7 +996,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.4;
+				CURRENT_PROJECT_VERSION = 1.5;
 				DEVELOPMENT_TEAM = G46S76PUH4;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
