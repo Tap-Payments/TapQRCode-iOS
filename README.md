@@ -348,3 +348,100 @@ This model represents a much easier and understandable wrapper for the *Addition
 | terminalLabel                    | String                           | No       | none         | A distinctive id associated to a terminal inside a store, will always be truncated to first 25 charachters Write it as *** if you want the mobile app to gather it |
 | additionalCustomerDataCollection | TapEmvcoAdditionalDataCollection | No       | .None        | Contains indications that the mobile application should include the requested information in order to complete the transaction. The information requested should be provided by the mobile application in the authorization without unnecessarily prompting the consumer. If present, the Additional Consumer Data Request (ID "09") shall contain any combination of the characters: "A", "M" and/or "E", and there shall only be a single instance of each of these characters. |
 
+###### TapEmvcoPushData init with Dictionary
+
+TapEmvcoPushData can be initiated by providing the dictionary which can be loaded from JSON file or JSON response from backend as follows:
+
+*Swift*:
+
+```swift
+import TapQRCode_iOS
+
+let url = Bundle.main.url(forResource: "EmvcoJson", withExtension: "json")!
+let data = try! Data(contentsOf: url)
+let emvcoDataFromJson:[String:Any] = try! JSONSerialization.jsonObject(with: data, options:.allowFragments) as! [String : Any]
+do {
+    let tapEmvcoData:TapEmvcoPushData = try TapEmvcoPushData.init(withDictionary: emvcoDataFromJson)
+}catch{
+    print(error.localizedDescription)
+}
+```
+
+*Objective-C*:
+
+```objective-c
+@import TapQRCode_iOS;
+
+NSError* error;
+NSError* jsonError;
+NSURL* url = [[NSBundle mainBundle] URLForResource:@"EmvcoJson" withExtension:@"json"];
+NSData* data = [NSData dataWithContentsOfURL:url];
+NSDictionary* emvcoDataFromJson = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&jsonError];
+if(!jsonError)
+{
+    TapEmvcoPushData* tapEmvcoData = [[TapEmvcoPushData alloc]initWithDictionary:emvcoDataFromJson error:&error];
+    NSLog(@"%@",@"");
+}
+```
+
+
+
+*Accepted JSON format:*
+
+```json
+{
+    "pointOfInitiation": "12",
+    "merchantCategoryCode": "1711",
+    "merchantName": "Tap Emvco",
+    "merchantCity": "Kuwait",
+    "paymentNetworks": [
+        {
+            "tag": "VisaTag02",
+            "value": "4600678934521435"
+        },
+        {
+            "tag": "VisaTag03",
+            "value": "4600678934521467"
+        },
+        {
+            "tag": "MasterTag04",
+            "value": "555544443333111"
+        },
+        {
+            "tag": "MasterTag05",
+            "value": "555544443333222"
+        },
+        {
+            "tag": "NPCITag06",
+            "value": ""
+        },
+        {
+            "tag": "NPCITag07",
+            "value": ""
+        },
+        {
+            "tag": "AmexTag011",
+            "value": ""
+        },
+        {
+            "tag": "AmexTag012",
+            "value": ""
+        }
+    ],
+    "countryCode": "KW",
+    "transactionCurrencyCode": "414",
+    "transactionAmount": 10,
+    "extraFeesMode": "02",
+    "extraFeesAmount": 5,
+    "billNumber": "123093133",
+    "customerLabel": "My Customer",
+    "terminalLabel": "POS 1",
+    "storeLabel": "New Cairo",
+    "loyaltyNumber": "78876",
+    "mobileNumber": "0020100936631",
+    "purposeForTransaction": "Demo One",
+    "additionalCustomerDataCollection": "ME"
+}
+
+```
+
