@@ -1,7 +1,7 @@
 {
     "pointOfInitiation": "12",
     "merchantCategoryCode": "1711",
-    "merchantName": "Tap Emvco",
+    "merchantName": "Tap Payments",
     "merchantCity": "Kuwait",
     "paymentNetworks": [
         {
@@ -43,11 +43,14 @@
     "extraFeesMode": "02",
     "extraFeesAmount": 5,
     "billNumber": "123093133",
-    "customerLabel": "My Customer",
+    "customerLabel": "Tap Customer",
     "terminalLabel": "POS 1",
-    "storeLabel": "New Cairo",
+    "storeLabel": "Kuwait",
     "loyaltyNumber": "78876",
-    "mobileNumber": "0020100936631",
-    "purposeForTransaction": "Demo One",
-    "additionalCustomerDataCollection": "ME"
+    "mobileNumber": "0096599999999",
+    "purposeForTransaction": "Tap Transaction",
+    "additionalCustomerDataCollection": "ME",
+    "alternateLanguageLocale": "ar",
+    "alternateLanguageMerchantName":"تاب للمدفوعات",
+    "alternateLanguageMerchantCityName":"الكويت"
 }

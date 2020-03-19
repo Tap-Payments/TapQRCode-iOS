@@ -30,6 +30,7 @@ import class MasterpassQRCoreSDK.AdditionalData
      - Parameter merchantCity:  Defines the city of the merchant up to 25
      - Parameter postalCode:  Defines postal code address of he merchant up to 25
      - Parameter additionData:Defines the Additional Data Field Template (ID "62")
+     - Parameter additionData: Defines the  Language Template (ID "64")
      */
     @objc public init(pointOfInitiation:TapEmvcoOfInitiation,
                merchantPaymentTags:[TapEmvcoPaymentNetwork],
@@ -42,7 +43,8 @@ import class MasterpassQRCoreSDK.AdditionalData
                merchantName:String,
                merchantCity:String,
                postalCode:String? = nil,
-               additionData:TapEmvcoAdditionalData?
+               additionData:TapEmvcoAdditionalData?,
+               alternateLanguageData:TapEmvcoAlternateLanguage?
                ) throws
     {
         super.init()
@@ -59,7 +61,8 @@ import class MasterpassQRCoreSDK.AdditionalData
                     merchantName:merchantName,
                     merchantCity:merchantCity,
                     postalCode:postalCode,
-                    additionData:additionData)
+                    additionData:additionData,
+                    alternateLanguageData:alternateLanguageData)
         }catch{ throw error }
     }
     
@@ -77,6 +80,7 @@ import class MasterpassQRCoreSDK.AdditionalData
     - Parameter merchantCity:  Defines the city of the merchant up to 25
     - Parameter postalCode:  Defines postal code address of he merchant up to 25
     - Parameter additionData:Defines the Additional Data Field Template (ID "62")
+    - Parameter additionData: Defines the  Language Template (ID "64")
     */
     
     private func commonInit(pointOfInitiation:TapEmvcoOfInitiation,
@@ -90,7 +94,8 @@ import class MasterpassQRCoreSDK.AdditionalData
                             merchantName:String,
                             merchantCity:String,
                             postalCode:String? = nil,
-                            additionData:TapEmvcoAdditionalData?) throws
+                            additionData:TapEmvcoAdditionalData?,
+                            alternateLanguageData:TapEmvcoAlternateLanguage?) throws
     {
         // This is by default
           pushPaymentData.payloadFormatIndicator = "01"
@@ -134,6 +139,10 @@ import class MasterpassQRCoreSDK.AdditionalData
             pushPaymentData.additionalData = nonNullEmvcoAdditionalData
         }
         
+        // Add the alternate language data if any
+        if let languageData = alternateLanguageData {
+            pushPaymentData.languageData = languageData.languageData
+        }
         
         // Validate everything
         do {
@@ -261,6 +270,22 @@ import class MasterpassQRCoreSDK.AdditionalData
             throw "Invalid additionalCustomerDataCollection. Allowed values:\n\(values)"}
         }
         
+        var alternateLanguageData:TapEmvcoAlternateLanguage?
+        
+        // Alternate language data
+        if let nonNullAlternateLanguageCode = withDictionary["alternateLanguageLocale"] as? String {
+            if let parsedAlternateLanguageCode:TapAlternateLanguageEnum = TapAlternateLanguageEnum.init(rawValue: nonNullAlternateLanguageCode) {
+                let alternateLanguageLocale = parsedAlternateLanguageCode
+                
+                let alternateLanguageMerchantName = withDictionary["alternateLanguageMerchantName"] as? String ?? ""
+                let alternateLanguageMerchantCityName = withDictionary["alternateLanguageMerchantCityName"] as? String ?? ""
+                
+                alternateLanguageData = .init(with: alternateLanguageLocale, alternatLanguageMerchantName: alternateLanguageMerchantName, alternatLanguageMerchantCityName: alternateLanguageMerchantCityName)
+                
+            }else { let values: String = TapAlternateLanguageEnum.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+            throw "Invalid Alternate Language code. Allowed values:\n\(values)" }
+        }
+        
         do {
             try commonInit(pointOfInitiation:pointOfInitiation,
                     merchantPaymentTags:merchantPaymentTags,
@@ -273,7 +298,7 @@ import class MasterpassQRCoreSDK.AdditionalData
                     merchantName:merchantName,
                     merchantCity:merchantCity,
                     postalCode:postalCode,
-                    additionData:.init(billNumber: billNumber, customerLabel: customerLabel, loyaltyNumber: loyaltyNumber, mobileNumber: mobileNumber, purposeForTransaction: purposeForTransaction, storeLabel: storeLabel, terminalLabel: terminalLabel, additionalCustomerDataCollection: additionalCustomerDataCollection))
+                    additionData:.init(billNumber: billNumber, customerLabel: customerLabel, loyaltyNumber: loyaltyNumber, mobileNumber: mobileNumber, purposeForTransaction: purposeForTransaction, storeLabel: storeLabel, terminalLabel: terminalLabel, additionalCustomerDataCollection: additionalCustomerDataCollection), alternateLanguageData: alternateLanguageData)
         }catch{ throw error }
     }
     
