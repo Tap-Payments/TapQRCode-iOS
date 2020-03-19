@@ -44,6 +44,11 @@ internal final class QRCodeReaderViewControllerBuilder {
    The title to use for the cancel button.
    */
   internal var cancelButtonTitle = "Cancel"
+    
+    /**
+     Icon used for torch buttton
+     */
+    internal var torchButtonIcon:UIImage?
 
   /**
    The code reader object used to scan the bar code.

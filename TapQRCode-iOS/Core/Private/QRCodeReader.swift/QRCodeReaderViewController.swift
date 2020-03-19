@@ -82,7 +82,7 @@ internal class QRCodeReaderViewController: UIViewController {
       }
     }
 
-    setupUIComponentsWithCancelButtonTitle(builder.cancelButtonTitle)
+    setupUIComponents(builder.cancelButtonTitle,torchButtonIcon:builder.torchButtonIcon)
   }
 
   required internal init?(coder aDecoder: NSCoder) {
@@ -121,7 +121,7 @@ internal class QRCodeReaderViewController: UIViewController {
 
   // MARK: - Initializing the AV Components
 
-  private func setupUIComponentsWithCancelButtonTitle(_ cancelButtonTitle: String) {
+    private func setupUIComponents(_ cancelButtonTitle: String,torchButtonIcon:UIImage?) {
     view.addSubview(builder.readerView.view)
 
     builder.readerView.view.translatesAutoresizingMaskIntoConstraints = false
@@ -131,6 +131,9 @@ internal class QRCodeReaderViewController: UIViewController {
 
     builder.readerView.displayable.switchCameraButton?.addTarget(self, action: #selector(switchCameraAction), for: .touchUpInside)
     builder.readerView.displayable.toggleTorchButton?.addTarget(self, action: #selector(toggleTorchAction), for: .touchUpInside)
+        if let nonNullTorchButtonIcon = torchButtonIcon {
+            builder.readerView.displayable.toggleTorchButton?.setImage(nonNullTorchButtonIcon, for: .normal)
+        }
     builder.readerView.displayable.cancelButton?.setTitle(cancelButtonTitle, for: .normal)
     builder.readerView.displayable.cancelButton?.addTarget(self, action: #selector(cancelAction), for: .touchUpInside)
 

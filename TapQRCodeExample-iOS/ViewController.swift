@@ -46,7 +46,10 @@ class ViewController: UIViewController {
         
         let fullSCreenFromCameraAction2:UIAlertAction = UIAlertAction(title: "Full Screen Camera With Buttons", style: .default) { [weak self] _ in
             DispatchQueue.main.async { [unowned self] in
-                TapQRCodeScanner().scan(fullScreen: self,showTorchButton: true, showSwitchCameraButton: true,
+                TapQRCodeScanner().scan(fullScreen: self,
+                                        showTorchButton: true,
+                                        showSwitchCameraButton: true,
+                                        torchButtonIcon: UIImage(named: "torchIcon"),
                                         scannedCodeCallBack: { [weak self] scannedValue in
                                             self?.showAlert(with: "Scanned", message: scannedValue.scannedText ?? "")
                                         })

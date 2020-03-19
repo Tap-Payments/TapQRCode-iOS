@@ -197,7 +197,7 @@ import enum UIKit.UIStatusBarStyle
     
     
     
-    @objc public func scan(fullScreen fromController:UIViewController?,showTorchButton:Bool = false, showOverlay:Bool = true, showSwitchCameraButton:Bool = false, statusBar:UIStatusBarStyle = .default,cancelButtonTitle:String = "Cancel", erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerCanceledCallBack:(() -> ())? = nil) {
+    @objc public func scan(fullScreen fromController:UIViewController?,showTorchButton:Bool = false, showOverlay:Bool = true, showSwitchCameraButton:Bool = false, statusBar:UIStatusBarStyle = .default,cancelButtonTitle:String = "Cancel",torchButtonIcon:UIImage? = nil, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerCanceledCallBack:(() -> ())? = nil) {
         
         guard TapQRCodeScanner.canStartScanner(), let _ = fromController else {
             print("Camera permission is required")
@@ -217,6 +217,7 @@ import enum UIKit.UIStatusBarStyle
             $0.reader.stopScanningWhenCodeIsFound = false
             $0.cancelButtonTitle       = cancelButtonTitle
             $0.showSwitchCameraButton  = showSwitchCameraButton
+            $0.torchButtonIcon         = torchButtonIcon
           }
           
           return QRCodeReaderViewController(builder: builder)
