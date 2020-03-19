@@ -92,3 +92,45 @@ Also, the `TapQRCodeScanner` provides an interface to style the scanner as follo
 1. Showing accessory buttons like flip camera and torch button.
 2. Torch button icons.
 3. Overlay scanning frame.
+
+## Usage
+
+------
+
+This section descripes how to call and initate different generators and scanners using SWIFT and Objective C languages.
+
+
+
+### Generating a QR Code
+
+Below the different ways you can attach a certain theme file to the shared ThemeManager and how to change the theme at run time.
+
+
+
+#### Text based QR Code
+
+`TapQRCodeGenerator` can generate QR codes that holds pure text as follows
+
+*Swift*:
+
+```swift
+import TapQRCode_iOS
+let tapGeneratedQRImage:UIImage = TapQRCodeGenerator.generateQrCode(with: .init(withText: "Hello from Tap Payments"), foreGroundColor: .red, backgroundColor: .white, waterMark: UIImage(named: "Tap"))
+```
+
+*Objective-C*:
+
+```objective-c
+@import TapQRCode_iOS;
+UIImage* tapGeneratedQRImage = [TapQRCodeGenerator generateQrCodeWith:[[TapQrCodeContent alloc]initWithText:@"Hello from Tap Payments"] foreGroundColor:UIColor.redColor backgroundColor:UIColor.whiteColor waterMark:[UIImage imageNamed:@"Tap"]];
+```
+
+*Parameters*:
+
+| Parameter name  | Parameter type   | Required | Default vale | Description                                                  |
+| --------------- | ---------------- | -------- | ------------ | ------------------------------------------------------------ |
+| qrCodeContent   | TapQrCodeContent | Yes      | none         | The TapQrCodeContent which hilds the type and content of the required qr code |
+| foreGroundColor | UIColor          | No       | .black       | The colour of the qr code dots and blocks.                   |
+| backgroundColor | UIColor          | No       | .clear       | The colour of the qr code background.                        |
+| waterMark       | UIImage          | No       | none         | Watermark image appears in the center of the qr code.        |
+
