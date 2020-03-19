@@ -57,7 +57,7 @@ import class MasterpassQRCoreSDK.AdditionalData
                     countryCode:countryCode,
                     merchantCategoryCode:merchantCategoryCode,
                     merchantName:merchantName,
-                    merchantCity:merchantName,
+                    merchantCity:merchantCity,
                     postalCode:postalCode,
                     additionData:additionData)
         }catch{ throw error }
