@@ -76,6 +76,7 @@
 		E82E514B242337FE007E9905 /* EFQRCode.h in Headers */ = {isa = PBXBuildFile; fileRef = E82E5134242337FE007E9905 /* EFQRCode.h */; };
 		E82E514C242337FE007E9905 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5135242337FE007E9905 /* UIImage+.swift */; };
 		E82E514D242337FE007E9905 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E5136242337FE007E9905 /* UIColor+.swift */; };
+		E82E519D2423E98A007E9905 /* TapAlternateLanguageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82E519C2423E98A007E9905 /* TapAlternateLanguageEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +191,7 @@
 		E82E5134242337FE007E9905 /* EFQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EFQRCode.h; sourceTree = "<group>"; };
 		E82E5135242337FE007E9905 /* UIImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		E82E5136242337FE007E9905 /* UIColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		E82E519C2423E98A007E9905 /* TapAlternateLanguageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapAlternateLanguageEnum.swift; sourceTree = "<group>"; };
 		ED1A1C9D6A47713B541EAE7B /* Pods-TapQRCodeExample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCodeExample-iOS.release.xcconfig"; path = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		EF3494C5B30E96B8C7D482AB /* Pods-TapQRCodeExample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapQRCodeExample-iOS.debug.xcconfig"; path = "Target Support Files/Pods-TapQRCodeExample-iOS/Pods-TapQRCodeExample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		FD3592FAE2619D3AD3AEB296 /* Pods_TapQRCodeExample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapQRCodeExample_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -313,6 +315,7 @@
 				E81A7DDF241F532000836547 /* TapEmvcoExtraFees.swift */,
 				E81A7DE1241F565400836547 /* TapEmvcoCountryCode.swift */,
 				E81A7DE5241F632900836547 /* TapEmvcoAdditionalDataCollection.swift */,
+				E82E519C2423E98A007E9905 /* TapAlternateLanguageEnum.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -658,6 +661,7 @@
 				E82E5149242337FE007E9905 /* EFQRCodeGenerator.swift in Sources */,
 				E82E513B242337FE007E9905 /* NSColor+.swift in Sources */,
 				E82E5142242337FE007E9905 /* CIColor+.swift in Sources */,
+				E82E519D2423E98A007E9905 /* TapAlternateLanguageEnum.swift in Sources */,
 				E82E50FC2421F6E2007E9905 /* TapQRCodeScanner.swift in Sources */,
 				E82E513E242337FE007E9905 /* EFIntSize.swift in Sources */,
 				E82E514A242337FE007E9905 /* CGColor+.swift in Sources */,
