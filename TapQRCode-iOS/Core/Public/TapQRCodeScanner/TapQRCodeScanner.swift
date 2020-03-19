@@ -196,7 +196,19 @@ import enum UIKit.UIStatusBarStyle
     }
     
     
-    
+    /**
+     Interface to show the scanner in a full screen as a modal controller
+     - Parameter fromController : The view controller the scanner will be presented from
+     - Parameter showTorchButton : Determine if the torch button will be visible on the scanner. Default true
+     - Parameter showOverlay : Determine if the overlay will be visible on the scanner. Default true
+     - Parameter showSwitchCameraButton : Determine if the switch button will be visible on the scanner. Default false
+     - Parameter statusBar : Determine what UIStatusbar stule you want. Default .default
+     - Parameter cancelButtonTitle : Determine the title of the cancel button. Default Cancel
+     - Parameter torchButtonIcon : If you want to set a specific icon for the torch button
+     - Parameter erroCallBack: Closure used to send a string description of any error prevented the scannr to start
+     - Parameter scannedCodeCallBack: Closure used to send a string description of the scanned code
+     - Parameter scannerCanceledCallBack: Closure used to inform when the scanner is cancelled
+     */
     @objc public func scan(fullScreen fromController:UIViewController?,showTorchButton:Bool = false, showOverlay:Bool = true, showSwitchCameraButton:Bool = false, statusBar:UIStatusBarStyle = .default,cancelButtonTitle:String = "Cancel",torchButtonIcon:UIImage? = nil, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerCanceledCallBack:(() -> ())? = nil) {
         
         guard TapQRCodeScanner.canStartScanner(), let _ = fromController else {
