@@ -276,7 +276,11 @@ do {
                            purposeForTransaction: "Tap Transaction",
                            storeLabel: "Store 1",
                            terminalLabel: "Terminal 1",
-										       additionalCustomerDataCollection: .addressPhone))
+                           additionalCustomerDataCollection: .addressPhone),
+        alternateLanguageData: TapEmvcoAlternateLanguage(
+                            with: .ar,
+                            alternatLanguageMerchantName: "تاب",
+                            alternatLanguageMerchantCityName: "الكويت"))
 }catch{
     print(error.localizedDescription)
 }
@@ -286,50 +290,56 @@ do {
 
 ```objective-c
 @import TapQRCode_iOS;
-	NSError* error;
-    
-	TapEmvcoPushData* tapEmvcoData = [[TapEmvcoPushData alloc]
-    initWithPointOfInitiation:TapEmvcoOfInitiationDynamic
-    merchantPaymentTags:@[[[TapEmvcoPaymentNetwork alloc]initWith:TapEmvcoNetworkTagsVisaTag02 value:@"4600678934521435"]]
-    transactionAmount:10
-    transactionCurrency:TapEmvcoCurrencyCodeKWD
-    extraFeesMode:TapEmvcoExtraFeesFixedFees
-    extraFeesAmount:5
-    countryCode:TapEmvcoCountryCodeKW
-    merchantCategoryCode:@"1171"
-    merchantName:@"Tap Payments"
-    merchantCity:@"Kuwait City"
-    postalCode:nil
-    additionData:[[TapEmvcoAdditionalData alloc]
-                  initWithBillNumber:@"Bill 123"
-                  customerLabel:@"Tap Customer"
-                  loyaltyNumber:@"Loyal Number 1"
-                  mobileNumber:@"+96599999999"
-                  purposeForTransaction:@"Tap Transaction"
-                  storeLabel:@"Tap Store # 1"
-                  terminalLabel:@"Tap Terminal # 1"
-                  additionalCustomerDataCollection:TapEmvcoAdditionalDataCollectionPhoneEmail]
-                                      error:&error];
+
+NSError* error;
+
+TapEmvcoPushData* tapEmvcoData = [[TapEmvcoPushData alloc]
+initWithPointOfInitiation:TapEmvcoOfInitiationDynamic
+merchantPaymentTags:@[[[TapEmvcoPaymentNetwork alloc]initWith:TapEmvcoNetworkTagsVisaTag02 value:@"4600678934521435"]]
+transactionAmount:10
+transactionCurrency:TapEmvcoCurrencyCodeKWD
+extraFeesMode:TapEmvcoExtraFeesFixedFees
+extraFeesAmount:5
+countryCode:TapEmvcoCountryCodeKW
+merchantCategoryCode:@"1171"
+merchantName:@"Tap Payments"
+merchantCity:@"Kuwait City"
+postalCode:nil
+additionData:[[TapEmvcoAdditionalData alloc]
+              initWithBillNumber:@"Bill 123"
+              customerLabel:@"Tap Customer"
+              loyaltyNumber:@"Loyal Number 1"
+              mobileNumber:@"+96599999999"
+              purposeForTransaction:@"Tap Transaction"
+              storeLabel:@"Tap Store # 1"
+              terminalLabel:@"Tap Terminal # 1"
+              additionalCustomerDataCollection:TapEmvcoAdditionalDataCollectionPhoneEmail]
+alternateLanguageData:[[TapEmvcoAlternateLanguage alloc]
+                       initWith:TapAlternateLanguageEnumAr
+                       alternatLanguageMerchantName:@"تاب"
+                       alternatLanguageMerchantCityName:@"الكويت"]
+               error:&error];
 ```
 
 
 
 *Parameters*:
 
-| Parameter name       | Parameter type           | Required | Default vale | Description                                                  |
-| -------------------- | ------------------------ | -------- | ------------ | ------------------------------------------------------------ |
-| pointOfInitiation    | TapEmvcoOfInitiation     | Yes      | none         | Defines whether the QR code is a static or a dynamic one. Static is payable multiple while dynamic is payable once. **Provides a descriptive way for EMVCO Point of Initiation Method (ID "01")** |
-| merchantPaymentTags  | [TapEmvcoPaymentNetwork] | Yes      | none         | Provides a list of merchant global identifers for different payment network tags. **At least one payment tag should be provided** |
-| transactionAmount    | Float                    | No       | 0            | The amount of the transaction, please note that the decimal part should match the official decimal part of the given currency code |
-| transactionCurrency  | TapEmvcoCurrencyCode     | Yes      | none         | The currency of the transaction. **Provides a descriptive way for EMVCO Transaction Currency (ID "53")** |
-| extraFeesMode        | TapEmvcoExtraFees        | No       | .FixedFees   | Defines the extra fees collection mode, whether NONE, or a fixed fee or a percentage of the total amount or promop the user to enter whatever he wants. **Provides a descriptive way for EMVCO Tip or Convenience Indicator (ID "55")** |
-| extraFeesAmount      | Float                    | No       | 0            | Defines the value of the extra fees, if NONE or Promopt no need to pass it, if fixed then a number > 0 and if percentage "00.01” and “99.99” shall be used |
-| countryCode          | TapEmvcoCountryCode      | Yes      | none         | Defines the country code where the merchant transacts.**Provides a descriptive way for EMVCO Country Code (ID "58")** |
-| merchantCategoryCode | String                   | Yes      | none         | Defines the code of the merchant nature as defined in the ISO 18245. For more information, see [ISO 18245](https://www.iso.org/standard/33365.html) |
-| merchantName         | String                   | Yes      | none         | Defines the merchant's name up to 25                         |
-| merchantCity         | String                   | Yes      | none         | Defines the city of the merchant up to 25                    |
-| postalCode           | String                   | No       | none         | Defines postal code address of he merchant up to 25          |
-| additionData         | TapEmvcoAdditionalData   | No       | none         | Defines the Additional Data Field Template (ID "62"). **Details below** |
+| Parameter name        | Parameter type            | Required | Default vale | Description                                                  |
+| --------------------- | ------------------------- | -------- | ------------ | ------------------------------------------------------------ |
+| pointOfInitiation     | TapEmvcoOfInitiation      | Yes      | none         | Defines whether the QR code is a static or a dynamic one. Static is payable multiple while dynamic is payable once. **Provides a descriptive way for EMVCO Point of Initiation Method (ID "01")** |
+| merchantPaymentTags   | [TapEmvcoPaymentNetwork]  | Yes      | none         | Provides a list of merchant global identifers for different payment network tags. **At least one payment tag should be provided** |
+| transactionAmount     | Float                     | No       | 0            | The amount of the transaction, please note that the decimal part should match the official decimal part of the given currency code |
+| transactionCurrency   | TapEmvcoCurrencyCode      | Yes      | none         | The currency of the transaction. **Provides a descriptive way for EMVCO Transaction Currency (ID "53")** |
+| extraFeesMode         | TapEmvcoExtraFees         | No       | .FixedFees   | Defines the extra fees collection mode, whether NONE, or a fixed fee or a percentage of the total amount or promop the user to enter whatever he wants. **Provides a descriptive way for EMVCO Tip or Convenience Indicator (ID "55")** |
+| extraFeesAmount       | Float                     | No       | 0            | Defines the value of the extra fees, if NONE or Promopt no need to pass it, if fixed then a number > 0 and if percentage "00.01” and “99.99” shall be used |
+| countryCode           | TapEmvcoCountryCode       | Yes      | none         | Defines the country code where the merchant transacts.**Provides a descriptive way for EMVCO Country Code (ID "58")** |
+| merchantCategoryCode  | String                    | Yes      | none         | Defines the code of the merchant nature as defined in the ISO 18245. For more information, see [ISO 18245](https://www.iso.org/standard/33365.html) |
+| merchantName          | String                    | Yes      | none         | Defines the merchant's name up to 25                         |
+| merchantCity          | String                    | Yes      | none         | Defines the city of the merchant up to 25                    |
+| postalCode            | String                    | No       | none         | Defines postal code address of he merchant up to 25          |
+| additionData          | TapEmvcoAdditionalData    | No       | none         | Defines the Additional Data Field Template (ID "62"). **Details below** |
+| alternateLanguageData | TapEmvcoAlternateLanguage | No       | none         | Defines the Language Template (ID "64"). Which displays the merchant name and city in a localised language of his choice. |
 
 ##### TapEmvcoAdditionalData
 
@@ -440,7 +450,10 @@ if(!jsonError)
     "loyaltyNumber": "78876",
     "mobileNumber": "0096599999999",
     "purposeForTransaction": "Tap Transaction",
-    "additionalCustomerDataCollection": "ME"
+    "additionalCustomerDataCollection": "ME",
+    "alternateLanguageLocale": "ar",
+    "alternateLanguageMerchantName":"تاب للمدفوعات",
+    "alternateLanguageMerchantCityName":"الكويت"
 }
 ```
 
@@ -570,4 +583,3 @@ TapQRCodeScanner().scan(fullScreen: self,
 | erroCallBack            | ((String) -> ())                 | No       | nil          | Closure used to send a string description of any error prevented the scannr to start |
 | scannedCodeCallBack     | ((TapQRCodeScannerResult) -> ()) | No       | nil          | Closure used to send a string description of the scanned code |
 | scannerCanceledCallBack | (() -> ())                       | No       | nil          | Closure used to inform when the scanner is cancelled         |
-
