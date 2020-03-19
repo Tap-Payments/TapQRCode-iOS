@@ -7,7 +7,7 @@
 //
 
 import Foundation
-///This is a representable and easy representation for the List of ISO 639-1 codes languages code list. To be used in forming the Language Template (ID "64") in EMVCO push payment data
+///This is a representable and easy representation for the List of ISO 639-1 codes languages code list. To be used in forming the Language Preference (ID "00") in Language Template (ID "64") in EMVCO push payment data
 @objc public enum TapAlternateLanguageEnum: Int, RawRepresentable, CaseIterable {
     
     /// Afar Language Code
