@@ -195,7 +195,7 @@ do {
                            purposeForTransaction: "Tap Transaction",
                            storeLabel: "Store 1",
                            terminalLabel: "Terminal 1",
-										       additionalCustomerDataCollection: .addressPhone))))
+			   additionalCustomerDataCollection: .addressPhone))))
 }catch {
     print(error.localizedDescription)
 }
