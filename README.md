@@ -129,7 +129,7 @@ UIImage* tapGeneratedQRImage = [TapQRCodeGenerator generateQrCodeWith:[[TapQrCod
 
 | Parameter name  | Parameter type                  | Required | Default vale | Description                                                  |
 | --------------- | ------------------------------- | -------- | ------------ | ------------------------------------------------------------ |
-| qrCodeContent   | TapQrCodeContent.init(withText) | Yes      | none         | The TapQrCodeContent which hilds the type and content of the required qr code |
+| qrCodeContent   | TapQrCodeContent.init(withText) | Yes      | none         | The TapQrCodeContent which holds the type and content of the required qr code |
 | foreGroundColor | UIColor                         | No       | .black       | The colour of the qr code dots and blocks.                   |
 | backgroundColor | UIColor                         | No       | .clear       | The colour of the qr code background.                        |
 | waterMark       | UIImage                         | No       | none         | Watermark image appears in the center of the qr code.        |
@@ -158,7 +158,7 @@ UIImage* tapGeneratedQRImage = [TapQRCodeGenerator generateQrCodeWith:[[TapQrCod
 
 | Parameter name  | Parameter type                 | Required | Default vale | Description                                                  |
 | --------------- | ------------------------------ | -------- | ------------ | ------------------------------------------------------------ |
-| qrCodeContent   | TapQrCodeContent.init(withUrl) | Yes      | none         | The TapQrCodeContent which hilds the type and content of the required qr code |
+| qrCodeContent   | TapQrCodeContent.init(withUrl) | Yes      | none         | The TapQrCodeContent which holds the type and content of the required qr code |
 | foreGroundColor | UIColor                        | No       | .black       | The colour of the qr code dots and blocks.                   |
 | backgroundColor | UIColor                        | No       | .clear       | The colour of the qr code background.                        |
 | waterMark       | UIImage                        | No       | none         | Watermark image appears in the center of the qr code.        |
@@ -230,4 +230,13 @@ do {
                                                    additionalCustomerDataCollection:TapEmvcoAdditionalDataCollectionPhoneEmail]
                                      error:&error]] foreGroundColor:UIColor.redColor backgroundColor:UIColor.whiteColor waterMark:[UIImage imageNamed:@"Tap"]];
 ```
+
+*Parameters*:
+
+| Parameter name  | Parameter type                     | Required | Default vale | Description                                                  |
+| --------------- | ---------------------------------- | -------- | ------------ | ------------------------------------------------------------ |
+| qrCodeContent   | TapQrCodeContent.init(initWithEmv) | Yes      | none         | The TapQrCodeContent which holds the type and content of the required qr code.<br />To generate an EMVCO push payment please look at the parameters for **TapEmvcoPushData,TapEmvcoPaymentNetwork and TapEmvcoAdditionalData** below |
+| foreGroundColor | UIColor                            | No       | .black       | The colour of the qr code dots and blocks.                   |
+| backgroundColor | UIColor                            | No       | .clear       | The colour of the qr code background.                        |
+| waterMark       | UIImage                            | No       | none         | Watermark image appears in the center of the qr code.        |
 
