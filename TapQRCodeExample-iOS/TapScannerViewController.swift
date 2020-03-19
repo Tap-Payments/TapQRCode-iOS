@@ -40,7 +40,7 @@ class TapScannerViewController: UIViewController {
     */
     @IBAction func inlineScanningSwitch(_ sender: Any) {
         if inlineSwitch.isOn {
-            tapBarCodeScanner.scanInline(inside: inlineView,
+            tapBarCodeScanner.scan(inside: inlineView,
                                         shouldHideUponScanning: dismissAfterScanningSwitch.isOn,
                                         erroCallBack: { [weak self] error in
                                             self?.inlineSwitch.setOn(false, animated: true)

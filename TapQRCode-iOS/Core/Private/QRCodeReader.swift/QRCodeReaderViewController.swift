@@ -43,6 +43,8 @@ internal class QRCodeReaderViewController: UIViewController {
 
   /// The completion blocak that will be called when a result is found.
   internal var completionBlock: ((QRCodeReaderResult?) -> Void)?
+    
+  internal var cancelBlock: (() -> ())?
 
   deinit {
     codeReader.stopScanning()
@@ -163,11 +165,15 @@ internal class QRCodeReaderViewController: UIViewController {
   @objc func cancelAction(_ button: UIButton) {
     codeReader.stopScanning()
 
-    if let _completionBlock = completionBlock {
+    /*if let _completionBlock = completionBlock {
       _completionBlock(nil)
-    }
+    }*/
 
     delegate?.readerDidCancel(self)
+    if let _cancelBlock = cancelBlock {
+      _cancelBlock()
+    }
+    self.dismiss(animated: true, completion: nil)
   }
 
   @objc func switchCameraAction(_ button: SwitchCameraButton) {

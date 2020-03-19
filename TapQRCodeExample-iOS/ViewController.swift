@@ -30,9 +30,26 @@ class ViewController: UIViewController {
                           self?.present(imagePicker, animated: true, completion: nil)
             }
         }
-        let fromCameraAction:UIAlertAction = UIAlertAction(title: "From Camera", style: .default) { [weak self] _ in
+        let inlineFromCameraAction:UIAlertAction = UIAlertAction(title: "Inline Camera", style: .default) { [weak self] _ in
             DispatchQueue.main.async {
                 self?.performSegue(withIdentifier: "scanSeg", sender: self)
+            }
+        }
+        let fullSCreenFromCameraAction:UIAlertAction = UIAlertAction(title: "Full Screen Camera No Buttons", style: .default) { [weak self] _ in
+            DispatchQueue.main.async { [unowned self] in
+                TapQRCodeScanner().scan(fullScreen: self,
+                                        scannedCodeCallBack: { [weak self] scannedValue in
+                                            self?.showAlert(with: "Scanned", message: scannedValue.scannedText ?? "")
+                                        })
+            }
+        }
+        
+        let fullSCreenFromCameraAction2:UIAlertAction = UIAlertAction(title: "Full Screen Camera With Buttons", style: .default) { [weak self] _ in
+            DispatchQueue.main.async { [unowned self] in
+                TapQRCodeScanner().scan(fullScreen: self,showTorchButton: true, showSwitchCameraButton: true,
+                                        scannedCodeCallBack: { [weak self] scannedValue in
+                                            self?.showAlert(with: "Scanned", message: scannedValue.scannedText ?? "")
+                                        })
             }
         }
         let cancelAction:UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { [unowned alert] _ in
@@ -40,20 +57,24 @@ class ViewController: UIViewController {
         }
         
         alert.addAction(fromImageAction)
-        alert.addAction(fromCameraAction)
+        alert.addAction(inlineFromCameraAction)
+        alert.addAction(fullSCreenFromCameraAction)
+        alert.addAction(fullSCreenFromCameraAction2)
         alert.addAction(cancelAction)
         self.present(alert,animated: true)
     }
     
     internal func showAlert(with title:String,message:String) {
-        let alertControl =  UIAlertController(title: title, message: message, preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "OK", style: .cancel) { [unowned alertControl] _ in
-            alertControl.dismiss(animated: true, completion: nil)
+        DispatchQueue.main.async {
+            let alertControl =  UIAlertController(title: title, message: message, preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .cancel) { [unowned alertControl] _ in
+                alertControl.dismiss(animated: true, completion: nil)
+            }
+            
+            alertControl.addAction(okAction)
+            self.present(alertControl,animated: true)
         }
-        
-        alertControl.addAction(okAction)
-        self.present(alertControl,animated: true)
     }
 }
 
@@ -65,7 +86,7 @@ extension ViewController:UIImagePickerControllerDelegate,UINavigationControllerD
             picker.dismiss(animated: true) {
                 if let pickedImage = info[.originalImage] as? UIImage {
                     // imageViewPic.contentMode = .scaleToFill
-                    let res:TapQRCodeScannerResult = TapQRCodeScanner.scan(from: pickedImage)
+                    let res:TapQRCodeScannerResult = TapQRCodeScanner().scan(from: pickedImage)
                     print(res.scannedText ?? "")
                     self?.showAlert(with: "Scanned", message: res.scannedText ?? "")
                 }

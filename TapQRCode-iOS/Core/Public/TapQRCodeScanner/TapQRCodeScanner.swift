@@ -19,6 +19,9 @@ import class UIKit.CIImage
 import var UIKit.CIDetectorAccuracy
 import var UIKit.CIDetectorAccuracyHigh
 import class UIKit.CIQRCodeFeature
+import class UIKit.UIViewController
+import class UIKit.UIButton
+import enum UIKit.UIStatusBarStyle
 
 /// This provides the public interface for the caller to the Tap QR code Scanner
 @objc public class TapQRCodeScanner:NSObject {
@@ -42,7 +45,6 @@ import class UIKit.CIQRCodeFeature
     internal var bottom:CGFloat = 0
     internal var right:CGFloat = 0
     internal var left:CGFloat = 0
-    
     
     @objc public var isScanning:Bool  {
         get {
@@ -86,7 +88,7 @@ import class UIKit.CIQRCodeFeature
      - Parameter left: Left margin from the holder uiview. Default is 0
      - Parameter right: Right margin from the holder uiview. Default is 0
      */
-    @objc public func scanInline(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil, introFadeIn:Bool = false, outroFadeOut:Bool = false,top:CGFloat = 0,bottom:CGFloat = 0,right:CGFloat = 0, left:CGFloat = 0) {
+    @objc public func scan(inside holdingView:UIView, shouldHideUponScanning:Bool = true, erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerRemovedCallBack:(() -> ())? = nil, introFadeIn:Bool = false, outroFadeOut:Bool = false,top:CGFloat = 0,bottom:CGFloat = 0,right:CGFloat = 0, left:CGFloat = 0) {
         
         self.holdingView = holdingView
         self.shouldHideUponScanning = shouldHideUponScanning
@@ -177,7 +179,7 @@ import class UIKit.CIQRCodeFeature
      - Parameter image : The image you want to see if it contains a qr code
      - Returns:TapQRCodeScannerResult with text filled with scanned qr code (empty if not found) and emvco data if the parsed string is a valid emvco data
      */
-    @objc public class func scan(from image:UIImage)->TapQRCodeScannerResult {
+    @objc public func scan(from image:UIImage)->TapQRCodeScannerResult {
         
         var qrCodeLink:String = ""
         // define the detector to get qr codes from the image
@@ -191,6 +193,62 @@ import class UIKit.CIQRCodeFeature
         }
         
         return .init(scannedText:qrCodeLink)
+    }
+    
+    
+    
+    @objc public func scan(fullScreen fromController:UIViewController?,showTorchButton:Bool = false, showOverlay:Bool = true, showSwitchCameraButton:Bool = false, statusBar:UIStatusBarStyle = .default,cancelButtonTitle:String = "Cancel", erroCallBack:((String) -> ())? = nil, scannedCodeCallBack:((TapQRCodeScannerResult) -> ())? = nil,scannerCanceledCallBack:(() -> ())? = nil) {
+        
+        guard TapQRCodeScanner.canStartScanner(), let _ = fromController else {
+            print("Camera permission is required")
+            if let erroCallBackBlock = erroCallBack {
+                erroCallBackBlock("Camera permission is required")
+            }
+            return
+        }
+
+        let readerVC: QRCodeReaderViewController = {
+          let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader                  = QRCodeReader(metadataObjectTypes: [.qr], captureDevicePosition: .back)
+            $0.showTorchButton         = showTorchButton
+            $0.preferredStatusBarStyle = statusBar
+            $0.showOverlayView         = showOverlay
+            $0.rectOfInterest          = CGRect(x: 0.1, y: 0.1, width: 0.8, height: 0.8)
+            $0.reader.stopScanningWhenCodeIsFound = false
+            $0.cancelButtonTitle       = cancelButtonTitle
+            $0.showSwitchCameraButton  = showSwitchCameraButton
+          }
+          
+          return QRCodeReaderViewController(builder: builder)
+        }()
+        
+        readerVC.modalPresentationStyle = .formSheet
+        //readerVC.delegate               = self
+
+        readerVC.completionBlock = { (result: QRCodeReaderResult?) in
+          if let result = result {
+            print("Completion with result: \(result.value) of type \(result.metadataType)")
+            readerVC.cancelBlock = nil
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [unowned readerVC] in
+                readerVC.codeReader.stopScanning()
+                readerVC.dismiss(animated: true) {
+                    if let scannedBlock = scannedCodeCallBack {
+                        scannedBlock(.init(scannedText:result.value))
+                    }
+                }
+            }
+          }
+        }
+        
+        
+        readerVC.cancelBlock = {
+            if let scannerCanceledCallBlock = scannerCanceledCallBack {
+                scannerCanceledCallBlock()
+            }
+        }
+
+        fromController!.present(readerVC, animated: true, completion: nil)
     }
     
     /**
