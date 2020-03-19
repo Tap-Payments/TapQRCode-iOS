@@ -392,8 +392,8 @@ if(!jsonError)
 {
     "pointOfInitiation": "12",
     "merchantCategoryCode": "1711",
-    "merchantName": "Tap Emvco",
-    "merchantCity": "Kuwait",
+    "merchantName": "Tap Payments",
+    "merchantCity": "Kuwait City",
     "paymentNetworks": [
         {
             "tag": "VisaTag02",
@@ -434,14 +434,13 @@ if(!jsonError)
     "extraFeesMode": "02",
     "extraFeesAmount": 5,
     "billNumber": "123093133",
-    "customerLabel": "My Customer",
+    "customerLabel": "Tap Customer",
     "terminalLabel": "POS 1",
-    "storeLabel": "New Cairo",
+    "storeLabel": "Kuwait City",
     "loyaltyNumber": "78876",
-    "mobileNumber": "0020100936631",
-    "purposeForTransaction": "Demo One",
+    "mobileNumber": "0096599999999",
+    "purposeForTransaction": "Tap Transaction",
     "additionalCustomerDataCollection": "ME"
 }
-
 ```
 
