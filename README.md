@@ -444,3 +444,90 @@ if(!jsonError)
 }
 ```
 
+### Scanning a QR Code
+
+Below the different ways you can scan a QR code using different ways.
+
+
+
+#### Extract QR Code from a static Image
+
+`TapQRCodeScanner` can scan a QR code from a given Image without using the camera.
+
+*Swift*:
+
+```swift
+import TapQRCode_iOS
+let tapQRCodeScannerResult:TapQRCodeScannerResult = TapQRCodeScanner().scan(from: pickedImage)
+```
+
+*Objective-C*:
+
+```objective-c
+@import TapQRCode_iOS;
+TapQRCodeScannerResult* tapQRCodeScannerResult = [[[TapQRCodeScanner alloc]init] scanFrom:pickedImage];
+```
+
+*Parameters*:
+
+| Parameter name | Parameter type | Required | Default vale | Description                                    |
+| -------------- | -------------- | -------- | ------------ | ---------------------------------------------- |
+| from           | UIImage        | Yes      | none         | The UIImage you want to extract a qr code from |
+
+
+
+#### Inline QR Code scanner
+
+`TapQRCodeScanner` can scan a QR code from a camera stream inside a given UIView. So you can fit a scanner inside your layout
+
+*Swift*:
+
+```swift
+import TapQRCode_iOS
+let tapBarCodeScanner:TapQRCodeScanner = TapQRCodeScanner()
+tapBarCodeScanner.scan(inside: inlineView,
+                        shouldHideUponScanning: true,
+                        erroCallBack: { [weak self] error in
+                           print (error)
+                        },scannedCodeCallBack: { [weak self] tapScanResult in
+                            print (tapScanResult.scannedText!)
+                        },scannerRemovedCallBack: { [weak self] in
+                            print("scannerStopped")
+                        },introFadeIn: false,
+                          outroFadeOut: false,
+		                      top:0, bottom:0, right:0, left:0)
+```
+
+*Objective-C*:
+
+```objective-c
+@import TapQRCode_iOS;
+TapQRCodeScanner* tapQRCodeScanner = [[TapQRCodeScanner alloc]init];
+    
+[tapQRCodeScanner scanInside:inlineView
+    shouldHideUponScanning:YES
+    erroCallBack:^(NSString * error) {
+        NSLog(@"%@",error);
+    } scannedCodeCallBack:^(TapQRCodeScannerResult * scannerResult) {
+        NSLog(@"%@",scannerResult.scannedText);
+    } scannerRemovedCallBack:^{
+        NSLog(@"%@",@"Scanner removed");
+    } introFadeIn:NO outroFadeOut:NO
+    top:0 bottom:0 right:0 left:0];
+```
+
+*Parameters*:
+
+| Parameter name         | Parameter type                   | Required | Default vale | Description                                                  |
+| ---------------------- | -------------------------------- | -------- | ------------ | ------------------------------------------------------------ |
+| holdingView            | UIView                           | Yes      | none         | The subview the caller wants to show the scanner in          |
+| shouldHideUponScanning | Bool                             | No       | true         | if true, then the scanner will dismiss itself after reading a code. Default True |
+| erroCallBack           | ((String) -> ())                 | No       | nil          | Closure used to send a string description of any error prevented the scannr to start |
+| scannedCodeCallBack    | ((TapQRCodeScannerResult) -> ()) | No       | nil          | Closure used to send a string description of the scanned code |
+| scannerRemovedCallBack | (() -> ())                       | No       | nil          | Closure used to inform when the scanner is removed           |
+| introFadeIn            | Bool                             | No       | false        | When set tthe scanner will fade in when ready                |
+| outroFadeOut           | Bool                             | No       | false        | When set the scanner will fde out upon completion            |
+| top                    | CGFloat                          | No       | 0            | Top margin from the holder uiview. Default is 0              |
+| bottom                 | CGFloat                          | No       | 0            | Bottom margin from the holder uiview. Default is 0           |
+| right                  | CGFloat                          | No       | 0            | Right margin from the holder uiview. Default is 0            |
+| Left                   | CGFloat                          | No       | 0            | Left margin from the holder uiview. Default is 0             |
