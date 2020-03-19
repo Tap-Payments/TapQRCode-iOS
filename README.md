@@ -127,10 +127,41 @@ UIImage* tapGeneratedQRImage = [TapQRCodeGenerator generateQrCodeWith:[[TapQrCod
 
 *Parameters*:
 
-| Parameter name  | Parameter type   | Required | Default vale | Description                                                  |
-| --------------- | ---------------- | -------- | ------------ | ------------------------------------------------------------ |
-| qrCodeContent   | TapQrCodeContent | Yes      | none         | The TapQrCodeContent which hilds the type and content of the required qr code |
-| foreGroundColor | UIColor          | No       | .black       | The colour of the qr code dots and blocks.                   |
-| backgroundColor | UIColor          | No       | .clear       | The colour of the qr code background.                        |
-| waterMark       | UIImage          | No       | none         | Watermark image appears in the center of the qr code.        |
+| Parameter name  | Parameter type                  | Required | Default vale | Description                                                  |
+| --------------- | ------------------------------- | -------- | ------------ | ------------------------------------------------------------ |
+| qrCodeContent   | TapQrCodeContent.init(withText) | Yes      | none         | The TapQrCodeContent which hilds the type and content of the required qr code |
+| foreGroundColor | UIColor                         | No       | .black       | The colour of the qr code dots and blocks.                   |
+| backgroundColor | UIColor                         | No       | .clear       | The colour of the qr code background.                        |
+| waterMark       | UIImage                         | No       | none         | Watermark image appears in the center of the qr code.        |
+
+
+
+#### URL based QR Code
+
+`TapQRCodeGenerator` can generate QR codes that holds pure URL as follows
+
+*Swift*:
+
+```swift
+import TapQRCode_iOS
+let tapGeneratedQRImage:UIImage = TapQRCodeGenerator.generateQrCode(with: .init(withUrl: URL(string: "https://tap.company")), foreGroundColor: .red, backgroundColor: .white, waterMark: UIImage(named: "Tap"))
+```
+
+*Objective-C*:
+
+```objective-c
+@import TapQRCode_iOS;
+UIImage* tapGeneratedQRImage = [TapQRCodeGenerator generateQrCodeWith:[[TapQrCodeContent alloc]initWithUrl:[NSURL URLWithString:@"https://tap.company"]] foreGroundColor:UIColor.redColor backgroundColor:UIColor.whiteColor waterMark:[UIImage imageNamed:@"Tap"]];
+```
+
+*Parameters*:
+
+| Parameter name  | Parameter type                 | Required | Default vale | Description                                                  |
+| --------------- | ------------------------------ | -------- | ------------ | ------------------------------------------------------------ |
+| qrCodeContent   | TapQrCodeContent.init(withUrl) | Yes      | none         | The TapQrCodeContent which hilds the type and content of the required qr code |
+| foreGroundColor | UIColor                        | No       | .black       | The colour of the qr code dots and blocks.                   |
+| backgroundColor | UIColor                        | No       | .clear       | The colour of the qr code background.                        |
+| waterMark       | UIImage                        | No       | none         | Watermark image appears in the center of the qr code.        |
+
+
 
