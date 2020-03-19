@@ -531,3 +531,43 @@ TapQRCodeScanner* tapQRCodeScanner = [[TapQRCodeScanner alloc]init];
 | bottom                 | CGFloat                          | No       | 0            | Bottom margin from the holder uiview. Default is 0           |
 | right                  | CGFloat                          | No       | 0            | Right margin from the holder uiview. Default is 0            |
 | Left                   | CGFloat                          | No       | 0            | Left margin from the holder uiview. Default is 0             |
+
+#### Modal Full Screen QR Code scanner
+
+`TapQRCodeScanner` can scan a QR code from a camera stream in a full screen mode by showing the scanner as model from a given UIViewController
+
+*Swift*:
+
+```swift
+import TapQRCode_iOS
+TapQRCodeScanner().scan(fullScreen: self,
+    showTorchButton: true,
+    showOverlay: true,
+    showSwitchCameraButton: true,
+    statusBar: .default,
+    cancelButtonTitle: "Cancel",
+    torchButtonIcon: UIImage(named: "torchIcon"),
+    erroCallBack: { (error) in
+        print(error)
+    }, scannedCodeCallBack: { scannedValue in
+         print(scannedValue.scannedText ?? "")
+    }) {
+        print("Scanner Canceled")
+    }
+```
+
+*Parameters*:
+
+| Parameter name          | Parameter type                   | Required | Default vale | Description                                                  |
+| ----------------------- | -------------------------------- | -------- | ------------ | ------------------------------------------------------------ |
+| fromController          | UIViewController                 | Yes      | none         | The view controller the scanner will be presented from       |
+| showTorchButton         | Bool                             | No       | true         | Determine if the torch button will be visible on the scanner. Default true |
+| showOverlay             | Bool                             | No       | true         | Determine if the overlay will be visible on the scanner. Default true |
+| showSwitchCameraButton  | Bool                             | No       | False        | Determine if the switch button will be visible on the scanner. Default false |
+| statusBar               | UIStatusBarStyle                 | No       | .default     | Determine what UIStatusbar stule you want. Default .default  |
+| cancelButtonTitle       | String                           | No       | Cancel       | Determine the title of the cancel button. Default Cancel     |
+| torchButtonIcon         | UIImage                          | No       | none         | If you want to set a specific icon for the torch button      |
+| erroCallBack            | ((String) -> ())                 | No       | nil          | Closure used to send a string description of any error prevented the scannr to start |
+| scannedCodeCallBack     | ((TapQRCodeScannerResult) -> ()) | No       | nil          | Closure used to send a string description of the scanned code |
+| scannerCanceledCallBack | (() -> ())                       | No       | nil          | Closure used to inform when the scanner is cancelled         |
+
