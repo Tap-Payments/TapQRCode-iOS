@@ -165,3 +165,69 @@ UIImage* tapGeneratedQRImage = [TapQRCodeGenerator generateQrCodeWith:[[TapQrCod
 
 
 
+#### Emvco Push Payment based QR Code
+
+`TapQRCodeGenerator` can generate QR codes that holds an Emvco Push Payment code, that can be read from any acceptable EMVCO parser as follows
+
+*Swift*:
+
+```swift
+import TapQRCode_iOS
+
+do {
+    let image = try TapQRCodeGenerator.generateQrCode(with: .init(withEmv:
+        TapEmvcoPushData(pointOfInitiation: .Dynamic,
+        merchantPaymentTags: [.init(with: .VisaTag02, value: "4600678934521435")],
+        transactionAmount: 10,
+        transactionCurrency: .KWD,
+        extraFeesMode: .FixedFees,
+        extraFeesAmount: 5,
+        countryCode: .EG,
+        merchantCategoryCode: "1171",
+        merchantName: "Tap Payments",
+        merchantCity: "Kuwait City",
+        postalCode: nil,
+        additionData: TapEmvcoAdditionalData(
+                           billNumber: "Bill 123",
+                           customerLabel: "Tap Customer",
+                           loyaltyNumber: "123",
+                           mobileNumber: "0096599999999",
+                           purposeForTransaction: "Tap Transaction",
+                           storeLabel: "Store 1",
+                           terminalLabel: "Terminal 1",
+										       additionalCustomerDataCollection: .addressPhone))))
+}catch {
+    print(error.localizedDescription)
+}
+```
+
+*Objective-C*:
+
+```objective-c
+@import TapQRCode_iOS;
+	NSError* error;
+    
+	UIImage* tapGeneratedQRImage = [TapQRCodeGenerator generateQrCodeWith:[[TapQrCodeContent alloc]initWithEmv:[[TapEmvcoPushData alloc]
+                                     initWithPointOfInitiation:TapEmvcoOfInitiationDynamic
+                                     merchantPaymentTags:@[[[TapEmvcoPaymentNetwork alloc]initWith:TapEmvcoNetworkTagsVisaTag02 value:@"4600678934521435"]]
+                                     transactionAmount:10
+                                     transactionCurrency:TapEmvcoCurrencyCodeKWD
+                                     extraFeesMode:TapEmvcoExtraFeesFixedFees
+                                     extraFeesAmount:5
+                                     countryCode:TapEmvcoCountryCodeKP
+                                     merchantCategoryCode:@"1171"
+                                     merchantName:@"Tap Payments"
+                                     merchantCity:@"Kuwait City"
+                                     postalCode:nil
+                                     additionData:[[TapEmvcoAdditionalData alloc]
+                                                   initWithBillNumber:@"123"
+                                                   customerLabel:@"Tap Customer"
+                                                   loyaltyNumber:@"123"
+                                                   mobileNumber:@"0096599999999"
+                                                   purposeForTransaction:@"Tap Transaction"
+                                                   storeLabel:@"Store 1"
+                                                   terminalLabel:@"Terminal 1"
+                                                   additionalCustomerDataCollection:TapEmvcoAdditionalDataCollectionPhoneEmail]
+                                     error:&error]] foreGroundColor:UIColor.redColor backgroundColor:UIColor.whiteColor waterMark:[UIImage imageNamed:@"Tap"]];
+```
+
