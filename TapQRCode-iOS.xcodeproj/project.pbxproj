@@ -31,9 +31,7 @@
 		E81A7DD8241E8EFA00836547 /* TapEmvcoNetworkTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */; };
 		E81A7DDA241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */; };
 		E81A7DDC241F416E00836547 /* TapEmvcoOfInitiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DDB241F416E00836547 /* TapEmvcoOfInitiation.swift */; };
-		E81A7DDE241F4D3C00836547 /* TapEmvcoCurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DDD241F4D3C00836547 /* TapEmvcoCurrencyCode.swift */; };
 		E81A7DE0241F532000836547 /* TapEmvcoExtraFees.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DDF241F532000836547 /* TapEmvcoExtraFees.swift */; };
-		E81A7DE2241F565400836547 /* TapEmvcoCountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE1241F565400836547 /* TapEmvcoCountryCode.swift */; };
 		E81A7DE4241F5E0900836547 /* TapEmvcoAdditionalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE3241F5E0900836547 /* TapEmvcoAdditionalData.swift */; };
 		E81A7DE6241F632900836547 /* TapEmvcoAdditionalDataCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE5241F632900836547 /* TapEmvcoAdditionalDataCollection.swift */; };
 		E81A7DE8241F80EA00836547 /* QRGeneratorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81A7DE7241F80EA00836547 /* QRGeneratorSettingsViewController.swift */; };
@@ -149,9 +147,7 @@
 		E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoNetworkTags.swift; sourceTree = "<group>"; };
 		E81A7DD9241E8FAA00836547 /* TapEmvcoPaymentNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoPaymentNetwork.swift; sourceTree = "<group>"; };
 		E81A7DDB241F416E00836547 /* TapEmvcoOfInitiation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoOfInitiation.swift; sourceTree = "<group>"; };
-		E81A7DDD241F4D3C00836547 /* TapEmvcoCurrencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoCurrencyCode.swift; sourceTree = "<group>"; };
 		E81A7DDF241F532000836547 /* TapEmvcoExtraFees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoExtraFees.swift; sourceTree = "<group>"; };
-		E81A7DE1241F565400836547 /* TapEmvcoCountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoCountryCode.swift; sourceTree = "<group>"; };
 		E81A7DE3241F5E0900836547 /* TapEmvcoAdditionalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoAdditionalData.swift; sourceTree = "<group>"; };
 		E81A7DE5241F632900836547 /* TapEmvcoAdditionalDataCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapEmvcoAdditionalDataCollection.swift; sourceTree = "<group>"; };
 		E81A7DE7241F80EA00836547 /* QRGeneratorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGeneratorSettingsViewController.swift; sourceTree = "<group>"; };
@@ -313,9 +309,7 @@
 				E81A7DC8241E727D00836547 /* TapQRCodeType.swift */,
 				E81A7DD7241E8EFA00836547 /* TapEmvcoNetworkTags.swift */,
 				E81A7DDB241F416E00836547 /* TapEmvcoOfInitiation.swift */,
-				E81A7DDD241F4D3C00836547 /* TapEmvcoCurrencyCode.swift */,
 				E81A7DDF241F532000836547 /* TapEmvcoExtraFees.swift */,
-				E81A7DE1241F565400836547 /* TapEmvcoCountryCode.swift */,
 				E81A7DE5241F632900836547 /* TapEmvcoAdditionalDataCollection.swift */,
 				E82E519C2423E98A007E9905 /* TapAlternateLanguageEnum.swift */,
 			);
@@ -668,7 +662,6 @@
 				E82E50FC2421F6E2007E9905 /* TapQRCodeScanner.swift in Sources */,
 				E82E513E242337FE007E9905 /* EFIntSize.swift in Sources */,
 				E82E514A242337FE007E9905 /* CGColor+.swift in Sources */,
-				E81A7DDE241F4D3C00836547 /* TapEmvcoCurrencyCode.swift in Sources */,
 				E82E5148242337FE007E9905 /* CGImage+.swift in Sources */,
 				E82E513D242337FE007E9905 /* BinaryInteger+.swift in Sources */,
 				E81A7DAA241E6FFA00836547 /* TapQRCodeGenerator.swift in Sources */,
@@ -684,7 +677,6 @@
 				E82E5147242337FE007E9905 /* EFInputCorrectionLevel.swift in Sources */,
 				E82E51042422469A007E9905 /* TapQRCodeScannerResult.swift in Sources */,
 				E82E5144242337FE007E9905 /* EFWatermarkMode.swift in Sources */,
-				E81A7DE2241F565400836547 /* TapEmvcoCountryCode.swift in Sources */,
 				E82E5140242337FE007E9905 /* CIImage+.swift in Sources */,
 				E81A7DD8241E8EFA00836547 /* TapEmvcoNetworkTags.swift in Sources */,
 				E82E5118242337BD007E9905 /* QRCodeReaderViewControllerBuilder.swift in Sources */,

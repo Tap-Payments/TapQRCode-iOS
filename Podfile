@@ -5,6 +5,7 @@
 target 'TapQRCode-iOS' do
   use_frameworks!
   pod 'MasterpassQRCoreSDK'
+  pod 'CommonDataModelsKit-iOS'
 end
 
 target 'TapQRCodeExample-iOS' do

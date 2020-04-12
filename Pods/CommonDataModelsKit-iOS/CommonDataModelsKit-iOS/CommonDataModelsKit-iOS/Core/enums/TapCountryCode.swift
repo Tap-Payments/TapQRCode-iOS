@@ -1,14 +1,14 @@
 //
-//  TapEmvcoCountryCode.swift
-//  TapQRCode-iOS
+//  TapCountryCode.swift
+//  TapCommonDataModelsKits
 //
-//  Created by Osama Rabie on 16/03/2020.
+//  Created by Osama Rabie on 12/04/2020.
 //  Copyright © 2020 Tap Payments. All rights reserved.
 //
 
 import Foundation
-///The Country Code shall contain a value as defined by [ISO 3166-1 alpha 2]. The Country Code should indicate the country in which the merchant transacts.
-@objc public enum TapEmvcoCountryCode: Int, RawRepresentable, CaseIterable {
+///The Country Code shall contain a value as defined
+@objc public enum TapCountryCode: Int, RawRepresentable, CaseIterable {
    
     /// Andorra Country Code
         case AD
@@ -1519,3 +1519,4 @@ import Foundation
         }
     }
 }
+

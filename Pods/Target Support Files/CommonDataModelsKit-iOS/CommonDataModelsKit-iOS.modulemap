@@ -1,0 +1,6 @@
+framework module CommonDataModelsKit_iOS {
+  umbrella header "CommonDataModelsKit-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

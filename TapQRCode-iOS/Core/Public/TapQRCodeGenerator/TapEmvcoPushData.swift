@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import enum CommonDataModelsKit_iOS.TapCurrencyCode
+import enum CommonDataModelsKit_iOS.TapCountryCode
 import class MasterpassQRCoreSDK.PushPaymentData
 import class MasterpassQRCoreSDK.AdditionalData
 
@@ -35,10 +37,10 @@ import class MasterpassQRCoreSDK.AdditionalData
     @objc public init(pointOfInitiation:TapEmvcoOfInitiation,
                merchantPaymentTags:[TapEmvcoPaymentNetwork],
                transactionAmount:Float = 0,
-               transactionCurrency:TapEmvcoCurrencyCode,
+               transactionCurrency:TapCurrencyCode,
                extraFeesMode:TapEmvcoExtraFees = .FixedFees,
                extraFeesAmount:Float = 0,
-               countryCode:TapEmvcoCountryCode,
+               countryCode:TapCountryCode,
                merchantCategoryCode:String,
                merchantName:String,
                merchantCity:String,
@@ -86,10 +88,10 @@ import class MasterpassQRCoreSDK.AdditionalData
     private func commonInit(pointOfInitiation:TapEmvcoOfInitiation,
                             merchantPaymentTags:[TapEmvcoPaymentNetwork],
                             transactionAmount:Float = 0,
-                            transactionCurrency:TapEmvcoCurrencyCode,
+                            transactionCurrency:TapCurrencyCode,
                             extraFeesMode:TapEmvcoExtraFees = .FixedFees,
                             extraFeesAmount:Float = 0,
-                            countryCode:TapEmvcoCountryCode,
+                            countryCode:TapCountryCode,
                             merchantCategoryCode:String,
                             merchantName:String,
                             merchantCity:String,
@@ -119,7 +121,7 @@ import class MasterpassQRCoreSDK.AdditionalData
         if transactionAmount > 0 {
             pushPaymentData.transactionAmount = String(transactionAmount)
         }
-        pushPaymentData.transactionCurrencyCode = transactionCurrency.rawValue
+        pushPaymentData.transactionCurrencyCode = transactionCurrency.emvcoRawValue
 
         pushPaymentData.tipOrConvenienceIndicator = extraFeesMode.rawValue
         switch extraFeesMode {
@@ -201,13 +203,13 @@ import class MasterpassQRCoreSDK.AdditionalData
             }
         }else { throw "You need to provide paymentNetworks tags and values" }
         
-        var countryCode:TapEmvcoCountryCode = .KW
+        var countryCode:TapCountryCode = .KW
         var postalCode:String? = ""
         
         if let nonNullCountryCode = withDictionary["countryCode"] as? String {
-            if let parsedCountryCode:TapEmvcoCountryCode = TapEmvcoCountryCode.init(rawValue: nonNullCountryCode) {
+            if let parsedCountryCode:TapCountryCode = TapCountryCode.init(rawValue: nonNullCountryCode) {
                 countryCode = parsedCountryCode
-            }else { let values: String = TapEmvcoCountryCode.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+            }else { let values: String = TapCountryCode.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
             throw "Invalid Country code. Allowed values:\n\(values)" }
         }else { throw "You have to enter a countryCode" }
         
@@ -220,14 +222,14 @@ import class MasterpassQRCoreSDK.AdditionalData
         
         // Add the amount related data
         var transactionAmount:Float = 0.0
-        var transactionCurrencyCode:TapEmvcoCurrencyCode = .KWD
+        var transactionCurrencyCode:TapCurrencyCode = .KWD
         var extraFeesMode:TapEmvcoExtraFees = .FixedFees
         var extraFeesAmount:Float = 0.0
         
         if let nonNulltransactionCurrencyCode = withDictionary["transactionCurrencyCode"] as? String {
-            if let parsedTransactionCurrencyCode:TapEmvcoCurrencyCode = TapEmvcoCurrencyCode.init(rawValue: nonNulltransactionCurrencyCode) {
+            if let parsedTransactionCurrencyCode:TapCurrencyCode = TapCurrencyCode.init(emvcoRawValue: nonNulltransactionCurrencyCode) {
                 transactionCurrencyCode = parsedTransactionCurrencyCode
-            }else { let values: String = TapEmvcoCurrencyCode.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
+            }else { let values: String = TapCurrencyCode.allCases.map { "\($0.rawValue)" }.joined(separator: "\n")
             throw "Invalid Currency code. Allowed values:\n\(values)" }
         }else { throw "You have to enter a transactionCurrencyCode" }
         

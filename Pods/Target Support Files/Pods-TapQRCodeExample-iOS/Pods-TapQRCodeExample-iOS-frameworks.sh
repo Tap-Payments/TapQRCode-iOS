@@ -167,6 +167,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SheetyColors/SheetyColors.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TactileSlider/TactileSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CommonDataModelsKit-iOS/CommonDataModelsKit_iOS.framework"
   install_framework "${PODS_ROOT}/MasterpassQRCoreSDK/Frameworks/MasterpassQRCoreSDK.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -176,6 +177,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SheetyColors/SheetyColors.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TactileSlider/TactileSlider.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CommonDataModelsKit-iOS/CommonDataModelsKit_iOS.framework"
   install_framework "${PODS_ROOT}/MasterpassQRCoreSDK/Frameworks/MasterpassQRCoreSDK.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
