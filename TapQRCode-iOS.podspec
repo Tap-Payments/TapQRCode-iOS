@@ -126,5 +126,5 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   spec.dependency "MasterpassQRCoreSDK", "~> 2.0.6"
-
+  spec.dependency "CommonDataModelsKit-iOS", "~> 1.0.1"
 end
